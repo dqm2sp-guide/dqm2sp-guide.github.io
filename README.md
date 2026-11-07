@@ -14,7 +14,7 @@ src/ 为界面源码；data.json 是包含怪物图片的固定资料快照。�
 
 ## 网站发布
 
-上传仓库只保存代码，不会自动开通网站。GitHub Pages 需要另外配置，且不能把私有仓库等同于私有网站。本包没有自动发布工作流。
+正式网站：https://yxch000-ai.github.io/dqm2sp-handbook/ 。GitHub Pages 从 main 分支根目录发布，更新 index.html 后自动部署。网站和仓库均公开。
 
 ## 数据范围
 
