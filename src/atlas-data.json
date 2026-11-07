@@ -1,0 +1,44 @@
+{
+  "world": "沙漠世界",
+  "fieldMap": "323261",
+  "width": 900,
+  "height": 720,
+  "precision": "中文方位示意图，非等比例实景地图",
+  "sources": [
+    {"label":"地形与地标","url":"https://game8.jp/dqm2/323261"},
+    {"label":"地标路线","url":"https://gamewith.jp/dqm2-irurukasp/article/show/221101"},
+    {"label":"细分出没范围","url":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"}
+  ],
+  "zones": [
+    {"id":"field","label":"沙漠野外","map":"323261","precision":"world","bounds":[60,45,780,625],"shape":"M90 60 Q150 35 240 65 L370 50 465 80 570 48 700 68 790 50 840 140 820 255 845 355 815 470 835 580 770 620 735 685 615 660 560 620 420 635 300 610 185 620 90 565 60 455 110 350 65 265 80 150Z"},
+    {"id":"village","label":"卡尔卡拉村","map":"323262","precision":"landmark","x":147,"y":243,"bounds":[95,195,135,95]},
+    {"id":"town","label":"阿西亚镇","map":"323265","precision":"landmark","x":192,"y":541,"bounds":[125,490,145,100]},
+    {"id":"sewer","label":"地下水路","map":"325597","precision":"entrance","x":147,"y":243,"bounds":[95,195,135,95],"description":"从卡尔卡拉村西南侧民宅进入；洞内点位未细分"},
+    {"id":"lake","label":"幻之湖","map":"325598","precision":"area","x":538,"y":213,"bounds":[465,155,150,115],"shape":"M480 174 Q550 145 595 185 L614 221 Q575 274 512 254 L470 227Z"},
+    {"id":"cave","label":"东部洞窟","map":"325599","precision":"entrance","x":801,"y":315,"bounds":[755,260,100,115]},
+    {"id":"pyramid","label":"金字塔","map":"325632","precision":"entrance","x":688,"y":576,"bounds":[580,493,190,150],"shape":"M600 500 L728 510 782 570 701 660 610 610 574 555Z"},
+    {"id":"village-south","label":"村外向南","precision":"direction","bounds":[100,282,182,196],"shape":"M132 287 Q186 265 226 303 L258 369 228 460 180 476 145 408 110 350Z"},
+    {"id":"oasis-nw","label":"绿洲西北","precision":"direction","bounds":[380,275,150,110],"shape":"M388 284 Q452 267 519 297 L530 349 465 382 390 354Z"},
+    {"id":"ruins","label":"镇东废墟","precision":"direction","bounds":[287,450,164,112],"shape":"M295 467 Q375 442 440 465 L450 529 397 559 303 540Z"},
+    {"id":"village-around","label":"卡尔卡拉村附近","precision":"direction","bounds":[75,165,215,150],"shape":"M96 175 Q192 145 273 197 L277 275 198 312 91 284Z"},
+    {"id":"town-around","label":"阿西亚镇附近","precision":"direction","bounds":[95,455,205,155],"shape":"M118 465 Q216 440 285 480 L300 560 238 610 132 593 98 533Z"},
+    {"id":"shrine","label":"不可思议之门祠堂","precision":"direction","bounds":[80,65,165,110],"shape":"M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"}
+  ],
+  "landmarks": [
+    {"id":"shrine","label":"传送门祠堂","x":153,"y":111,"icon":"portal"},
+    {"id":"village","label":"卡尔卡拉村","x":147,"y":243,"icon":"village"},
+    {"id":"town","label":"阿西亚镇","x":192,"y":541,"icon":"town"},
+    {"id":"sewer","label":"地下水路（村内）","x":320,"y":163,"icon":"cave"},
+    {"id":"lake","label":"幻之湖","x":538,"y":213,"icon":"lake"},
+    {"id":"oasis","label":"绿洲营地","x":570,"y":385,"icon":"palm"},
+    {"id":"cave","label":"东部洞窟","x":801,"y":315,"icon":"cave"},
+    {"id":"pyramid","label":"金字塔","x":688,"y":576,"icon":"pyramid"}
+  ],
+  "placements": [
+    {"monster":97,"map":"323261","zones":["village-south","oasis-nw"],"description":"卡尔卡拉村外向南；绿洲营地西北一带","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
+    {"monster":400,"map":"323261","zones":["ruins"],"description":"阿西亚镇外向东的废墟一带","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
+    {"monster":367,"map":"323261","zones":["village-around"],"description":"卡尔卡拉村附近","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
+    {"monster":114,"map":"323261","zones":["town-around"],"description":"阿西亚镇附近","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
+    {"monster":104,"map":"323261","zones":["shrine"],"description":"不可思议之门祠堂附近；沙漠世界通关后","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"}
+  ]
+}
