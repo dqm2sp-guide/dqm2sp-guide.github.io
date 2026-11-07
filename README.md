@@ -14,7 +14,7 @@ src/ 为界面源码；data.json 是包含怪物图片的固定资料快照。�
 
 ## 网站发布
 
-正式网站：https://yxch000-ai.github.io/dqm2sp-handbook/ 。GitHub Pages 从 main 分支根目录发布，更新 index.html 后自动部署。网站和仓库均公开。
+Beta 测试网站：https://dqm2sp-guide.github.io/ 。GitHub Pages 从 main 分支根目录发布，更新 index.html 后自动部署。网站和仓库均公开。
 
 ## 数据范围
 
