@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=import.meta.dirname;
+const read=p=>fs.readFile(path.join(root,p),'utf8');
+const data=JSON.parse(await read('data.json'));
+const atlasUi=await read('src/interactive-atlas.js'),atlasData=await read('src/atlas-data.json'),guideUi=await read('src/gameplay-guide.js'),guideData=await read('src/gameplay-guide.json');
+const modules={};for(const file of ['usability','acquisition-ui','features-v2'])modules[file]=await read('src/'+file+'.js');
+let app=await read('src/app.js');
+for(const [marker,file] of [['USABILITY_UI','usability'],['ACQUISITION_UI','acquisition-ui'],['FEATURES_V2','features-v2']])app=app.replace('/* '+marker+' */',()=>modules[file]);
+app=app.replace('/* INTERACTIVE_ATLAS */',()=>(atlasUi.replace('/* ATLAS_DATA */',()=>atlasData))).replace('/* GAMEPLAY_GUIDE */',()=>guideUi.replace('/* GAMEPLAY_GUIDE_DATA */',()=>guideData));
+const css=(await Promise.all(['style','gameplay-guide','acquisition-ui','usability','interactive-atlas'].map(f=>read('src/'+f+'.css')))).join('\n');
+const core=(await read('src/core.js'))+'\n'+await read('src/atlas-core.js');
+new Function(app);new Function(core);
+let html=await read('src/index.html');
+html=html.replace('<link rel="stylesheet" href="style.css">',()=>'<style>'+css+'</style>').replace('<script src="data.js"></script>',()=>'<script>window.DQM_DATA='+JSON.stringify(data).replaceAll('<','\\u003c')+';</script>').replace('<script src="core.js"></script>',()=>'<script>'+core+'</script>').replace('<script src="app.js" defer></script>',()=>'<script>'+app+'</script>').replace('<link rel="manifest" href="manifest.webmanifest">','');
+html=html.replace(/if\('serviceWorker'in navigator[^\n]+/,'');
+await fs.writeFile(path.join(root,'index.html'),html);
+console.log('Built index.html: '+data.monsters.length+' monsters');
