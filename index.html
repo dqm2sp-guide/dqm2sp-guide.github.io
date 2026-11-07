@@ -23,6 +23,7 @@
 .map-roster>.search{display:flex;align-items:center;position:relative;gap:6px}.map-roster>.search>span{position:absolute;left:12px;color:#758773}.map-roster>.search input{width:100%;padding-left:34px}.map-canvas svg{height:clamp(360px,43vw,520px)}
 @media(max-width:1000px){.interactive-atlas{grid-template-columns:minmax(0,1fr) 250px;gap:12px}.map-canvas svg{height:440px}}
 @media(max-width:720px){.atlas-heading{margin-bottom:12px}.atlas-heading h1{font-size:22px}.atlas-heading>div{display:block}.atlas-heading span{display:block;font-size:12px;margin-top:3px}.atlas-heading select{font-size:12px;padding:9px}.interactive-atlas{grid-template-columns:1fr;gap:12px}.map-canvas svg{height:350px}.map-topline{font-size:13px;padding:10px 12px}.map-topline button{font-size:12px}.map-workspace{border-radius:12px}.atlas-location{min-width:100%;padding:10px}.map-roster-heading{padding:12px}.map-roster-item img{width:43px;height:43px}#atlas-roster{max-height:350px}.map-scale-note{font-size:10px}.map-zoom{right:8px;bottom:32px;gap:5px}.map-zoom button{width:36px;height:36px;font-size:22px}.atlas-selected-monster{padding:10px 12px}.atlas-quick{gap:6px;padding:10px}.atlas-quick button{font-size:11px}.atlas-quick img{width:24px;height:24px}}
+.atlas-place-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;background:#f4f5eb;border-bottom:1px solid #e4e0cf}.atlas-place-bar select{min-width:0;max-width:78%;border:1px solid #ccd6c3;background:#fffef8;border-radius:8px;padding:9px;font:inherit;color:#294f40}.atlas-place-bar>span{white-space:nowrap;font-size:12px;color:#6f7c68}.atlas-other-worlds{display:flex;gap:7px;flex-wrap:wrap;padding:0 14px 12px;align-items:center;font-size:12px}.atlas-other-worlds>span{color:#6d796b}.atlas-other-worlds button{font:inherit;color:#285a45;background:#eff4e8;border:1px solid #cbd9c4;border-radius:16px;padding:6px 10px;cursor:pointer}#atlas-search-scope{padding:0 12px 7px;color:#55735d;font-size:11px}.atlas-landmark[aria-hidden]{pointer-events:none;opacity:.75}.atlas-landmark:focus-visible,.atlas-area-label:focus-visible{outline:none;filter:drop-shadow(0 0 6px #18653a)}
 </style>
 </head><body>
 <a class="skip" href="#main">跳转到内容</a>
@@ -98,7 +99,7 @@ function locations(atlas,maps,monster){
  return maps.filter(m=>m.world===atlas.world).flatMap(m=>m.entries.filter(e=>e.monster===Number(monster)).map(e=>{
   const p=atlas.placements.find(p=>p.monster===e.monster&&p.map===m.id),fallback=atlas.zones.find(z=>z.map===m.id);
   const ids=p?p.zones:fallback?[fallback.id]:[];
-  return {...e,map:m.id,mapName:m.name,zones:ids,precision:p?'direction':fallback?.precision||'unknown',description:p?.description||e.position||fallback?.description||(m.id===atlas.fieldMap?'沙漠野外，具体范围未核实':m.name+'内，具体楼层与点位未核实'),positionSource:p?.source||e.positionSource||null};
+  return {...e,map:m.id,mapName:m.name,zones:ids,precision:p?'direction':fallback?.precision||'unknown',description:p?.description||e.position||fallback?.description||(m.id===atlas.fieldMap?atlas.world+'野外，具体范围未核实':m.name+'内，具体楼层与点位未核实'),positionSource:p?.source||e.positionSource||null};
  }));
 }
 function zoneMonsters(atlas,maps,zone){
@@ -107,7 +108,10 @@ function zoneMonsters(atlas,maps,zone){
 }
 function clampView(atlas,view){const w=Math.max(atlas.width/4,Math.min(atlas.width,view.w));const h=w*atlas.height/atlas.width;return {x:Math.max(0,Math.min(atlas.width-w,view.x)),y:Math.max(0,Math.min(atlas.height-h,view.y)),w,h};}
 function fitZones(atlas,ids){const b=atlas.zones.filter(z=>ids.includes(z.id)).map(z=>z.bounds);if(!b.length||ids.includes('field'))return {x:0,y:0,w:atlas.width,h:atlas.height};const x=Math.min(...b.map(v=>v[0])),y=Math.min(...b.map(v=>v[1])),right=Math.max(...b.map(v=>v[0]+v[2])),bottom=Math.max(...b.map(v=>v[1]+v[3]));const w=Math.max(360,right-x+130,(bottom-y+130)*atlas.width/atlas.height),h=w*atlas.height/atlas.width;return clampView(atlas,{x:(x+right-w)/2,y:(y+bottom-h)/2,w});}
-const api={locations,zoneMonsters,clampView,fitZones};if(typeof module!=='undefined')module.exports=api;else root.DQM_ATLAS=api;
+function findAtlas(book,world){return (book.worlds||[book]).find(a=>a.world===world)||null;}
+function monsterWorlds(book,maps,monster){return (book.worlds||[book]).filter(a=>locations(a,maps,monster).length).map(a=>a.world);}
+function resolveTarget(book,maps,mapId,monster){const map=maps.find(m=>m.id===mapId);if(!map)return null;const atlas=findAtlas(book,map.world);if(!atlas)return null;const id=Number(monster),hits=Number.isFinite(id)?locations(atlas,maps,id):[];return {atlas,monster:hits.length?id:null,zone:atlas.zones.find(z=>z.map===mapId)?.id||'',zones:hits.length?hits.filter(h=>h.map===mapId).flatMap(h=>h.zones):[atlas.zones.find(z=>z.map===mapId)?.id].filter(Boolean)};}
+const api={locations,zoneMonsters,clampView,fitZones,findAtlas,monsterWorlds,resolveTarget};if(typeof module!=='undefined')module.exports=api;else root.DQM_ATLAS=api;
 })(typeof window!=='undefined'?window:globalThis);
 </script>
 <script>/* Standalone, dependency-free UI. All game data is a local snapshot. */
@@ -642,62 +646,2031 @@ function acquisitionSummary(m){const a=m.acquisition;return `<div class="obtain-
 function encounterCard(e){const map=mapById.get(e.map);return `<article class="obtain-card"><div class="obtain-tags"><span>地图出现</span><span>${esc(e.precision)}级资料</span></div><h4>${esc(map.world)}${map.name===map.world?'':' → '+esc(map.name)}</h4><p><b>位置：</b>${esc(e.position||'已定位到本区域；具体方向、楼层与坐标未收录。')}</p><p><b>出现条件：</b>${esc(e.condition)}</p><div class="obtain-actions"><button class="btn small" data-map-place="${map.id}" data-map-focus="${state.selected||''}">在地图标出 →</button><a href="${esc(map.url)}" target="_blank" rel="noopener noreferrer">查看原站地图 ↗</a>${e.positionSource?`<a href="${esc(e.positionSource)}" target="_blank" rel="noopener noreferrer">位置依据 ↗</a>`:''}</div></article>`}
 function acquisitionPanel(m){const a=m.acquisition;return `<div class="section-title"><h3>入手与位置：${esc(name(m))}</h3></div>${a.methods.length?`<div class="obtain-methods">${a.methods.map(x=>`<article class="obtain-card"><div class="obtain-tags"><span>${esc(x.label)}</span></div><p>${esc(x.detail)}</p>${x.position?`<p><b>位置：</b>${esc(x.position)}</p>`:''}<div class="obtain-actions">${x.type==='breed'?'<button class="btn small" data-tab="in">查看配合材料 →</button>':''}${x.map?`<button class="btn small" data-map-place="${x.map}">前往地图 →</button>`:''}${x.source?`<a href="${esc(x.source)}" target="_blank" rel="noopener noreferrer">途径依据 ↗</a>`:''}</div></article>`).join('')}</div>`:''}<h3 class="obtain-heading">地图位置与出现条件</h3>${a.encounters.length?`<div class="obtain-methods">${a.encounters.map(encounterCard).join('')}</div>`:`<div class="empty"><strong>详细野外位置尚未收录</strong>不据此判断此怪物只能配合取得；可继续查下方区域线索或配合路线。</div>`}${a.areaHints.length?`<details class="obtain-hints"><summary>原数据的区域线索（${a.areaHints.length}）</summary><p>这些记录没有细分出现条件，也未全部对应到上方地图；仅用于补充查找。</p>${locations(m)}</details>`:''}<div class="obtain-actions"><button class="btn" data-tab="in">返回“怎么合成它” →</button></div>`}
 function mapWorlds(){return [...new Set(D.maps.map(m=>m.world))]}
-function renderMaps(){if(!mapWorld||mapWorld===ATLAS.world)return renderInteractiveAtlas();return renderMapIndex();}
+function renderMaps(){return renderInteractiveAtlas();}
 function renderMapIndex(){const available=D.maps.filter(m=>!mapWorld||m.world===mapWorld);if(!available.some(m=>m.id===mapPlace))mapPlace=available[0].id;$('#main').innerHTML=intro('去哪里，找下一位伙伴？','按世界和地图反查怪物，核对出现条件，再点图片查看合成方法。')+`<div class="atlas-stats"><span><b>${D.maps.length}</b> 张区域索引</span><span><b>${D.meta.acquisition.mappedMonsters}</b> 种怪物有地图记录</span><span><b>${D.meta.acquisition.preciseMonsters}</b> 种补充方向描述</span></div><div class="atlas-controls"><label>所在世界<select id="map-world"><option value="">全部世界</option>${mapWorlds().map(w=>`<option ${w===mapWorld?'selected':''}>${esc(w)}</option>`).join('')}</select></label><label>选择地图<select id="map-place">${available.map(m=>`<option value="${m.id}" ${m.id===mapPlace?'selected':''}>${esc(m.world===m.name?m.name:m.world+' · '+m.name)}</option>`).join('')}</select></label></div><label class="search atlas-search"><span class="glass" aria-hidden="true">⌕</span><input id="map-search" type="search" placeholder="搜索这张地图的怪物或出现条件…" aria-label="搜索地图中的怪物" value="${esc(mapSearch)}"></label><div id="atlas-result"></div><p class="footnote">当前世界暂提供地点列表；交互地图已开放沙漠世界。</p>`;renderMapResult();}
 function renderMapResult(){const map=mapById.get(mapPlace),q=mapSearch.trim();const list=map.entries.filter(e=>!q||name(byId.get(e.monster)).includes(q)||e.condition.includes(q)||e.position?.includes(q));$('#atlas-result').innerHTML=`<section class="atlas-map-header"><div><span class="guide-tag">${esc(map.world)}</span><h2>${esc(map.name)}</h2><p>${map.entries.length} 条地图出现记录 · 当前显示 ${list.length} 条</p></div><a class="btn" href="${esc(map.url)}" target="_blank" rel="noopener noreferrer">打开原站地图 ↗</a></section>${list.length?`<div class="atlas-monsters">${list.map(e=>{const m=byId.get(e.monster);return `<article class="atlas-monster"><button data-monster="${m.id}" aria-label="查看${esc(name(m))}的合成方法">${image(m)}<div><strong>${esc(name(m))}</strong><small>${D.families[m.family]} · ${m.rank} · 图鉴 ${String(m.no).padStart(3,'0')}</small></div></button><p><b>条件：</b>${esc(e.condition)}</p><p class="${e.position?'':'muted'}"><b>位置：</b>${esc(e.position||'区域已知，精确点位未收录')}</p><button class="link-button" data-map-monster="${m.id}">看全部入手途径 →</button></article>`}).join('')}</div>`:`<div class="empty"><strong>${q?'没有匹配记录':'这张地图尚无野外怪物记录'}</strong>${q?'试试怪物中文名、夜间或通关后等条件。':'仍可打开原站地图查看路线；空表不代表游戏中绝对没有怪物。'}</div>`}`;}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-map-place')&&mapById.has(b.dataset.mapPlace)){atlasToMonster(b.dataset.mapPlace,b.dataset.mapFocus);}if(b.hasAttribute('data-map-monster')){openMonster(+b.dataset.mapMonster);state.detailTab='obtain';renderModal();}});
 document.addEventListener('change',e=>{if(e.target.id==='map-world'){mapWorld=e.target.value;mapSearch='';renderMaps();}if(e.target.id==='map-place'){mapPlace=e.target.value;mapSearch='';renderMaps();}});
 document.addEventListener('input',e=>{if(e.target.id==='map-search'){mapSearch=e.target.value;renderMapResult();}});
 
-const ATLAS={
+const ATLAS_BOOK={
   "world": "沙漠世界",
   "fieldMap": "323261",
   "width": 900,
   "height": 720,
   "precision": "中文方位示意图，非等比例实景地图",
   "sources": [
-    {"label":"地形与地标","url":"https://game8.jp/dqm2/323261"},
-    {"label":"地标路线","url":"https://gamewith.jp/dqm2-irurukasp/article/show/221101"},
-    {"label":"细分出没范围","url":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"}
+    {
+      "label": "地形与地标",
+      "url": "https://game8.jp/dqm2/323261"
+    },
+    {
+      "label": "地标路线",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/221101"
+    },
+    {
+      "label": "细分出没范围",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    }
   ],
   "zones": [
-    {"id":"field","label":"沙漠野外","map":"323261","precision":"world","bounds":[60,45,780,625],"shape":"M90 60 Q150 35 240 65 L370 50 465 80 570 48 700 68 790 50 840 140 820 255 845 355 815 470 835 580 770 620 735 685 615 660 560 620 420 635 300 610 185 620 90 565 60 455 110 350 65 265 80 150Z"},
-    {"id":"village","label":"卡尔卡拉村","map":"323262","precision":"landmark","x":147,"y":243,"bounds":[95,195,135,95]},
-    {"id":"town","label":"阿西亚镇","map":"323265","precision":"landmark","x":192,"y":541,"bounds":[125,490,145,100]},
-    {"id":"sewer","label":"地下水路","map":"325597","precision":"entrance","x":147,"y":243,"bounds":[95,195,135,95],"description":"从卡尔卡拉村西南侧民宅进入；洞内点位未细分"},
-    {"id":"lake","label":"幻之湖","map":"325598","precision":"area","x":538,"y":213,"bounds":[465,155,150,115],"shape":"M480 174 Q550 145 595 185 L614 221 Q575 274 512 254 L470 227Z"},
-    {"id":"cave","label":"东部洞窟","map":"325599","precision":"entrance","x":801,"y":315,"bounds":[755,260,100,115]},
-    {"id":"pyramid","label":"金字塔","map":"325632","precision":"entrance","x":688,"y":576,"bounds":[580,493,190,150],"shape":"M600 500 L728 510 782 570 701 660 610 610 574 555Z"},
-    {"id":"village-south","label":"村外向南","precision":"direction","bounds":[100,282,182,196],"shape":"M132 287 Q186 265 226 303 L258 369 228 460 180 476 145 408 110 350Z"},
-    {"id":"oasis-nw","label":"绿洲西北","precision":"direction","bounds":[380,275,150,110],"shape":"M388 284 Q452 267 519 297 L530 349 465 382 390 354Z"},
-    {"id":"ruins","label":"镇东废墟","precision":"direction","bounds":[287,450,164,112],"shape":"M295 467 Q375 442 440 465 L450 529 397 559 303 540Z"},
-    {"id":"village-around","label":"卡尔卡拉村附近","precision":"direction","bounds":[75,165,215,150],"shape":"M96 175 Q192 145 273 197 L277 275 198 312 91 284Z"},
-    {"id":"town-around","label":"阿西亚镇附近","precision":"direction","bounds":[95,455,205,155],"shape":"M118 465 Q216 440 285 480 L300 560 238 610 132 593 98 533Z"},
-    {"id":"shrine","label":"不可思议之门祠堂","precision":"direction","bounds":[80,65,165,110],"shape":"M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"}
+    {
+      "id": "field",
+      "label": "沙漠野外",
+      "map": "323261",
+      "precision": "world",
+      "bounds": [
+        60,
+        45,
+        780,
+        625
+      ],
+      "shape": "M90 60 Q150 35 240 65 L370 50 465 80 570 48 700 68 790 50 840 140 820 255 845 355 815 470 835 580 770 620 735 685 615 660 560 620 420 635 300 610 185 620 90 565 60 455 110 350 65 265 80 150Z"
+    },
+    {
+      "id": "village",
+      "label": "卡尔卡拉村",
+      "map": "323262",
+      "precision": "landmark",
+      "x": 147,
+      "y": 243,
+      "bounds": [
+        95,
+        195,
+        135,
+        95
+      ]
+    },
+    {
+      "id": "town",
+      "label": "阿西亚镇",
+      "map": "323265",
+      "precision": "landmark",
+      "x": 192,
+      "y": 541,
+      "bounds": [
+        125,
+        490,
+        145,
+        100
+      ]
+    },
+    {
+      "id": "sewer",
+      "label": "地下水路",
+      "map": "325597",
+      "precision": "entrance",
+      "x": 147,
+      "y": 243,
+      "bounds": [
+        95,
+        195,
+        135,
+        95
+      ],
+      "description": "从卡尔卡拉村西南侧民宅进入；洞内点位未细分"
+    },
+    {
+      "id": "lake",
+      "label": "幻之湖",
+      "map": "325598",
+      "precision": "area",
+      "x": 538,
+      "y": 213,
+      "bounds": [
+        465,
+        155,
+        150,
+        115
+      ],
+      "shape": "M480 174 Q550 145 595 185 L614 221 Q575 274 512 254 L470 227Z"
+    },
+    {
+      "id": "cave",
+      "label": "东部洞窟",
+      "map": "325599",
+      "precision": "entrance",
+      "x": 801,
+      "y": 315,
+      "bounds": [
+        755,
+        260,
+        100,
+        115
+      ]
+    },
+    {
+      "id": "pyramid",
+      "label": "金字塔",
+      "map": "325632",
+      "precision": "entrance",
+      "x": 688,
+      "y": 576,
+      "bounds": [
+        580,
+        493,
+        190,
+        150
+      ],
+      "shape": "M600 500 L728 510 782 570 701 660 610 610 574 555Z"
+    },
+    {
+      "id": "village-south",
+      "label": "村外向南",
+      "precision": "direction",
+      "bounds": [
+        100,
+        282,
+        182,
+        196
+      ],
+      "shape": "M132 287 Q186 265 226 303 L258 369 228 460 180 476 145 408 110 350Z"
+    },
+    {
+      "id": "oasis-nw",
+      "label": "绿洲西北",
+      "precision": "direction",
+      "bounds": [
+        380,
+        275,
+        150,
+        110
+      ],
+      "shape": "M388 284 Q452 267 519 297 L530 349 465 382 390 354Z"
+    },
+    {
+      "id": "ruins",
+      "label": "镇东废墟",
+      "precision": "direction",
+      "bounds": [
+        287,
+        450,
+        164,
+        112
+      ],
+      "shape": "M295 467 Q375 442 440 465 L450 529 397 559 303 540Z"
+    },
+    {
+      "id": "village-around",
+      "label": "卡尔卡拉村附近",
+      "precision": "direction",
+      "bounds": [
+        75,
+        165,
+        215,
+        150
+      ],
+      "shape": "M96 175 Q192 145 273 197 L277 275 198 312 91 284Z"
+    },
+    {
+      "id": "town-around",
+      "label": "阿西亚镇附近",
+      "precision": "direction",
+      "bounds": [
+        95,
+        455,
+        205,
+        155
+      ],
+      "shape": "M118 465 Q216 440 285 480 L300 560 238 610 132 593 98 533Z"
+    },
+    {
+      "id": "shrine",
+      "label": "不可思议之门祠堂",
+      "precision": "direction",
+      "bounds": [
+        80,
+        65,
+        165,
+        110
+      ],
+      "shape": "M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"
+    }
   ],
   "landmarks": [
-    {"id":"shrine","label":"传送门祠堂","x":153,"y":111,"icon":"portal"},
-    {"id":"village","label":"卡尔卡拉村","x":147,"y":243,"icon":"village"},
-    {"id":"town","label":"阿西亚镇","x":192,"y":541,"icon":"town"},
-    {"id":"sewer","label":"地下水路（村内）","x":320,"y":163,"icon":"cave"},
-    {"id":"lake","label":"幻之湖","x":538,"y":213,"icon":"lake"},
-    {"id":"oasis","label":"绿洲营地","x":570,"y":385,"icon":"palm"},
-    {"id":"cave","label":"东部洞窟","x":801,"y":315,"icon":"cave"},
-    {"id":"pyramid","label":"金字塔","x":688,"y":576,"icon":"pyramid"}
+    {
+      "id": "shrine",
+      "label": "传送门祠堂",
+      "x": 153,
+      "y": 111,
+      "icon": "portal"
+    },
+    {
+      "id": "village",
+      "label": "卡尔卡拉村",
+      "x": 147,
+      "y": 243,
+      "icon": "village",
+      "target": "village-around"
+    },
+    {
+      "id": "town",
+      "label": "阿西亚镇",
+      "x": 192,
+      "y": 541,
+      "icon": "town",
+      "target": "town-around"
+    },
+    {
+      "id": "sewer",
+      "label": "地下水路（村内）",
+      "x": 320,
+      "y": 163,
+      "icon": "cave"
+    },
+    {
+      "id": "lake",
+      "label": "幻之湖",
+      "x": 538,
+      "y": 213,
+      "icon": "lake"
+    },
+    {
+      "id": "oasis",
+      "label": "绿洲营地",
+      "x": 570,
+      "y": 385,
+      "icon": "palm",
+      "target": "oasis-nw"
+    },
+    {
+      "id": "cave",
+      "label": "东部洞窟",
+      "x": 801,
+      "y": 315,
+      "icon": "cave"
+    },
+    {
+      "id": "pyramid",
+      "label": "金字塔",
+      "x": 688,
+      "y": 576,
+      "icon": "pyramid"
+    }
   ],
   "placements": [
-    {"monster":97,"map":"323261","zones":["village-south","oasis-nw"],"description":"卡尔卡拉村外向南；绿洲营地西北一带","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
-    {"monster":400,"map":"323261","zones":["ruins"],"description":"阿西亚镇外向东的废墟一带","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
-    {"monster":367,"map":"323261","zones":["village-around"],"description":"卡尔卡拉村附近","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
-    {"monster":114,"map":"323261","zones":["town-around"],"description":"阿西亚镇附近","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"},
-    {"monster":104,"map":"323261","zones":["shrine"],"description":"不可思议之门祠堂附近；沙漠世界通关后","source":"https://gamewith.jp/dqm2-irurukasp/article/show/220302"}
+    {
+      "monster": 97,
+      "map": "323261",
+      "zones": [
+        "village-south",
+        "oasis-nw"
+      ],
+      "description": "卡尔卡拉村外向南；绿洲营地西北一带",
+      "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    },
+    {
+      "monster": 400,
+      "map": "323261",
+      "zones": [
+        "ruins"
+      ],
+      "description": "阿西亚镇外向东的废墟一带",
+      "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    },
+    {
+      "monster": 367,
+      "map": "323261",
+      "zones": [
+        "village-around"
+      ],
+      "description": "卡尔卡拉村附近",
+      "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    },
+    {
+      "monster": 114,
+      "map": "323261",
+      "zones": [
+        "town-around"
+      ],
+      "description": "阿西亚镇附近",
+      "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    },
+    {
+      "monster": 104,
+      "map": "323261",
+      "zones": [
+        "shrine"
+      ],
+      "description": "不可思议之门祠堂附近；沙漠世界通关后",
+      "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    }
+  ],
+  "theme": "desert",
+  "slug": "desert",
+  "worlds": [
+    {
+      "world": "玛尔塔王国",
+      "slug": "marta",
+      "theme": "forest",
+      "layout": "diagram",
+      "title": "玛尔塔区域导航",
+      "fieldMap": "323963",
+      "width": 900,
+      "height": 720,
+      "precision": "区域导航示意；节点排列不表示实际距离与方位",
+      "sources": [
+        {
+          "label": "玛尔塔王国",
+          "url": "https://game8.jp/dqm2/323963"
+        }
+      ],
+      "zones": [
+        {
+          "id": "field",
+          "map": "323963",
+          "label": "玛尔塔王国野外",
+          "precision": "world",
+          "bounds": [
+            35,
+            25,
+            830,
+            670
+          ],
+          "shape": "M80 540Q45 400 145 300L245 340 315 260 470 295 520 220 730 270 825 390 750 590 550 650 280 625Z"
+        },
+        {
+          "id": "coast",
+          "label": "起始海岸",
+          "precision": "direction",
+          "bounds": [
+            620,
+            410,
+            180,
+            170
+          ],
+          "shape": "M630 420Q710 400 790 440L780 565 650 575Z"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "coast",
+          "label": "起始海岸",
+          "x": 705,
+          "y": 500,
+          "icon": "lake",
+          "decorative": false
+        },
+        {
+          "id": "home",
+          "label": "自家",
+          "x": 515,
+          "y": 540,
+          "icon": "village",
+          "decorative": true
+        },
+        {
+          "id": "ranch",
+          "label": "怪物牧场",
+          "x": 290,
+          "y": 360,
+          "icon": "palm",
+          "decorative": true
+        },
+        {
+          "id": "castle",
+          "label": "玛尔塔城",
+          "x": 520,
+          "y": 260,
+          "icon": "town",
+          "decorative": true
+        },
+        {
+          "id": "gate",
+          "label": "钥匙之门",
+          "x": 150,
+          "y": 500,
+          "icon": "portal",
+          "decorative": true
+        }
+      ],
+      "placements": [
+        {
+          "monster": 133,
+          "map": "323963",
+          "zones": [
+            "coast"
+          ],
+          "description": "起始海岸；从自家向东北方向寻找",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        }
+      ],
+      "terrain": [
+        {
+          "d": "M80 540Q45 400 145 300L245 340 315 260 470 295 520 220 730 270 825 390 750 590 550 650 280 625Z",
+          "fill": "#b6c99a"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "沙漠世界",
+      "fieldMap": "323261",
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "地形与地标",
+          "url": "https://game8.jp/dqm2/323261"
+        },
+        {
+          "label": "地标路线",
+          "url": "https://gamewith.jp/dqm2-irurukasp/article/show/221101"
+        },
+        {
+          "label": "细分出没范围",
+          "url": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        }
+      ],
+      "zones": [
+        {
+          "id": "field",
+          "label": "沙漠野外",
+          "map": "323261",
+          "precision": "world",
+          "bounds": [
+            60,
+            45,
+            780,
+            625
+          ],
+          "shape": "M90 60 Q150 35 240 65 L370 50 465 80 570 48 700 68 790 50 840 140 820 255 845 355 815 470 835 580 770 620 735 685 615 660 560 620 420 635 300 610 185 620 90 565 60 455 110 350 65 265 80 150Z"
+        },
+        {
+          "id": "village",
+          "label": "卡尔卡拉村",
+          "map": "323262",
+          "precision": "landmark",
+          "x": 147,
+          "y": 243,
+          "bounds": [
+            95,
+            195,
+            135,
+            95
+          ]
+        },
+        {
+          "id": "town",
+          "label": "阿西亚镇",
+          "map": "323265",
+          "precision": "landmark",
+          "x": 192,
+          "y": 541,
+          "bounds": [
+            125,
+            490,
+            145,
+            100
+          ]
+        },
+        {
+          "id": "sewer",
+          "label": "地下水路",
+          "map": "325597",
+          "precision": "entrance",
+          "x": 147,
+          "y": 243,
+          "bounds": [
+            95,
+            195,
+            135,
+            95
+          ],
+          "description": "从卡尔卡拉村西南侧民宅进入；洞内点位未细分"
+        },
+        {
+          "id": "lake",
+          "label": "幻之湖",
+          "map": "325598",
+          "precision": "area",
+          "x": 538,
+          "y": 213,
+          "bounds": [
+            465,
+            155,
+            150,
+            115
+          ],
+          "shape": "M480 174 Q550 145 595 185 L614 221 Q575 274 512 254 L470 227Z"
+        },
+        {
+          "id": "cave",
+          "label": "东部洞窟",
+          "map": "325599",
+          "precision": "entrance",
+          "x": 801,
+          "y": 315,
+          "bounds": [
+            755,
+            260,
+            100,
+            115
+          ]
+        },
+        {
+          "id": "pyramid",
+          "label": "金字塔",
+          "map": "325632",
+          "precision": "entrance",
+          "x": 688,
+          "y": 576,
+          "bounds": [
+            580,
+            493,
+            190,
+            150
+          ],
+          "shape": "M600 500 L728 510 782 570 701 660 610 610 574 555Z"
+        },
+        {
+          "id": "village-south",
+          "label": "村外向南",
+          "precision": "direction",
+          "bounds": [
+            100,
+            282,
+            182,
+            196
+          ],
+          "shape": "M132 287 Q186 265 226 303 L258 369 228 460 180 476 145 408 110 350Z"
+        },
+        {
+          "id": "oasis-nw",
+          "label": "绿洲西北",
+          "precision": "direction",
+          "bounds": [
+            380,
+            275,
+            150,
+            110
+          ],
+          "shape": "M388 284 Q452 267 519 297 L530 349 465 382 390 354Z"
+        },
+        {
+          "id": "ruins",
+          "label": "镇东废墟",
+          "precision": "direction",
+          "bounds": [
+            287,
+            450,
+            164,
+            112
+          ],
+          "shape": "M295 467 Q375 442 440 465 L450 529 397 559 303 540Z"
+        },
+        {
+          "id": "village-around",
+          "label": "卡尔卡拉村附近",
+          "precision": "direction",
+          "bounds": [
+            75,
+            165,
+            215,
+            150
+          ],
+          "shape": "M96 175 Q192 145 273 197 L277 275 198 312 91 284Z"
+        },
+        {
+          "id": "town-around",
+          "label": "阿西亚镇附近",
+          "precision": "direction",
+          "bounds": [
+            95,
+            455,
+            205,
+            155
+          ],
+          "shape": "M118 465 Q216 440 285 480 L300 560 238 610 132 593 98 533Z"
+        },
+        {
+          "id": "shrine",
+          "label": "不可思议之门祠堂",
+          "precision": "direction",
+          "bounds": [
+            80,
+            65,
+            165,
+            110
+          ],
+          "shape": "M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "shrine",
+          "label": "传送门祠堂",
+          "x": 153,
+          "y": 111,
+          "icon": "portal"
+        },
+        {
+          "id": "village",
+          "label": "卡尔卡拉村",
+          "x": 147,
+          "y": 243,
+          "icon": "village",
+          "target": "village-around"
+        },
+        {
+          "id": "town",
+          "label": "阿西亚镇",
+          "x": 192,
+          "y": 541,
+          "icon": "town",
+          "target": "town-around"
+        },
+        {
+          "id": "sewer",
+          "label": "地下水路（村内）",
+          "x": 320,
+          "y": 163,
+          "icon": "cave"
+        },
+        {
+          "id": "lake",
+          "label": "幻之湖",
+          "x": 538,
+          "y": 213,
+          "icon": "lake"
+        },
+        {
+          "id": "oasis",
+          "label": "绿洲营地",
+          "x": 570,
+          "y": 385,
+          "icon": "palm",
+          "target": "oasis-nw"
+        },
+        {
+          "id": "cave",
+          "label": "东部洞窟",
+          "x": 801,
+          "y": 315,
+          "icon": "cave"
+        },
+        {
+          "id": "pyramid",
+          "label": "金字塔",
+          "x": 688,
+          "y": 576,
+          "icon": "pyramid"
+        }
+      ],
+      "placements": [
+        {
+          "monster": 97,
+          "map": "323261",
+          "zones": [
+            "village-south",
+            "oasis-nw"
+          ],
+          "description": "卡尔卡拉村外向南；绿洲营地西北一带",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        },
+        {
+          "monster": 400,
+          "map": "323261",
+          "zones": [
+            "ruins"
+          ],
+          "description": "阿西亚镇外向东的废墟一带",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        },
+        {
+          "monster": 367,
+          "map": "323261",
+          "zones": [
+            "village-around"
+          ],
+          "description": "卡尔卡拉村附近",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        },
+        {
+          "monster": 114,
+          "map": "323261",
+          "zones": [
+            "town-around"
+          ],
+          "description": "阿西亚镇附近",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        },
+        {
+          "monster": 104,
+          "map": "323261",
+          "zones": [
+            "shrine"
+          ],
+          "description": "不可思议之门祠堂附近；沙漠世界通关后",
+          "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        }
+      ],
+      "theme": "desert",
+      "slug": "desert"
+    },
+    {
+      "world": "水世界",
+      "slug": "water",
+      "theme": "water",
+      "layout": "geography",
+      "title": "水世界",
+      "fieldMap": "325600",
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "水世界",
+          "url": "https://game8.jp/dqm2/325600"
+        },
+        {
+          "label": "约尔德村",
+          "url": "https://game8.jp/dqm2/325601"
+        },
+        {
+          "label": "波罗尼亚村",
+          "url": "https://game8.jp/dqm2/325602"
+        },
+        {
+          "label": "波特里兹港",
+          "url": "https://game8.jp/dqm2/325603"
+        },
+        {
+          "label": "西岬洞窟",
+          "url": "https://game8.jp/dqm2/325604"
+        },
+        {
+          "label": "人鱼王国",
+          "url": "https://game8.jp/dqm2/325605"
+        },
+        {
+          "label": "幽灵船",
+          "url": "https://game8.jp/dqm2/325606"
+        },
+        {
+          "label": "蓝色洞窟",
+          "url": "https://game8.jp/dqm2/325607"
+        },
+        {
+          "label": "古代灯塔",
+          "url": "https://game8.jp/dqm2/325608"
+        },
+        {
+          "label": "火山岛洞窟",
+          "url": "https://game8.jp/dqm2/325610"
+        },
+        {
+          "label": "海神神殿",
+          "url": "https://game8.jp/dqm2/325633"
+        }
+      ],
+      "zones": [
+        {
+          "id": "field",
+          "map": "325600",
+          "label": "水世界野外",
+          "precision": "world",
+          "bounds": [
+            35,
+            25,
+            830,
+            670
+          ],
+          "shape": "M110 70L185 45 255 95 250 195 190 225 95 180Z M345 110Q470 45 605 90L665 175 570 215 485 190 410 230 365 200Z M695 90L765 75 830 125 820 210 735 245 675 190Z M220 235L315 205 380 270 360 330 315 340 360 390 330 450 225 475 165 420 190 335Z M365 480L450 450 480 510 560 520 620 465 680 490 655 585 595 655 480 650 390 595Z M110 535Q190 470 260 540L245 625 170 655 100 615Z M760 410L800 435 790 490 755 480Z M745 520L815 530 840 640 790 675 735 640Z M490 345Q555 310 565 365L550 395 500 400Z"
+        },
+        {
+          "id": "325601",
+          "map": "325601",
+          "label": "约尔德村",
+          "x": 565,
+          "y": 606,
+          "precision": "entrance",
+          "bounds": [
+            505,
+            551,
+            120,
+            110
+          ],
+          "description": "约尔德村内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325602",
+          "map": "325602",
+          "label": "波罗尼亚村",
+          "x": 428,
+          "y": 521,
+          "precision": "entrance",
+          "bounds": [
+            368,
+            466,
+            120,
+            110
+          ],
+          "description": "波罗尼亚村内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325603",
+          "map": "325603",
+          "label": "波特里兹港",
+          "x": 472,
+          "y": 166,
+          "precision": "entrance",
+          "bounds": [
+            412,
+            111,
+            120,
+            110
+          ],
+          "description": "波特里兹港内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325604",
+          "map": "325604",
+          "label": "西岬洞窟",
+          "x": 242,
+          "y": 401,
+          "precision": "entrance",
+          "bounds": [
+            182,
+            346,
+            120,
+            110
+          ],
+          "description": "西岬洞窟内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325605",
+          "map": "325605",
+          "label": "人鱼王国",
+          "x": 274,
+          "y": 254,
+          "precision": "entrance",
+          "bounds": [
+            214,
+            199,
+            120,
+            110
+          ],
+          "description": "人鱼王国内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325606",
+          "map": "325606",
+          "label": "幽灵船",
+          "x": 187,
+          "y": 220,
+          "precision": "entrance",
+          "bounds": [
+            127,
+            165,
+            120,
+            110
+          ],
+          "description": "幽灵船内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325607",
+          "map": "325607",
+          "label": "蓝色洞窟",
+          "x": 163,
+          "y": 143,
+          "precision": "entrance",
+          "bounds": [
+            103,
+            88,
+            120,
+            110
+          ],
+          "description": "蓝色洞窟内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325608",
+          "map": "325608",
+          "label": "古代灯塔",
+          "x": 610,
+          "y": 198,
+          "precision": "entrance",
+          "bounds": [
+            550,
+            143,
+            120,
+            110
+          ],
+          "description": "古代灯塔内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325610",
+          "map": "325610",
+          "label": "火山岛洞窟",
+          "x": 750,
+          "y": 205,
+          "precision": "entrance",
+          "bounds": [
+            690,
+            150,
+            120,
+            110
+          ],
+          "description": "火山岛洞窟内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325633",
+          "map": "325633",
+          "label": "海神神殿",
+          "x": 783,
+          "y": 596,
+          "precision": "entrance",
+          "bounds": [
+            723,
+            541,
+            120,
+            110
+          ],
+          "description": "海神神殿内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "325601",
+          "label": "约尔德村",
+          "x": 565,
+          "y": 606,
+          "icon": "village",
+          "decorative": false
+        },
+        {
+          "id": "325602",
+          "label": "波罗尼亚村",
+          "x": 428,
+          "y": 521,
+          "icon": "village",
+          "decorative": false
+        },
+        {
+          "id": "325603",
+          "label": "波特里兹港",
+          "x": 472,
+          "y": 166,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325604",
+          "label": "西岬洞窟",
+          "x": 242,
+          "y": 401,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325605",
+          "label": "人鱼王国",
+          "x": 274,
+          "y": 254,
+          "icon": "lake",
+          "decorative": false
+        },
+        {
+          "id": "325606",
+          "label": "幽灵船",
+          "x": 187,
+          "y": 220,
+          "icon": "ship",
+          "decorative": false
+        },
+        {
+          "id": "325607",
+          "label": "蓝色洞窟",
+          "x": 163,
+          "y": 143,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325608",
+          "label": "古代灯塔",
+          "x": 610,
+          "y": 198,
+          "icon": "tower",
+          "decorative": false
+        },
+        {
+          "id": "325610",
+          "label": "火山岛洞窟",
+          "x": 750,
+          "y": 205,
+          "icon": "volcano",
+          "decorative": false
+        },
+        {
+          "id": "325633",
+          "label": "海神神殿",
+          "x": 783,
+          "y": 596,
+          "icon": "temple",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M110 70L185 45 255 95 250 195 190 225 95 180Z",
+          "fill": "#b7ce88"
+        },
+        {
+          "d": "M345 110Q470 45 605 90L665 175 570 215 485 190 410 230 365 200Z",
+          "fill": "#b8cf89"
+        },
+        {
+          "d": "M695 90L765 75 830 125 820 210 735 245 675 190Z",
+          "fill": "#c8966d"
+        },
+        {
+          "d": "M220 235L315 205 380 270 360 330 315 340 360 390 330 450 225 475 165 420 190 335Z",
+          "fill": "#b1c980"
+        },
+        {
+          "d": "M365 480L450 450 480 510 560 520 620 465 680 490 655 585 595 655 480 650 390 595Z",
+          "fill": "#b9cf89"
+        },
+        {
+          "d": "M110 535Q190 470 260 540L245 625 170 655 100 615Z",
+          "fill": "#b2c482"
+        },
+        {
+          "d": "M760 410L800 435 790 490 755 480Z M745 520L815 530 840 640 790 675 735 640Z",
+          "fill": "#c3cc9d"
+        },
+        {
+          "d": "M490 345Q555 310 565 365L550 395 500 400Z",
+          "fill": "#a2c374"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "雪与冰世界",
+      "slug": "ice",
+      "theme": "ice",
+      "layout": "geography",
+      "title": "雪与冰世界",
+      "fieldMap": "325611",
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "雪与冰世界",
+          "url": "https://game8.jp/dqm2/325611"
+        },
+        {
+          "label": "北国诺斯登",
+          "url": "https://game8.jp/dqm2/325612"
+        },
+        {
+          "label": "边境矿山",
+          "url": "https://game8.jp/dqm2/325613"
+        },
+        {
+          "label": "北港诺福",
+          "url": "https://game8.jp/dqm2/325614"
+        },
+        {
+          "label": "西国韦斯塔尼亚",
+          "url": "https://game8.jp/dqm2/325615"
+        },
+        {
+          "label": "西港威斯顿",
+          "url": "https://game8.jp/dqm2/325616"
+        },
+        {
+          "label": "东国伊斯特里亚",
+          "url": "https://game8.jp/dqm2/325617"
+        },
+        {
+          "label": "北山洞穴",
+          "url": "https://game8.jp/dqm2/325618"
+        },
+        {
+          "label": "猛犸巨兽体内",
+          "url": "https://game8.jp/dqm2/325619"
+        },
+        {
+          "label": "迷失森林",
+          "url": "https://game8.jp/dqm2/325620"
+        },
+        {
+          "label": "雪山冰穴",
+          "url": "https://game8.jp/dqm2/325621"
+        },
+        {
+          "label": "湖上魔塔",
+          "url": "https://game8.jp/dqm2/325634"
+        }
+      ],
+      "zones": [
+        {
+          "id": "field",
+          "map": "325611",
+          "label": "雪与冰世界野外",
+          "precision": "world",
+          "bounds": [
+            35,
+            25,
+            830,
+            670
+          ],
+          "shape": "M95 45L240 65 370 30 495 55 650 25 720 105 850 160 825 255 775 330 790 440 850 490 795 655 635 690 440 655 320 690 180 640 75 560 100 405 50 280 75 160Z M365 50L630 55 655 150 585 195 510 165 430 190Z M640 175L800 190 755 330 790 445 700 435 690 310Z M260 310L400 220 470 310 620 330 695 435 550 485 435 420 350 460 210 365Z M95 570Q200 490 310 550L440 505 465 550 320 605 210 595 120 620Z M600 510L790 455 835 490 770 540Z M525 645L570 595 680 570 745 610 700 680 580 685Z"
+        },
+        {
+          "id": "325612",
+          "map": "325612",
+          "label": "北国诺斯登",
+          "x": 170,
+          "y": 130,
+          "precision": "entrance",
+          "bounds": [
+            110,
+            75,
+            120,
+            110
+          ],
+          "description": "北国诺斯登内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325613",
+          "map": "325613",
+          "label": "边境矿山",
+          "x": 103,
+          "y": 300,
+          "precision": "entrance",
+          "bounds": [
+            43,
+            245,
+            120,
+            110
+          ],
+          "description": "边境矿山内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325614",
+          "map": "325614",
+          "label": "北港诺福",
+          "x": 370,
+          "y": 282,
+          "precision": "entrance",
+          "bounds": [
+            310,
+            227,
+            120,
+            110
+          ],
+          "description": "北港诺福内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325615",
+          "map": "325615",
+          "label": "西国韦斯塔尼亚",
+          "x": 100,
+          "y": 512,
+          "precision": "entrance",
+          "bounds": [
+            40,
+            457,
+            120,
+            110
+          ],
+          "description": "西国韦斯塔尼亚内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325616",
+          "map": "325616",
+          "label": "西港威斯顿",
+          "x": 315,
+          "y": 512,
+          "precision": "entrance",
+          "bounds": [
+            255,
+            457,
+            120,
+            110
+          ],
+          "description": "西港威斯顿内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325617",
+          "map": "325617",
+          "label": "东国伊斯特里亚",
+          "x": 590,
+          "y": 408,
+          "precision": "entrance",
+          "bounds": [
+            530,
+            353,
+            120,
+            110
+          ],
+          "description": "东国伊斯特里亚内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325618",
+          "map": "325618",
+          "label": "北山洞穴",
+          "x": 600,
+          "y": 95,
+          "precision": "entrance",
+          "bounds": [
+            540,
+            40,
+            120,
+            110
+          ],
+          "description": "北山洞穴内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325619",
+          "map": "325619",
+          "label": "猛犸巨兽体内",
+          "x": 625,
+          "y": 565,
+          "precision": "entrance",
+          "bounds": [
+            565,
+            510,
+            120,
+            110
+          ],
+          "description": "猛犸巨兽体内内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325620",
+          "map": "325620",
+          "label": "迷失森林",
+          "x": 665,
+          "y": 645,
+          "precision": "entrance",
+          "bounds": [
+            605,
+            590,
+            120,
+            110
+          ],
+          "description": "迷失森林内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325621",
+          "map": "325621",
+          "label": "雪山冰穴",
+          "x": 815,
+          "y": 220,
+          "precision": "entrance",
+          "bounds": [
+            755,
+            165,
+            120,
+            110
+          ],
+          "description": "雪山冰穴内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325634",
+          "map": "325634",
+          "label": "湖上魔塔",
+          "x": 440,
+          "y": 433,
+          "precision": "entrance",
+          "bounds": [
+            380,
+            378,
+            120,
+            110
+          ],
+          "description": "湖上魔塔内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "325612",
+          "label": "北国诺斯登",
+          "x": 170,
+          "y": 130,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325613",
+          "label": "边境矿山",
+          "x": 103,
+          "y": 300,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325614",
+          "label": "北港诺福",
+          "x": 370,
+          "y": 282,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325615",
+          "label": "西国韦斯塔尼亚",
+          "x": 100,
+          "y": 512,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325616",
+          "label": "西港威斯顿",
+          "x": 315,
+          "y": 512,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325617",
+          "label": "东国伊斯特里亚",
+          "x": 590,
+          "y": 408,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325618",
+          "label": "北山洞穴",
+          "x": 600,
+          "y": 95,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325619",
+          "label": "猛犸巨兽体内",
+          "x": 625,
+          "y": 565,
+          "icon": "beast",
+          "decorative": false
+        },
+        {
+          "id": "325620",
+          "label": "迷失森林",
+          "x": 665,
+          "y": 645,
+          "icon": "palm",
+          "decorative": false
+        },
+        {
+          "id": "325621",
+          "label": "雪山冰穴",
+          "x": 815,
+          "y": 220,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325634",
+          "label": "湖上魔塔",
+          "x": 440,
+          "y": 433,
+          "icon": "tower",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M95 45L240 65 370 30 495 55 650 25 720 105 850 160 825 255 775 330 790 440 850 490 795 655 635 690 440 655 320 690 180 640 75 560 100 405 50 280 75 160Z",
+          "fill": "#d2e9eb"
+        },
+        {
+          "d": "M365 50L630 55 655 150 585 195 510 165 430 190Z M640 175L800 190 755 330 790 445 700 435 690 310Z M260 310L400 220 470 310 620 330 695 435 550 485 435 420 350 460 210 365Z",
+          "fill": "#9bb3bd"
+        },
+        {
+          "d": "M95 570Q200 490 310 550L440 505 465 550 320 605 210 595 120 620Z M600 510L790 455 835 490 770 540Z",
+          "fill": "#548ba8"
+        },
+        {
+          "d": "M525 645L570 595 680 570 745 610 700 680 580 685Z",
+          "fill": "#78a58f"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "天空世界",
+      "slug": "sky",
+      "theme": "sky",
+      "layout": "geography",
+      "title": "天空世界",
+      "fieldMap": "325622",
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "天空世界",
+          "url": "https://game8.jp/dqm2/325622"
+        },
+        {
+          "label": "芬特村",
+          "url": "https://game8.jp/dqm2/325623"
+        },
+        {
+          "label": "贤者之塔",
+          "url": "https://game8.jp/dqm2/325624"
+        },
+        {
+          "label": "佩伊镇",
+          "url": "https://game8.jp/dqm2/325625"
+        },
+        {
+          "label": "希塔诺镇",
+          "url": "https://game8.jp/dqm2/325626"
+        },
+        {
+          "label": "小洞窟",
+          "url": "https://game8.jp/dqm2/325627"
+        },
+        {
+          "label": "风之塔",
+          "url": "https://game8.jp/dqm2/325628"
+        },
+        {
+          "label": "死者城堡",
+          "url": "https://game8.jp/dqm2/325629"
+        },
+        {
+          "label": "魔王城",
+          "url": "https://game8.jp/dqm2/325630"
+        }
+      ],
+      "zones": [
+        {
+          "id": "field",
+          "map": "325622",
+          "label": "天空世界野外",
+          "precision": "world",
+          "bounds": [
+            35,
+            25,
+            830,
+            670
+          ],
+          "shape": "M165 425L245 385 300 435 390 395 470 425 530 410 605 460 670 455 650 520 575 575 540 660 460 675 405 625 330 665 240 610 210 550 165 500Z M385 180Q475 130 545 205L585 320 530 390 420 385 360 320Z M70 155L170 140 245 215 225 290 145 330 65 265Z M690 265L755 245 820 280 825 370 775 445 705 420 665 355Z M355 70L410 60 465 95 455 145 390 150 350 120Z M150 625L200 615 240 670 145 680Z M700 645L745 600 795 630 820 685 690 690Z"
+        },
+        {
+          "id": "325623",
+          "map": "325623",
+          "label": "芬特村",
+          "x": 350,
+          "y": 560,
+          "precision": "entrance",
+          "bounds": [
+            290,
+            505,
+            120,
+            110
+          ],
+          "description": "芬特村内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325624",
+          "map": "325624",
+          "label": "贤者之塔",
+          "x": 485,
+          "y": 435,
+          "precision": "entrance",
+          "bounds": [
+            425,
+            380,
+            120,
+            110
+          ],
+          "description": "贤者之塔内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325625",
+          "map": "325625",
+          "label": "佩伊镇",
+          "x": 470,
+          "y": 300,
+          "precision": "entrance",
+          "bounds": [
+            410,
+            245,
+            120,
+            110
+          ],
+          "description": "佩伊镇内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325626",
+          "map": "325626",
+          "label": "希塔诺镇",
+          "x": 405,
+          "y": 85,
+          "precision": "entrance",
+          "bounds": [
+            345,
+            30,
+            120,
+            110
+          ],
+          "description": "希塔诺镇内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325627",
+          "map": "325627",
+          "label": "小洞窟",
+          "x": 745,
+          "y": 275,
+          "precision": "entrance",
+          "bounds": [
+            685,
+            220,
+            120,
+            110
+          ],
+          "description": "小洞窟内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325628",
+          "map": "325628",
+          "label": "风之塔",
+          "x": 740,
+          "y": 600,
+          "precision": "entrance",
+          "bounds": [
+            680,
+            545,
+            120,
+            110
+          ],
+          "description": "风之塔内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325629",
+          "map": "325629",
+          "label": "死者城堡",
+          "x": 185,
+          "y": 640,
+          "precision": "entrance",
+          "bounds": [
+            125,
+            585,
+            120,
+            110
+          ],
+          "description": "死者城堡内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325630",
+          "map": "325630",
+          "label": "魔王城",
+          "x": 175,
+          "y": 220,
+          "precision": "entrance",
+          "bounds": [
+            115,
+            165,
+            120,
+            110
+          ],
+          "description": "魔王城内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "325623",
+          "label": "芬特村",
+          "x": 350,
+          "y": 560,
+          "icon": "village",
+          "decorative": false
+        },
+        {
+          "id": "325624",
+          "label": "贤者之塔",
+          "x": 485,
+          "y": 435,
+          "icon": "tower",
+          "decorative": false
+        },
+        {
+          "id": "325625",
+          "label": "佩伊镇",
+          "x": 470,
+          "y": 300,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325626",
+          "label": "希塔诺镇",
+          "x": 405,
+          "y": 85,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325627",
+          "label": "小洞窟",
+          "x": 745,
+          "y": 275,
+          "icon": "cave",
+          "decorative": false
+        },
+        {
+          "id": "325628",
+          "label": "风之塔",
+          "x": 740,
+          "y": 600,
+          "icon": "tower",
+          "decorative": false
+        },
+        {
+          "id": "325629",
+          "label": "死者城堡",
+          "x": 185,
+          "y": 640,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "325630",
+          "label": "魔王城",
+          "x": 175,
+          "y": 220,
+          "icon": "town",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M165 425L245 385 300 435 390 395 470 425 530 410 605 460 670 455 650 520 575 575 540 660 460 675 405 625 330 665 240 610 210 550 165 500Z",
+          "fill": "#c2d19e"
+        },
+        {
+          "d": "M385 180Q475 130 545 205L585 320 530 390 420 385 360 320Z",
+          "fill": "#b8aa7a"
+        },
+        {
+          "d": "M70 155L170 140 245 215 225 290 145 330 65 265Z",
+          "fill": "#c0a46e"
+        },
+        {
+          "d": "M690 265L755 245 820 280 825 370 775 445 705 420 665 355Z",
+          "fill": "#a8c29c"
+        },
+        {
+          "d": "M355 70L410 60 465 95 455 145 390 150 350 120Z",
+          "fill": "#bda47a"
+        },
+        {
+          "d": "M150 625L200 615 240 670 145 680Z M700 645L745 600 795 630 820 685 690 690Z",
+          "fill": "#abb39c"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "夹缝世界",
+      "slug": "rift",
+      "theme": "rift",
+      "layout": "geography",
+      "title": "夹缝世界",
+      "fieldMap": null,
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "多克之馆",
+          "url": "https://game8.jp/dqm2/325631"
+        }
+      ],
+      "zones": [
+        {
+          "id": "325631",
+          "map": "325631",
+          "label": "多克之馆",
+          "x": 450,
+          "y": 235,
+          "precision": "entrance",
+          "bounds": [
+            390,
+            180,
+            120,
+            110
+          ],
+          "description": "多克之馆内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "325631",
+          "label": "多克之馆",
+          "x": 450,
+          "y": 235,
+          "icon": "town",
+          "decorative": false
+        },
+        {
+          "id": "return",
+          "label": "返回玛尔塔",
+          "x": 450,
+          "y": 600,
+          "icon": "portal",
+          "decorative": true
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M380 640L380 595 415 540 415 380Q320 320 360 220Q385 175 415 160L415 80 485 80 485 160Q575 205 555 290Q550 350 485 380L485 540 520 595 520 640Z",
+          "fill": "#a697bb"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "寄生木世界",
+      "slug": "tree",
+      "theme": "forest",
+      "layout": "diagram",
+      "title": "寄生木区域导航",
+      "fieldMap": null,
+      "width": 900,
+      "height": 720,
+      "precision": "区域导航示意；节点排列不表示实际距离与方位",
+      "sources": [
+        {
+          "label": "通往究极钥匙的门厅",
+          "url": "https://game8.jp/dqm2/325635"
+        },
+        {
+          "label": "寄生木之塔山脚",
+          "url": "https://game8.jp/dqm2/325636"
+        },
+        {
+          "label": "寄生木村",
+          "url": "https://game8.jp/dqm2/325637"
+        },
+        {
+          "label": "寄生木之塔",
+          "url": "https://game8.jp/dqm2/325638"
+        }
+      ],
+      "zones": [
+        {
+          "id": "325635",
+          "map": "325635",
+          "label": "通往究极钥匙的门厅",
+          "x": 200,
+          "y": 585,
+          "precision": "entrance",
+          "bounds": [
+            140,
+            530,
+            120,
+            110
+          ],
+          "description": "通往究极钥匙的门厅内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325636",
+          "map": "325636",
+          "label": "寄生木之塔山脚",
+          "x": 445,
+          "y": 530,
+          "precision": "entrance",
+          "bounds": [
+            385,
+            475,
+            120,
+            110
+          ],
+          "description": "寄生木之塔山脚内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325637",
+          "map": "325637",
+          "label": "寄生木村",
+          "x": 625,
+          "y": 365,
+          "precision": "entrance",
+          "bounds": [
+            565,
+            310,
+            120,
+            110
+          ],
+          "description": "寄生木村内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "325638",
+          "map": "325638",
+          "label": "寄生木之塔",
+          "x": 445,
+          "y": 165,
+          "precision": "entrance",
+          "bounds": [
+            385,
+            110,
+            120,
+            110
+          ],
+          "description": "寄生木之塔内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "325635",
+          "label": "通往究极钥匙的门厅",
+          "x": 200,
+          "y": 585,
+          "icon": "portal",
+          "decorative": false
+        },
+        {
+          "id": "325636",
+          "label": "寄生木之塔山脚",
+          "x": 445,
+          "y": 530,
+          "icon": "palm",
+          "decorative": false
+        },
+        {
+          "id": "325637",
+          "label": "寄生木村",
+          "x": 625,
+          "y": 365,
+          "icon": "village",
+          "decorative": false
+        },
+        {
+          "id": "325638",
+          "label": "寄生木之塔",
+          "x": 445,
+          "y": 165,
+          "icon": "tower",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M245 690L280 615 255 530 300 440 290 350 340 260 350 170 400 65 475 35 530 130 550 230 605 310 600 430 640 530 600 635 655 690Z",
+          "fill": "#aec292"
+        }
+      ],
+      "links": [
+        [
+          "325635",
+          "325636"
+        ],
+        [
+          "325636",
+          "325637"
+        ],
+        [
+          "325637",
+          "325638"
+        ]
+      ]
+    },
+    {
+      "world": "最终钥匙世界",
+      "slug": "last",
+      "theme": "lava",
+      "layout": "geography",
+      "title": "最终钥匙世界",
+      "fieldMap": null,
+      "width": 900,
+      "height": 720,
+      "precision": "中文方位示意图，非等比例实景地图",
+      "sources": [
+        {
+          "label": "熔岩洞窟",
+          "url": "https://game8.jp/dqm2/325639"
+        }
+      ],
+      "zones": [
+        {
+          "id": "325639",
+          "map": "325639",
+          "label": "熔岩洞窟",
+          "x": 450,
+          "y": 505,
+          "precision": "entrance",
+          "bounds": [
+            390,
+            450,
+            120,
+            110
+          ],
+          "description": "熔岩洞窟内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "entrance",
+          "label": "入口",
+          "x": 450,
+          "y": 110,
+          "icon": "portal",
+          "decorative": true
+        },
+        {
+          "id": "325639",
+          "label": "熔岩洞窟",
+          "x": 450,
+          "y": 505,
+          "icon": "volcano",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M425 65L475 65 468 325 540 355 575 430 630 480 615 590 555 660 445 685 330 630 290 550 325 440 365 355 432 325Z",
+          "fill": "#c2a183"
+        }
+      ],
+      "links": []
+    },
+    {
+      "world": "特殊钥匙",
+      "slug": "special",
+      "theme": "metal",
+      "layout": "diagram",
+      "title": "金属钥匙区域",
+      "fieldMap": null,
+      "width": 900,
+      "height": 720,
+      "precision": "区域导航示意；节点排列不表示实际距离与方位",
+      "sources": [
+        {
+          "label": "金属区域",
+          "url": "https://game8.jp/dqm2/315325"
+        }
+      ],
+      "zones": [
+        {
+          "id": "metal",
+          "map": "metal",
+          "label": "金属区域",
+          "x": 450,
+          "y": 340,
+          "precision": "entrance",
+          "bounds": [
+            390,
+            285,
+            120,
+            110
+          ],
+          "description": "金属区域内；楼层与刷怪点未细分"
+        }
+      ],
+      "landmarks": [
+        {
+          "id": "metal",
+          "label": "金属区域",
+          "x": 450,
+          "y": 340,
+          "icon": "portal",
+          "decorative": false
+        }
+      ],
+      "placements": [],
+      "terrain": [
+        {
+          "d": "M220 200Q450 85 680 200L735 380 655 565 440 620 235 545 175 380Z",
+          "fill": "#c3c7c0"
+        }
+      ],
+      "links": []
+    }
   ]
 }
 ,AC=window.DQM_ATLAS;
+let ATLAS=AC.findAtlas(ATLAS_BOOK,'沙漠世界')||ATLAS_BOOK;
+function switchAtlas(world){const next=AC.findAtlas(ATLAS_BOOK,world);if(!next)return;ATLAS=next;mapWorld=world;atlasState.monster=null;atlasState.zone='';atlasState.q='';atlasState.family='';atlasState.rank='';atlasState.view={x:0,y:0,w:ATLAS.width,h:ATLAS.height};}
+function atlasCurrentPlaces(){return D.maps.filter(m=>m.world===ATLAS.world);}
 const atlasState={monster:null,zone:'',q:'',family:'',rank:'',view:{x:0,y:0,w:900,h:720}};
 let atlasIgnoreClick=false;
 function atlasLocations(id){return AC.locations(ATLAS,D.maps,id);}
 function atlasIcon(type){const icons={
+ tower:'<path d="M-19 24V-24H-24V-31H24V-24H19V24Z" fill="#e6dcc0"/><path d="M-6 24V9H6V24M-5-16H5M-5-4H5"/>',
+ temple:'<path d="M-32-12L0-32 32-12ZM-29 24H29M-22-8V20M-7-8V20M7-8V20M22-8V20" fill="#e4dcba"/>',
+ volcano:'<path d="M-34 24L-11-23 11-23 34 24Z" fill="#ae8471"/><path d="M-11-23L0-10 11-23M0-10L7 10" stroke="#c96c37" stroke-width="7"/>',
+ ship:'<path d="M-32 9H32L19 26H-18Z" fill="#a89374"/><path d="M0 9V-32L26-3H0Z" fill="#f6f0d8"/>',
+ beast:'<path d="M-28 12Q-35-25-3-25Q25-25 27 10L32 23 16 24 13 3M-18 9V25M5 9V25" fill="#b3a28b"/>',
  portal:'<ellipse cx="0" cy="-9" rx="14" ry="22" fill="#eef6dc" stroke="#2c6a57" stroke-width="6"/><path d="M-24 17H24"/>',
  village:'<path d="M-22 0L-7-15 7 0M-20 0V19H7V0M3-8L17-22 31-8M7-8V12H27V-8" fill="#fff5dc"/>',
  town:'<path d="M-25 19V-14H-15V-23H-5V-14H7V-23H17V-14H27V19ZM-5 19V4H7V19" fill="#fff5dc"/>',
@@ -706,7 +2679,7 @@ function atlasIcon(type){const icons={
  palm:'<path d="M-6 22L3-16M3-16Q-19-33-28-10M3-16Q28-34 34-9M3-16Q10-40 23-33M3-16Q-9-40-22-30" stroke="#507b4d" stroke-width="7"/><ellipse cy="25" rx="28" ry="6" fill="#a8c784" stroke="none"/>',
  pyramid:'<path d="M-36 24L0-32 36 24Z" fill="#f2cf7d"/><path d="M0-32L9 24H36Z" fill="#b88e46"/><path d="M-6 24V12H5V24"/>'
  };return icons[type]||icons.cave;}
-function atlasTerrain(){return `<defs><pattern id="atlas-sand" width="52" height="43" patternUnits="userSpaceOnUse"><path d="M8 30q12-8 23-2" fill="none" stroke="#c8ac70" stroke-opacity=".25" stroke-width="2"/></pattern><pattern id="atlas-hatch" width="15" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V15" stroke="#b37829" stroke-opacity=".16" stroke-width="5"/></pattern></defs>
+function atlasTerrain(){if(ATLAS.theme!=='desert')return atlasWorldTerrain();return `<defs><pattern id="atlas-sand" width="52" height="43" patternUnits="userSpaceOnUse"><path d="M8 30q12-8 23-2" fill="none" stroke="#c8ac70" stroke-opacity=".25" stroke-width="2"/></pattern><pattern id="atlas-hatch" width="15" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V15" stroke="#b37829" stroke-opacity=".16" stroke-width="5"/></pattern></defs>
  <rect width="900" height="720" fill="#f3f0e5"/>
  <path class="atlas-land" d="${ATLAS.zones[0].shape}" fill="#e5cd91" stroke="#9c8860" stroke-width="6"/>
  <path d="M100 65Q155 42 245 68L299 135 287 205 249 267 172 300 88 281 70 243 87 155Z" fill="#bacb89"/>
@@ -720,15 +2693,15 @@ function atlasTerrain(){return `<defs><pattern id="atlas-sand" width="52" height
  <g fill="#c9af79" stroke="#9f8b63" stroke-width="3"><path d="M325 486h24v21h-24zM372 477h17v28h-17zM398 515h24v18h-24z"/></g>
  <path d="M160 229L276 174" stroke="#6a7758" stroke-width="3" stroke-dasharray="6 5"/><text x="659" y="122" class="atlas-geography">北部沙漠</text><text x="650" y="458" class="atlas-geography">南部沙漠</text>
  <g transform="translate(845 80)" fill="#476350"><path d="M0-22L-9 3 0-2 9 3Z"/><text y="29" text-anchor="middle" font-size="20">北</text></g>`;}
-function atlasOverlay(){const hits=atlasState.monster?atlasLocations(atlasState.monster):[];const active=new Set(atlasState.zone?[atlasState.zone]:hits.flatMap(l=>l.zones));return ATLAS.zones.filter(z=>active.has(z.id)).map(z=>z.shape?`<path class="atlas-highlight ${z.id==='field'?'atlas-wide':''}" data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物" d="${z.shape}"/>`:`<ellipse class="atlas-highlight" cx="${z.x}" cy="${z.y}" rx="52" ry="40"/>`).join('')+ATLAS.landmarks.map(z=>{const isActive=active.has(z.id),labelWidth=Math.max(100,z.label.length*24+18);return `<g class="atlas-landmark ${isActive?'on':''}" data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物" transform="translate(${z.x} ${z.y})"><title>${esc(z.label)}</title><circle r="39" fill="${isActive?'#fff3c2':'#f9f3dc'}" fill-opacity=".9" stroke="${isActive?'#c28427':'#c1b289'}" stroke-width="2"/><g stroke="#5c6048" stroke-width="3" stroke-linejoin="round">${atlasIcon(z.icon)}</g><rect x="${-labelWidth/2}" y="36" rx="9" width="${labelWidth}" height="34"/><text y="61" text-anchor="middle">${esc(z.label)}</text></g>`;}).join('')+ATLAS.zones.filter(z=>active.has(z.id)&&!ATLAS.landmarks.some(l=>l.id===z.id)&&z.id!=='field').map(z=>`<g class="atlas-area-label" data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物" transform="translate(${z.bounds[0]+z.bounds[2]/2} ${z.bounds[1]+z.bounds[3]/2})"><rect x="-90" y="-18" width="180" height="36" rx="9"/><text text-anchor="middle" y="8">${esc(z.label)}</text></g>`).join('');}
-function renderInteractiveAtlas(){mapWorld=ATLAS.world;$('#main').innerHTML=`<div class="atlas-heading"><div><h1>地图找怪</h1><span>沙漠世界</span></div><select id="interactive-world" aria-label="切换世界">${mapWorlds().map(w=>`<option ${w===ATLAS.world?'selected':''}>${esc(w)}</option>`).join('')}</select></div><div class="interactive-atlas"><section class="map-workspace" aria-label="沙漠世界交互地图"><div class="map-topline"><span id="atlas-status" aria-live="polite"></span><button class="link-button" data-atlas-clear>世界全览</button></div><div class="map-canvas"><svg id="interactive-map" viewBox="${Object.values(atlasState.view).join(' ')}" role="group" aria-label="沙漠世界，可拖动和缩放" tabindex="0">${atlasTerrain()}<g id="atlas-overlay">${atlasOverlay()}</g></svg><div class="map-zoom"><button data-atlas-zoom="in" aria-label="放大地图">＋</button><button data-atlas-zoom="out" aria-label="缩小地图">−</button><button data-atlas-fit aria-label="定位当前怪物">◎</button></div><span class="map-scale-note">中文方位示意 · 非等比例</span></div><div id="atlas-selection" aria-live="polite"></div></section><aside class="map-roster"><div class="map-roster-heading"><h2 id="atlas-list-title">寻找怪物</h2><span id="atlas-count"></span></div><label class="search"><span aria-hidden="true">⌕</span><input id="atlas-monster-search" type="search" aria-label="地图怪物搜索" placeholder="怪物名 / 编号" value="${esc(atlasState.q)}"></label><div class="map-roster-filters"><select id="atlas-family" aria-label="地图系别筛选"><option value="">全部系别</option>${D.families.slice(1).map((v,i)=>`<option value="${i+1}" ${atlasState.family===String(i+1)?'selected':''}>${v}</option>`).join('')}</select><select id="atlas-rank" aria-label="地图阶级筛选"><option value="">全部阶级</option>${RANK_ORDER.map(v=>`<option ${atlasState.rank===v?'selected':''}>${v}</option>`).join('')}</select></div><div id="atlas-roster"></div></aside></div><details class="atlas-source"><summary>地图依据</summary><p>${ATLAS.precision}。色块表示方向范围；洞窟标记表示地点入口，不代表洞内刷怪坐标。未细分范围的记录只高亮整个世界。</p>${ATLAS.sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label} ↗</a>`).join(' · ')}</details>`;updateAtlas();bindAtlasGestures();}
-function updateAtlas(){const hits=atlasState.monster?atlasLocations(atlasState.monster):[];const m=byId.get(atlasState.monster),z=ATLAS.zones.find(z=>z.id===atlasState.zone);$('#atlas-overlay').innerHTML=atlasOverlay();$('#atlas-status').textContent=m?name(m):z?z.label:'点怪物，查看位置';$('#atlas-selection').innerHTML=m?`<div class="atlas-selected-monster">${image(m)}<div><strong>${esc(name(m))}</strong><small>${D.families[m.family]} · ${m.rank}</small></div><button class="btn small" data-monster="${m.id}">合成材料</button></div><div class="atlas-location-list">${hits.map((h,i)=>`<button class="atlas-location" data-atlas-location="${i}"><strong>${h.precision==='world'?'仅确认世界':h.precision==='entrance'?'地点内':'出没范围'} · ${esc(h.mapName)}</strong><span>${esc(h.description)}</span><small>${esc(h.condition)}</small></button>`).join('')}</div>`:z?`<div class="atlas-region-caption"><strong>${esc(z.label)}</strong><span>${z.precision==='entrance'?'地点内记录，尚未细分楼层':z.id==='field'?'此列表仅收录尚未细分野外范围的记录':'已收录的区域记录'}</span><button class="link-button" data-atlas-clear>全部地点</button></div>`:'<div class="atlas-quick"><span>试着找</span>'+[97,400,240].map(id=>`<button data-atlas-monster="${id}">${image(byId.get(id))}${esc(name(byId.get(id)))}</button>`).join('')+'</div>';renderAtlasRoster();}
-function renderAtlasRoster(){const allowed=new Set(AC.zoneMonsters(ATLAS,D.maps,atlasState.zone)),list=C.filterCatalog(D.monsters,{q:atlasState.q,family:atlasState.family,rank:atlasState.rank},save).filter(m=>allowed.has(m.id)).sort((a,b)=>a.no-b.no);$('#atlas-count').textContent=list.length+' 种';$('#atlas-list-title').textContent=atlasState.zone?(ATLAS.zones.find(z=>z.id===atlasState.zone)?.label||'此区域'):'寻找怪物';$('#atlas-roster').innerHTML=list.map(m=>{const hits=atlasLocations(m.id),detail=hits.find(h=>h.precision!=='world');return `<button class="atlas-roster-item ${atlasState.monster===m.id?'selected':''}" data-atlas-monster="${m.id}" aria-pressed="${atlasState.monster===m.id}" aria-label="在地图定位${esc(name(m))}">${image(m)}<span><strong>${esc(name(m))}</strong><small>${D.families[m.family]} · ${m.rank} · ${detail?detail.mapName:'沙漠野外'}</small></span><span class="atlas-locate">⌖</span></button>`}).join('')||'<div class="map-empty">暂无匹配记录<button class="link-button" data-atlas-reset-filters>清空筛选</button></div>';}
+function atlasOverlay(){const hits=atlasState.monster?atlasLocations(atlasState.monster):[];const active=new Set(atlasState.zone?[atlasState.zone]:hits.flatMap(l=>l.zones));return ATLAS.zones.filter(z=>active.has(z.id)).map(z=>z.shape?`<path class="atlas-highlight ${z.id==='field'?'atlas-wide':''}" data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物" d="${z.shape}"/>`:`<ellipse class="atlas-highlight" cx="${z.x}" cy="${z.y}" rx="52" ry="40"/>`).join('')+ATLAS.landmarks.map(z=>{const isActive=active.has(z.id),labelWidth=Math.max(100,z.label.length*24+18);return `<g class="atlas-landmark ${isActive?'on':''}" ${z.decorative?'aria-hidden="true"':`data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物"`} transform="translate(${z.x} ${z.y})"><title>${esc(z.label)}</title><circle r="39" fill="${isActive?'#fff3c2':'#f9f3dc'}" fill-opacity=".9" stroke="${isActive?'#c28427':'#c1b289'}" stroke-width="2"/><g stroke="#5c6048" stroke-width="3" stroke-linejoin="round">${atlasIcon(z.icon)}</g><rect x="${-labelWidth/2}" y="36" rx="9" width="${labelWidth}" height="34"/><text y="61" text-anchor="middle">${esc(z.label)}</text></g>`;}).join('')+ATLAS.zones.filter(z=>active.has(z.id)&&!ATLAS.landmarks.some(l=>l.id===z.id)&&z.id!=='field').map(z=>`<g class="atlas-area-label" data-zone="${z.id}" role="button" tabindex="0" aria-label="查看${esc(z.label)}的怪物" transform="translate(${z.bounds[0]+z.bounds[2]/2} ${z.bounds[1]+z.bounds[3]/2})"><rect x="-90" y="-18" width="180" height="36" rx="9"/><text text-anchor="middle" y="8">${esc(z.label)}</text></g>`).join('');}
+function renderInteractiveAtlas(){if(mapWorld&&mapWorld!==ATLAS.world)switchAtlas(mapWorld);mapWorld=ATLAS.world;$('#main').innerHTML=`<div class="atlas-heading"><div><h1>地图找怪</h1><span>${esc(ATLAS.world)}</span></div><select id="interactive-world" aria-label="切换世界">${mapWorlds().map(w=>`<option ${w===ATLAS.world?'selected':''}>${esc(w)}</option>`).join('')}</select></div><div class="interactive-atlas"><section class="map-workspace" aria-label="${esc(ATLAS.world)}交互地图"><div class="atlas-place-bar"><select id="atlas-place" aria-label="选择地点"><option value="">世界全览</option>${atlasCurrentPlaces().map(p=>`<option value="${p.id}" ${ATLAS.zones.find(z=>z.id===atlasState.zone)?.map===p.id?'selected':''}>${esc(p.name)} · ${p.entries.length} 条记录</option>`).join('')}</select><span>${atlasCurrentPlaces().length} 个地点</span></div><div class="map-topline"><span id="atlas-status" aria-live="polite"></span><button class="link-button" data-atlas-clear>世界全览</button></div><div class="map-canvas"><svg id="interactive-map" viewBox="${Object.values(atlasState.view).join(' ')}" role="group" aria-label="${esc(ATLAS.world)}，可拖动和缩放" tabindex="0">${atlasTerrain()}<g id="atlas-overlay">${atlasOverlay()}</g></svg><div class="map-zoom"><button data-atlas-zoom="in" aria-label="放大地图">＋</button><button data-atlas-zoom="out" aria-label="缩小地图">−</button><button data-atlas-fit aria-label="定位当前怪物">◎</button></div><span class="map-scale-note">${ATLAS.layout==='diagram'?'区域导航 · 非地理比例':'中文方位示意 · 非等比例'}</span></div><div id="atlas-selection" aria-live="polite"></div></section><aside class="map-roster"><div class="map-roster-heading"><h2 id="atlas-list-title">寻找怪物</h2><span id="atlas-count"></span></div><label class="search"><span aria-hidden="true">⌕</span><input id="atlas-monster-search" type="search" aria-label="地图怪物搜索" placeholder="搜全部世界的怪物 / 编号" value="${esc(atlasState.q)}"></label><div class="map-roster-filters"><select id="atlas-family" aria-label="地图系别筛选"><option value="">全部系别</option>${D.families.slice(1).map((v,i)=>`<option value="${i+1}" ${atlasState.family===String(i+1)?'selected':''}>${v}</option>`).join('')}</select><select id="atlas-rank" aria-label="地图阶级筛选"><option value="">全部阶级</option>${RANK_ORDER.map(v=>`<option ${atlasState.rank===v?'selected':''}>${v}</option>`).join('')}</select></div><div id="atlas-search-scope"></div><div id="atlas-roster"></div></aside></div><details class="atlas-source"><summary>地图依据</summary><p>${ATLAS.precision}。色块表示方向范围；洞窟标记表示地点入口，不代表洞内刷怪坐标。未细分范围的记录只高亮整个世界。</p>${ATLAS.sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label} ↗</a>`).join(' · ')}</details>`;updateAtlas();bindAtlasGestures();}
+function updateAtlas(){const placeSelect=$('#atlas-place');if(placeSelect)placeSelect.value=ATLAS.zones.find(z=>z.id===atlasState.zone)?.map||'';const hits=atlasState.monster?atlasLocations(atlasState.monster):[];const m=byId.get(atlasState.monster),z=ATLAS.zones.find(z=>z.id===atlasState.zone);$('#atlas-overlay').innerHTML=atlasOverlay();$('#atlas-status').textContent=m?name(m):z?z.label:'点怪物，查看位置';$('#atlas-selection').innerHTML=m?`<div class="atlas-selected-monster">${image(m)}<div><strong>${esc(name(m))}</strong><small>${D.families[m.family]} · ${m.rank}</small></div><button class="btn small" data-monster="${m.id}">合成材料</button></div>${atlasOtherWorldButtons(m.id)}<div class="atlas-location-list">${hits.map((h,i)=>`<button class="atlas-location" data-atlas-location="${i}"><strong>${h.precision==='world'?'仅确认世界':h.precision==='entrance'?'地点内':'出没范围'} · ${esc(h.mapName)}</strong><span>${esc(h.description)}</span><small>${esc(h.condition)}</small></button>`).join('')}</div>`:z?`<div class="atlas-region-caption"><strong>${esc(z.label)}</strong><span>${z.precision==='entrance'?'地点内记录，尚未细分楼层':z.id==='field'?'此列表仅收录尚未细分野外范围的记录':'已收录的区域记录'}</span><button class="link-button" data-atlas-clear>全部地点</button></div>`:'<div class="atlas-quick"><span>试着找</span>'+AC.zoneMonsters(ATLAS,D.maps,'').sort((a,b)=>byId.get(a).no-byId.get(b).no).slice(0,3).map(id=>`<button data-atlas-monster="${id}">${image(byId.get(id))}${esc(name(byId.get(id)))}</button>`).join('')+'</div>';renderAtlasRoster();}
+function renderAtlasRoster(){const across=!!atlasState.q.trim(),allowed=new Set(across?D.maps.flatMap(p=>p.entries.map(e=>e.monster)):AC.zoneMonsters(ATLAS,D.maps,atlasState.zone)),list=C.filterCatalog(D.monsters,{q:atlasState.q,family:atlasState.family,rank:atlasState.rank},save).filter(m=>allowed.has(m.id)).sort((a,b)=>a.no-b.no);$('#atlas-count').textContent=list.length+' 种';$('#atlas-search-scope').textContent=across?'全部世界的搜索结果':'';$('#atlas-list-title').textContent=across?'搜索结果':atlasState.zone?(ATLAS.zones.find(z=>z.id===atlasState.zone)?.label||'此区域'):'寻找怪物';$('#atlas-roster').innerHTML=list.map(m=>{const hits=atlasLocations(m.id),detail=hits.find(h=>h.precision!=='world'),worlds=AC.monsterWorlds(ATLAS_BOOK,D.maps,m.id);return `<button class="atlas-roster-item ${atlasState.monster===m.id?'selected':''}" data-atlas-monster="${m.id}" aria-pressed="${atlasState.monster===m.id}" aria-label="在地图定位${esc(name(m))}">${image(m)}<span><strong>${esc(name(m))}</strong><small>${D.families[m.family]} · ${m.rank} · ${across?esc(worlds.join(' / ')):detail?esc(detail.mapName):esc(ATLAS.world+'野外')}</small></span><span class="atlas-locate">⌖</span></button>`}).join('')||'<div class="map-empty">'+(atlasState.q||atlasState.family||atlasState.rank?'暂无匹配记录':'此地点未收录野外怪物')+'<button class="link-button" data-atlas-reset-filters>清空筛选</button></div>';}
 function setAtlasView(v){atlasState.view=AC.clampView(ATLAS,v);$('#interactive-map')?.setAttribute('viewBox',Object.values(atlasState.view).join(' '));}
 function fitAtlas(ids){setAtlasView(AC.fitZones(ATLAS,ids));}
-function selectAtlasMonster(id){atlasState.monster=Number(id);atlasState.zone='';const hits=atlasLocations(id);fitAtlas(hits.flatMap(h=>h.zones));updateAtlas();if(innerWidth<=720)$('.map-workspace').scrollIntoView({block:'start',behavior:'smooth'});}
+function selectAtlasMonster(id){const worlds=AC.monsterWorlds(ATLAS_BOOK,D.maps,id);if(!worlds.length)return;if(!worlds.includes(ATLAS.world)){switchAtlas(worlds[0]);renderInteractiveAtlas();}atlasState.monster=Number(id);atlasState.zone='';const hits=atlasLocations(id);fitAtlas(hits.flatMap(h=>h.zones));updateAtlas();if(innerWidth<=720)$('.map-workspace').scrollIntoView({block:'start',behavior:'smooth'});}
 function zoomAtlas(factor,anchor={x:.5,y:.5}){const v=atlasState.view,w=Math.max(225,Math.min(900,v.w*factor)),h=w*.8;setAtlasView({x:v.x+(v.w-w)*anchor.x,y:v.y+(v.h-h)*anchor.y,w});}
-function atlasToMonster(mapId,monster){const target=mapById.get(mapId);if(!target)return;mapPlace=mapId;mapWorld=target.world;mapSearch='';if(target.world===ATLAS.world){atlasState.monster=monster?Number(monster):null;atlasState.zone=monster?'':ATLAS.zones.find(z=>z.map===mapId)?.id||'';atlasState.q='';atlasState.family='';atlasState.rank='';atlasState.view=AC.fitZones(ATLAS,monster?atlasLocations(monster).flatMap(h=>h.zones):[atlasState.zone]);}closeModal();state.view='maps';shell();window.scrollTo(0,0);}
+function atlasToMonster(mapId,monster){const target=AC.resolveTarget(ATLAS_BOOK,D.maps,mapId,monster);if(!target)return;switchAtlas(target.atlas.world);mapPlace=mapId;mapSearch='';atlasState.monster=target.monster;atlasState.zone=target.monster?'':target.zone;atlasState.view=AC.fitZones(ATLAS,target.zones);closeModal();state.view='maps';shell();window.scrollTo(0,0);}
 function bindAtlasGestures(){const svg=$('#interactive-map'),pointers=new Map();let last=null,pinched=false,moved=false;
  const point=e=>({x:e.clientX,y:e.clientY});const distance=()=>{const p=[...pointers.values()];return Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);};
  svg.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointers.set(e.pointerId,point(e));moved=false;atlasIgnoreClick=false;if(pointers.size===2){last={distance:distance()};pinched=true;}else{last=point(e);pinched=false;}});
@@ -737,9 +2710,14 @@ function bindAtlasGestures(){const svg=$('#interactive-map'),pointers=new Map();
  svg.addEventListener('wheel',e=>{e.preventDefault();zoomAtlas(e.deltaY>0?1.15:1/1.15);},{passive:false});
  svg.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-'].includes(e.key)){e.preventDefault();if(['+','=','-'].includes(e.key))return zoomAtlas(e.key==='-'?1.25:.8);const v=atlasState.view;setAtlasView({...v,x:v.x+({'ArrowLeft':-1,'ArrowRight':1}[e.key]||0)*v.w*.1,y:v.y+({'ArrowUp':-1,'ArrowDown':1}[e.key]||0)*v.h*.1});}else if(['Enter',' '].includes(e.key)&&e.target.closest('[data-zone]')){e.preventDefault();e.target.closest('[data-zone]').dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
 }
-document.addEventListener('click',e=>{const target=e.target.closest('[data-zone],button');if(!target)return;if(target.hasAttribute('data-zone')){if(atlasIgnoreClick){atlasIgnoreClick=false;return;}const id=target.dataset.zone==='village'?'village-around':target.dataset.zone==='town'?'town-around':target.dataset.zone;atlasState.q='';atlasState.family='';atlasState.rank='';$('#atlas-monster-search').value='';$('#atlas-family').value='';$('#atlas-rank').value='';if(id==='oasis'){atlasState.monster=null;atlasState.zone='oasis-nw';fitAtlas(['oasis-nw']);}else{atlasState.monster=null;atlasState.zone=id;fitAtlas([id]);}updateAtlas();return;}atlasIgnoreClick=false;if(target.hasAttribute('data-atlas-monster'))selectAtlasMonster(target.dataset.atlasMonster);if(target.hasAttribute('data-atlas-clear')){atlasState.monster=null;atlasState.zone='';fitAtlas([]);updateAtlas();}if(target.hasAttribute('data-atlas-zoom'))zoomAtlas(target.dataset.atlasZoom==='in'?.75:1.3333);if(target.hasAttribute('data-atlas-fit'))fitAtlas(atlasState.monster?atlasLocations(atlasState.monster).flatMap(h=>h.zones):[atlasState.zone]);if(target.hasAttribute('data-atlas-location')){const h=atlasLocations(atlasState.monster)[+target.dataset.atlasLocation];if(h)fitAtlas(h.zones);}if(target.hasAttribute('data-atlas-reset-filters')){atlasState.q='';atlasState.family='';atlasState.rank='';renderInteractiveAtlas();}});
+document.addEventListener('click',e=>{const target=e.target.closest('[data-zone],button');if(!target)return;if(target.hasAttribute('data-zone')){if(atlasIgnoreClick){atlasIgnoreClick=false;return;}const rawId=target.dataset.zone,id=ATLAS.landmarks.find(l=>l.id===rawId)?.target||rawId;if(!ATLAS.zones.some(z=>z.id===id))return;atlasState.q='';atlasState.family='';atlasState.rank='';$('#atlas-monster-search').value='';$('#atlas-family').value='';$('#atlas-rank').value='';atlasState.monster=null;atlasState.zone=id;fitAtlas([id]);updateAtlas();return;}atlasIgnoreClick=false;if(target.hasAttribute('data-atlas-monster'))selectAtlasMonster(target.dataset.atlasMonster);if(target.hasAttribute('data-atlas-clear')){atlasState.monster=null;atlasState.zone='';fitAtlas([]);updateAtlas();}if(target.hasAttribute('data-atlas-zoom'))zoomAtlas(target.dataset.atlasZoom==='in'?.75:1.3333);if(target.hasAttribute('data-atlas-fit'))fitAtlas(atlasState.monster?atlasLocations(atlasState.monster).flatMap(h=>h.zones):[atlasState.zone]);if(target.hasAttribute('data-atlas-location')){const h=atlasLocations(atlasState.monster)[+target.dataset.atlasLocation];if(h)fitAtlas(h.zones);}if(target.hasAttribute('data-atlas-reset-filters')){atlasState.q='';atlasState.family='';atlasState.rank='';renderInteractiveAtlas();}});
 document.addEventListener('input',e=>{if(e.target.id==='atlas-monster-search'){atlasState.q=e.target.value;renderAtlasRoster();}});
-document.addEventListener('change',e=>{if(e.target.id==='atlas-family'||e.target.id==='atlas-rank'){atlasState[e.target.id==='atlas-family'?'family':'rank']=e.target.value;renderAtlasRoster();}if(e.target.id==='interactive-world'){mapWorld=e.target.value;mapPlace=D.maps.find(m=>m.world===mapWorld).id;renderMaps();}});
+document.addEventListener('change',e=>{if(e.target.id==='atlas-family'||e.target.id==='atlas-rank'){atlasState[e.target.id==='atlas-family'?'family':'rank']=e.target.value;renderAtlasRoster();}if(e.target.id==='interactive-world'){switchAtlas(e.target.value);mapPlace=D.maps.find(m=>m.world===mapWorld).id;renderMaps();}});
+
+function atlasOtherWorldButtons(id){const worlds=AC.monsterWorlds(ATLAS_BOOK,D.maps,id);return worlds.length>1?'<div class="atlas-other-worlds"><span>也出现在</span>'+worlds.filter(w=>w!==ATLAS.world).map(w=>'<button data-atlas-world="'+esc(w)+'" data-focus-monster="'+id+'">'+esc(w)+'</button>').join('')+'</div>':'';}
+function atlasWorldTerrain(){const themes={water:['#e0eef0','#659aa6'],ice:['#edf4f5','#8ba6ae'],sky:['#e8eff0','#8f9e8d'],forest:['#f2f2e5','#7c9068'],rift:['#eeebf3','#7d738d'],lava:['#f4e8db','#9c8068'],metal:['#edf0ec','#8d9d8f']},[bg,stroke]=themes[ATLAS.theme]||themes.forest;return '<defs><pattern id="atlas-hatch" width="15" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V15" stroke="#b37829" stroke-opacity=".16" stroke-width="5"/></pattern></defs><rect width="900" height="720" fill="'+bg+'"/>'+ATLAS.terrain.map(p=>'<path d="'+p.d+'" fill="'+p.fill+'" stroke="'+stroke+'" stroke-width="4" stroke-linejoin="round"/>').join('')+(ATLAS.links||[]).map(([a,b])=>{a=ATLAS.landmarks.find(l=>l.id===a);b=ATLAS.landmarks.find(l=>l.id===b);return '<path d="M'+a.x+' '+a.y+'L'+b.x+' '+b.y+'" stroke="#668459" stroke-width="5" stroke-dasharray="9 8"/>'}).join('')+(ATLAS.layout==='diagram'?'<text x="450" y="38" text-anchor="middle" class="atlas-geography">'+esc(ATLAS.title)+'</text>':'<g transform="translate(850 70)" fill="#476350"><path d="M0-22L-9 3 0-2 9 3Z"/><text y="29" text-anchor="middle" font-size="20">北</text></g>');}
+document.addEventListener('change',e=>{if(e.target.id==='atlas-place'){atlasState.monster=null;atlasState.zone=ATLAS.zones.find(z=>z.map===e.target.value)?.id||'';atlasState.q='';atlasState.family='';atlasState.rank='';atlasState.view=AC.fitZones(ATLAS,[atlasState.zone]);renderInteractiveAtlas();}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-atlas-world]');if(b){const id=+b.dataset.focusMonster;switchAtlas(b.dataset.atlasWorld);renderInteractiveAtlas();selectAtlasMonster(id);}});
 
 // Feature functions are inserted inside app.js's closure by the one-time updater.
 function familyNav(){const examples=[0,1,53,111,116,205,255,298,265];return `<section class="families" aria-label="怪物系别分类"><div class="section-title"><h2>按系别找伙伴</h2><button class="link-button" data-family="" aria-pressed="${!state.family}">全部系别 · ${D.monsters.length}</button></div><div class="family-grid">${D.families.slice(1).map((f,i)=>{const id=i+1;return `<button class="family-entry f-${id} ${Number(state.family)===id?'selected':''}" data-family="${id}" aria-pressed="${Number(state.family)===id}" aria-label="${f}分类">${image(byId.get(examples[id]))}<span><strong>${f}</strong><small>${D.monsters.filter(m=>m.family===id).length} 种${id===3?' · 含植物类':''}</small></span></button>`}).join('')}</div></section>`}
