@@ -50,11 +50,15 @@
    function outgoing(id){if(outgoingCache.has(id))return outgoingCache.get(id);const routes=[];for(const b of sorted)for(const r of calculate(id,b.id))if(['normal','same'].includes(r.type))routes.push({type:'normal',parents:[id,b.id],result:r.id,reason:r.reason});if(outgoingCache.size>=20)outgoingCache.delete(outgoingCache.keys().next().value);outgoingCache.set(id,routes);return routes}
    return {calculate,effectiveNo,incoming,outgoing};
  }
+ function matchesMonster(m,q,customName=''){
+   const query=String(q||'').normalize('NFKC').trim().toLowerCase().replace(/^(?:#|no\.?\s*)/,'');
+   return !query||[m.name,...(m.aliases||[]),customName].some(n=>String(n).normalize('NFKC').toLowerCase().includes(query))||String(m.no)===String(Number(query));
+ }
  function filterCatalog(monsters,filters,save,omit=''){
    const families=filters.families?.length?filters.families.map(Number):filters.family?[Number(filters.family)]:[],ranks=filters.ranks?.length?filters.ranks:filters.rank?[filters.rank]:[],sizes=filters.sizes?.length?filters.sizes.map(Number):filters.size?[Number(filters.size)]:[];
    const query=(filters.q||'').normalize('NFKC').trim().toLowerCase().replace(/^(?:#|no\.?\s*)/,'');
-   return monsters.filter(m=>(filters.view!=='collection'||save.favorites.includes(m.id))&&(!filters.onlyOwned||save.owned[m.id]>0)&&(omit==='family'||!families.length||families.includes(m.family))&&(omit==='rank'||!ranks.length||ranks.includes(m.rank))&&(omit==='size'||!sizes.length||sizes.includes(m.size))&&(!query||m.name.toLowerCase().includes(query)||(save.aliases[m.id]||'').toLowerCase().includes(query)||String(m.no)===String(Number(query))));
+   return monsters.filter(m=>(filters.view!=='collection'||save.favorites.includes(m.id))&&(!filters.onlyOwned||save.owned[m.id]>0)&&(omit==='family'||!families.length||families.includes(m.family))&&(omit==='rank'||!ranks.length||ranks.includes(m.rank))&&(omit==='size'||!sizes.length||sizes.includes(m.size))&&matchesMonster(m,query,save.aliases[m.id]||''));
  }
  function catalogFacets(monsters,filters,save){const counts={family:{},rank:{},size:{}};for(const facet of Object.keys(counts))for(const m of filterCatalog(monsters,filters,save,facet))counts[facet][m[facet]]=(counts[facet][m[facet]]||0)+1;return counts;}
- const api={needCounts,readiness,validateSave,mergeSaves,createBreedingEngine,filterCatalog,catalogFacets};if(typeof module!=='undefined')module.exports=api;else root.DQM_CORE=api;
+ const api={needCounts,readiness,validateSave,mergeSaves,createBreedingEngine,filterCatalog,catalogFacets,matchesMonster};if(typeof module!=='undefined')module.exports=api;else root.DQM_CORE=api;
 })(typeof window!=='undefined'?window:globalThis);
