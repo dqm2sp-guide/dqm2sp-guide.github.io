@@ -6,7 +6,6 @@ const data=JSON.parse(await read('data.json'));
 const atlasUi=await read('src/interactive-atlas.js'),atlasData=await read('src/atlas-data.json'),guideUi=await read('src/gameplay-guide.js'),guideData=await read('src/gameplay-guide.json');
 const modules={};for(const file of ['usability','acquisition-ui','features-v2'])modules[file]=await read('src/'+file+'.js');
 let app=await read('src/app.js');
-modules['features-v2']+='\n'+await read('src/battle-ui.js');
 for(const [marker,file] of [['USABILITY_UI','usability'],['ACQUISITION_UI','acquisition-ui'],['FEATURES_V2','features-v2']])app=app.replace('/* '+marker+' */',()=>modules[file]);
 app=app.replace('/* INTERACTIVE_ATLAS */',()=>(atlasUi.replace('/* ATLAS_DATA */',()=>atlasData))).replace('/* GAMEPLAY_GUIDE */',()=>guideUi.replace('/* GAMEPLAY_GUIDE_DATA */',()=>guideData));
 const css=(await Promise.all(['style','gameplay-guide','acquisition-ui','usability','interactive-atlas'].map(f=>read('src/'+f+'.css')))).join('\n');
