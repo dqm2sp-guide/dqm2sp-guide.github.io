@@ -1,0 +1,712 @@
+{
+  "checked": "2026-11-09",
+  "version": "手机 SP",
+  "intro": "19 件衣服：6 件直接获取，10 件宝箱／奖励纸样制作，3 件巡游商人纸样制作。",
+  "translationNote": "服装和部分地名采用中文参考译名，尚未逐项对齐汉化实机。",
+  "steps": [
+    "先在游戏换装列表核对已有衣服；纸样集齐和成衣领取分别记录。",
+    "制作类共 13 套、65 张纸样；每套五张齐全后找天空世界芬特村虎男村长制作。",
+    "商人路线依次为龙王→海盗→传说，购图总计 260,000 G；全部 13 套制作费共 18,500 G。",
+    "全 19 件成衣集齐，获得时尚大师称号，解锁钥匙前缀“时髦的”。"
+  ],
+  "sources": [
+    {
+      "label": "Game8：剧情服领取节点",
+      "url": "https://game8.jp/dqm2/320629"
+    },
+    {
+      "label": "Altema：SP 衣服与纸样",
+      "url": "https://altema.jp/iruruka/katagami"
+    },
+    {
+      "label": "Altema：巡游商人顺序和位置",
+      "url": "https://altema.jp/iruruka/sasuraishouninn"
+    },
+    {
+      "label": "神游戏攻略：纸样与制作费",
+      "url": "https://kamigame.jp/dqm2_sp/page/118743512836472839.html"
+    },
+    {
+      "label": "Game-cap：纸样地点与费用核对",
+      "url": "https://game-cap.com/dqm2/etc/fuku.html"
+    },
+    {
+      "label": "神游戏攻略：招募问答",
+      "url": "https://kamigame.jp/dqm2_sp/page/117422814218158087.html"
+    },
+    {
+      "label": "神游戏攻略：每日活动战",
+      "url": "https://kamigame.jp/dqm2_sp/page/119476894893604872.html"
+    }
+  ],
+  "outfits": [
+    {
+      "id": "everyday",
+      "name": "日常服",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "初始持有，在换装列表确认即可。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "arabian",
+      "name": "阿拉伯服",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "沙漠世界：阿西亚镇旅馆，答应帮助马戏团团长，推进该段剧情领取。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "sailor",
+      "name": "水手制服",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "玛尔塔怪物竞技场：赢得 C 级大会后领取。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "fluffy",
+      "name": "毛绒外套",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "通关水世界并学会碎岩后，回玛尔塔大街破坏挡路巨石，完成事件领取。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "monster",
+      "name": "魔物玩偶服",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "天空世界：完成芬特村贤者塔与扫墓事件，再找村内东南屋的虎男村长领取。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "gothic",
+      "name": "哥特服",
+      "method": "剧情／直接领取",
+      "cost": "无需制作费",
+      "requirements": "按下列剧情节点领取；哥特服需主动开箱。",
+      "steps": [
+        "主线击败多克后，回夹缝世界崩塌后的多克房间，打开后方红宝箱。此件不会只靠剧情自动到账。"
+      ],
+      "pieces": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/320629",
+        "https://altema.jp/iruruka/katagami"
+      ]
+    },
+    {
+      "id": "rare-desert",
+      "name": "高级阿拉伯服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 500 G",
+      "tailorGold": 500,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "人鱼国高台：从波罗尼亚村附近海域进入漩涡；若落点不对，重试。",
+        "巨象体内：到东国找大臣使巨象入睡，再从鼻子进入。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-desert-1",
+          "label": "纸样 1",
+          "location": "玛尔塔之脐：渡水后开红宝箱。"
+        },
+        {
+          "id": "rare-desert-2",
+          "label": "纸样 2",
+          "location": "水世界·人鱼国高台：由海上漩涡传送到达，开红宝箱。"
+        },
+        {
+          "id": "rare-desert-3",
+          "label": "纸样 3",
+          "location": "水世界·海神神殿：1 层西南红宝箱。"
+        },
+        {
+          "id": "rare-desert-4",
+          "label": "纸样 4",
+          "location": "冰雪世界·巨象体内：胃袋红宝箱。"
+        },
+        {
+          "id": "rare-desert-5",
+          "label": "纸样 5",
+          "location": "天空世界·希塔诺镇：向西走到地图西端，开红宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html"
+      ]
+    },
+    {
+      "id": "rare-sailor",
+      "name": "时尚水手制服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 500 G",
+      "tailorGold": 500,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "招募问答在儿童大师大会优胜后，到牧场找父亲开启；依次做到第 4 题。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-sailor-1",
+          "label": "纸样 1",
+          "location": "玛尔塔·起始海岸：破坏挡路岩石后的红宝箱。"
+        },
+        {
+          "id": "rare-sailor-2",
+          "label": "纸样 2",
+          "location": "招募问答第 4 题奖励：带指定怪物咆哮熊（图鉴编号 269，别名鸟头熊）给牧场的父亲看。"
+        },
+        {
+          "id": "rare-sailor-3",
+          "label": "纸样 3",
+          "location": "宿木村：长老家旁的红宝箱。"
+        },
+        {
+          "id": "rare-sailor-4",
+          "label": "纸样 4",
+          "location": "冰雪世界·北山：从飞行点飞到另一侧，开红宝箱。"
+        },
+        {
+          "id": "rare-sailor-5",
+          "label": "纸样 5",
+          "location": "玛尔塔城·卡美哈王子房间：红宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://kamigame.jp/dqm2_sp/page/117422814218158087.html"
+      ]
+    },
+    {
+      "id": "rare-snow",
+      "name": "雅致毛绒外套",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 1,000 G",
+      "tailorGold": 1000,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "前往金字塔附近的幻之湖，在帐篷找海狸交谈，乘坐巨龙；到高台下车后找宝箱。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-snow-1",
+          "label": "纸样 1",
+          "location": "沙漠世界·仙人掌球聚落：乘巨龙抵达北部高台，开红宝箱。"
+        },
+        {
+          "id": "rare-snow-2",
+          "label": "纸样 2",
+          "location": "天空世界·死者城：地下 2 层西北宝箱。"
+        },
+        {
+          "id": "rare-snow-3",
+          "label": "纸样 3",
+          "location": "玛尔塔之脐：从飞行点飞到另一侧，开红宝箱。"
+        },
+        {
+          "id": "rare-snow-4",
+          "label": "纸样 4",
+          "location": "天空世界·西山：梯子上方宝箱。"
+        },
+        {
+          "id": "rare-snow-5",
+          "label": "纸样 5",
+          "location": "冰雪世界·湖上魔塔：2 层西南红宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html"
+      ]
+    },
+    {
+      "id": "rare-monster",
+      "name": "缤纷魔物玩偶服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 1,000 G",
+      "tailorGold": 1000,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "冰穴入口在巨象体内另一端；巨象必须睡在东国东北侧。位置不对时重新找大臣使其入睡，再确认地图。",
+        "每日活动战须打完后日谈的隐藏头目，并赢得竞技场 S 级；之后找竞技场接待，首战对手为玛尔塔女孩。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-monster-1",
+          "label": "纸样 1",
+          "location": "冰雪世界·雪山冰穴：地下 1 层入口附近红宝箱。"
+        },
+        {
+          "id": "rare-monster-2",
+          "label": "纸样 2",
+          "location": "沙漠世界·金字塔：1 层西侧红宝箱。"
+        },
+        {
+          "id": "rare-monster-3",
+          "label": "纸样 3",
+          "location": "冰雪世界·湖上魔塔：1 层红宝箱。"
+        },
+        {
+          "id": "rare-monster-4",
+          "label": "纸样 4",
+          "location": "天空世界·小洞窟：1 层红宝箱。"
+        },
+        {
+          "id": "rare-monster-5",
+          "label": "纸样 5",
+          "location": "玛尔塔竞技场·每日活动战：首次击败玛尔塔女孩的奖励。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://kamigame.jp/dqm2_sp/page/119476894893604872.html"
+      ]
+    },
+    {
+      "id": "rare-gothic",
+      "name": "酷感哥特服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 1,500 G",
+      "tailorGold": 1500,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "高台小岛不能直接步行上去；找晴天海面上的漩涡，传送落点不对就重试。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-gothic-1",
+          "label": "纸样 1",
+          "location": "水世界·波特里兹港西侧高台小岛：由海上漩涡到达后开宝箱。"
+        },
+        {
+          "id": "rare-gothic-2",
+          "label": "纸样 2",
+          "location": "天空世界·贤者塔：2 层东侧宝箱。"
+        },
+        {
+          "id": "rare-gothic-3",
+          "label": "纸样 3",
+          "location": "沙漠世界·金字塔外东侧：红宝箱。"
+        },
+        {
+          "id": "rare-gothic-4",
+          "label": "纸样 4",
+          "location": "冰雪世界·迷失森林：入口向西的高台红宝箱。"
+        },
+        {
+          "id": "rare-gothic-5",
+          "label": "纸样 5",
+          "location": "宿木塔·通往顶端的道路：东侧宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html"
+      ]
+    },
+    {
+      "id": "elegant",
+      "name": "雅致礼服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 2,000 G",
+      "tailorGold": 2000,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "elegant-1",
+          "label": "纸样 1",
+          "location": "水世界·海神神殿：地下 2 层东侧宝箱。"
+        },
+        {
+          "id": "elegant-2",
+          "label": "纸样 2",
+          "location": "沙漠世界·金字塔：2 层东北宝箱。"
+        },
+        {
+          "id": "elegant-3",
+          "label": "纸样 3",
+          "location": "沙漠世界·东洞窟：进入后附近的红宝箱。"
+        },
+        {
+          "id": "elegant-4",
+          "label": "纸样 4",
+          "location": "宿木塔：5 层东北宝箱。"
+        },
+        {
+          "id": "elegant-5",
+          "label": "纸样 5",
+          "location": "小徽章累计 75 枚奖励：找玛尔塔的小徽章兑换 NPC 领取。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "contest",
+      "name": "决胜服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 1,500 G",
+      "tailorGold": 1500,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "雪人聚落：使用改变天气的玩家特技制造降雪，再传送一次刷新道路；从北山传送点向西南走。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "contest-1",
+          "label": "纸样 1",
+          "location": "玛尔塔城：从 3 层露台进入宝物库，开东侧宝箱。"
+        },
+        {
+          "id": "contest-2",
+          "label": "纸样 2",
+          "location": "宿木塔：3 层通往 4 层道路附近的宝箱。"
+        },
+        {
+          "id": "contest-3",
+          "label": "纸样 3",
+          "location": "水世界·海神神殿：地下 1 层宝箱。"
+        },
+        {
+          "id": "contest-4",
+          "label": "纸样 4",
+          "location": "小徽章累计 20 枚奖励：找小徽章兑换 NPC 领取。"
+        },
+        {
+          "id": "contest-5",
+          "label": "纸样 5",
+          "location": "冰雪世界·雪人聚落：下雪时从北山西南的雪路上去，开宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "rare-contest",
+      "name": "优雅决胜服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 2,000 G",
+      "tailorGold": 2000,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-contest-1",
+          "label": "纸样 1",
+          "location": "水世界·海神神殿：地下 1 层西南宝箱。"
+        },
+        {
+          "id": "rare-contest-2",
+          "label": "纸样 2",
+          "location": "天空世界·贤者塔：4 层宝箱。"
+        },
+        {
+          "id": "rare-contest-3",
+          "label": "纸样 3",
+          "location": "宿木塔：4 层中央附近红宝箱。"
+        },
+        {
+          "id": "rare-contest-4",
+          "label": "纸样 4",
+          "location": "沙漠世界·金字塔：1 层入口右侧红宝箱。"
+        },
+        {
+          "id": "rare-contest-5",
+          "label": "纸样 5",
+          "location": "小徽章累计 40 枚奖励：找小徽章兑换 NPC 领取。"
+        }
+      ],
+      "sourceUrls": [
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "service",
+      "name": "侍应服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 1,500 G",
+      "tailorGold": 1500,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "service-1",
+          "label": "纸样 1",
+          "location": "冰雪世界·北山洞穴：登梯向北，进入小洞后找宝箱。"
+        },
+        {
+          "id": "service-2",
+          "label": "纸样 2",
+          "location": "小徽章累计 10 枚奖励：找小徽章兑换 NPC 领取。"
+        },
+        {
+          "id": "service-3",
+          "label": "纸样 3",
+          "location": "水世界·青洞窟：进入西北海域，在洞内开宝箱。"
+        },
+        {
+          "id": "service-4",
+          "label": "纸样 4",
+          "location": "冰雪世界·湖上魔塔：3 层宝箱。"
+        },
+        {
+          "id": "service-5",
+          "label": "纸样 5",
+          "location": "天空世界·风之塔：4 层东南宝箱。"
+        }
+      ],
+      "sourceUrls": [
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "rare-service",
+      "name": "时髦侍应服",
+      "method": "宝箱／任务纸样",
+      "cost": "制作 2,000 G",
+      "tailorGold": 2000,
+      "patternGold": 0,
+      "requirements": "集齐本套 1～5 号纸样；部分地点须通关、飞行或完成后日谈。",
+      "steps": [
+        "招募问答第 11 题起须主线通关；继续按顺序完成到第 13 题。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "rare-service-1",
+          "label": "纸样 1",
+          "location": "沙漠世界·金字塔：先上 2 层绕行，再下到目标 1 层区域开箱。"
+        },
+        {
+          "id": "rare-service-2",
+          "label": "纸样 2",
+          "location": "宿木塔：2 层，通往 3 层道路之前的红宝箱。"
+        },
+        {
+          "id": "rare-service-3",
+          "label": "纸样 3",
+          "location": "玛尔塔·小型怪物放牧地：从入口东侧飞行点飞过去开红宝箱。"
+        },
+        {
+          "id": "rare-service-4",
+          "label": "纸样 4",
+          "location": "天空世界·魔王城：3 层东北红宝箱。"
+        },
+        {
+          "id": "rare-service-5",
+          "label": "纸样 5",
+          "location": "招募问答第 13 题奖励：给父亲看一只超巨大身体（4 格）的怪物。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/katagami",
+        "https://kamigame.jp/dqm2_sp/page/118743512836472839.html",
+        "https://kamigame.jp/dqm2_sp/page/117422814218158087.html"
+      ]
+    },
+    {
+      "id": "dragonlord",
+      "name": "龙王扮装",
+      "method": "巡游商人",
+      "cost": "纸样 10,000 G＋制作 2,000 G",
+      "tailorGold": 2000,
+      "patternGold": 10000,
+      "requirements": "按纸样 1→5 的顺序找商人；买下当前纸样后才会移到下一站。",
+      "steps": [
+        "通关后返回芬特村开启路线；第 1 张免费，后四张各 2,500 G。",
+        "第 4 站的方位在不同攻略中有差异，按大颗仙人掌、流沙瀑布和瀑布左侧三个地标寻找。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "dragonlord-1",
+          "label": "纸样 1",
+          "location": "天空世界·芬特村：与斑点史莱姆交谈，免费取得第 1 张并开启巡游商人路线。"
+        },
+        {
+          "id": "dragonlord-2",
+          "label": "纸样 2",
+          "location": "沙漠世界·卡尔卡拉村入口：购买，2,500 G。"
+        },
+        {
+          "id": "dragonlord-3",
+          "label": "纸样 3",
+          "location": "沙漠世界·绿洲营地：购买，2,500 G。"
+        },
+        {
+          "id": "dragonlord-4",
+          "label": "纸样 4",
+          "location": "沙漠世界·流沙瀑布旁：以大颗仙人掌和瀑布为地标，找瀑布左侧商人，2,500 G。"
+        },
+        {
+          "id": "dragonlord-5",
+          "label": "纸样 5",
+          "location": "水世界·约尔德村旅馆旁：购买，2,500 G。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/sasuraishouninn",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "pirate",
+      "name": "海盗服",
+      "method": "巡游商人",
+      "cost": "纸样 50,000 G＋制作 1,000 G",
+      "tailorGold": 1000,
+      "patternGold": 50000,
+      "requirements": "按纸样 1→5 的顺序找商人；买下当前纸样后才会移到下一站。",
+      "steps": [
+        "先买完龙王扮装的第 5 张，商人才会开始海盗服路线。",
+        "第 5 站必须下雪才有通路；晴天可改变天气后重新传送到北山。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "pirate-1",
+          "label": "纸样 1",
+          "location": "水世界·西南聚落：在波罗尼亚村西侧祭坛召唤海龙过去，购买，10,000 G。"
+        },
+        {
+          "id": "pirate-2",
+          "label": "纸样 2",
+          "location": "水世界·波特里兹港西侧小岛：购买，10,000 G。"
+        },
+        {
+          "id": "pirate-3",
+          "label": "纸样 3",
+          "location": "冰雪世界·东国喷泉旁：购买，10,000 G。"
+        },
+        {
+          "id": "pirate-4",
+          "label": "纸样 4",
+          "location": "冰雪世界·西港入口外左侧：购买，10,000 G。"
+        },
+        {
+          "id": "pirate-5",
+          "label": "纸样 5",
+          "location": "冰雪世界·雪人聚落：降雪时由北山西南雪路登上，左侧深处找商人，10,000 G。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/sasuraishouninn",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    },
+    {
+      "id": "legend",
+      "name": "传说服装",
+      "method": "巡游商人",
+      "cost": "纸样 200,000 G＋制作 2,000 G",
+      "tailorGold": 2000,
+      "patternGold": 200000,
+      "requirements": "按纸样 1→5 的顺序找商人；买下当前纸样后才会移到下一站。",
+      "steps": [
+        "先买完海盗服的第 5 张，商人才会开始传说服装路线。",
+        "第 2 站攻略有东南／西南笔误差异，使用“村外下楼梯后转右”的共同路线。",
+        "五张集齐后，去天空世界的芬特村找虎男村长，付制作费领取衣服；拿到成衣才算完成。"
+      ],
+      "pieces": [
+        {
+          "id": "legend-1",
+          "label": "纸样 1",
+          "location": "天空世界·佩伊镇西边坡下的陨石坑：购买，40,000 G。"
+        },
+        {
+          "id": "legend-2",
+          "label": "纸样 2",
+          "location": "天空世界·芬特村外：下楼梯后转右找商人，40,000 G。"
+        },
+        {
+          "id": "legend-3",
+          "label": "纸样 3",
+          "location": "天空世界·魔王城东北墙边凹处：从城外传送点沿右侧墙走，40,000 G。"
+        },
+        {
+          "id": "legend-4",
+          "label": "纸样 4",
+          "location": "玛尔塔·图书馆东南侧：购买，40,000 G。"
+        },
+        {
+          "id": "legend-5",
+          "label": "纸样 5",
+          "location": "玛尔塔城屋顶：购买，40,000 G。"
+        }
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/sasuraishouninn",
+        "https://game-cap.com/dqm2/etc/fuku.html"
+      ]
+    }
+  ]
+}

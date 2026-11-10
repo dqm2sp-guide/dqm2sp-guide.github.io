@@ -1,0 +1,1054 @@
+{
+  "checked": "2026-11-09",
+  "version": "手机SP",
+  "intro": "先选用途，再查看钥匙组合与尚缺称号。这里只收录已找到SP攻略依据的实用路线，不是全部称号表。",
+  "translationNote": "钥匙词条和称号使用中文参考译名；尚未对齐汉化实机。",
+  "unlock": "完成主线结局后，在玛尔塔城1层、锻造屋旁的钥匙炼金店制作。",
+  "notes": [
+    "词条决定候选范围，不保证头目、奖励怪物或地图一致。",
+    "经验与金币路线中，战斗收益和钥匙结算奖励是两件事。",
+    "可在最终确认前取消不满意的生成结果；已确认制作会自动保存，勿把重启当作无损撤销。",
+    "已解锁勾选只保存在本浏览器，不会读取游戏存档。"
+  ],
+  "sources": [
+    {
+      "label": "GameWith：SP钥匙组合",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/223461"
+    },
+    {
+      "label": "Game8：SP钥匙制作",
+      "url": "https://game8.jp/dqm2/314748"
+    },
+    {
+      "label": "Altema：SP钥匙规则",
+      "url": "https://altema.jp/iruruka/osusumekagi"
+    },
+    {
+      "label": "神游戏攻略：SP称号",
+      "url": "https://kamigame.jp/dqm2_sp/page/119605535556239367.html"
+    },
+    {
+      "label": "Altema：铁条称号与位置",
+      "url": "https://altema.jp/iruruka/tetsujyou"
+    },
+    {
+      "label": "Altema：武器钥匙",
+      "url": "https://altema.jp/iruruka/bukikagi"
+    },
+    {
+      "label": "Altema：强化宝珠钥匙",
+      "url": "https://altema.jp/iruruka/orb"
+    },
+    {
+      "label": "GameWith：SP称号与等级",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+    },
+    {
+      "label": "Altema：SP转生怪出现地点",
+      "url": "https://altema.jp/iruruka/tenseimonster"
+    },
+    {
+      "label": "GameWith：宿木剧情",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/222832"
+    },
+    {
+      "label": "Game8：天空世界地图",
+      "url": "https://game8.jp/dqm2/325622"
+    },
+    {
+      "label": "Altema：配合入口与条件",
+      "url": "https://altema.jp/iruruka/haigouyarikata"
+    },
+    {
+      "label": "GameWith：改变天气取得",
+      "url": "https://gamewith.jp/dqm2-irurukasp/article/show/222797"
+    }
+  ],
+  "titles": [
+    {
+      "id": "fashion",
+      "name": "时尚大师",
+      "keyName": "时髦的",
+      "part": "前缀",
+      "condition": "收集全部19套服装。",
+      "howTo": "先补齐服装与版型任务；获得版型后仍需确认对应服装已经入手。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "打开下方「19套服装怎么拿」，先勾选已取得的服装，找出缺少的那几套。",
+        "按每套条目去找指定人物、取得版型或完成对应条件；拿到版型后继续完成制衣，不能只把版型算作服装。",
+        "回游戏服装列表核对19套是否都已取得；达到条件会自动获得称号，再回钥匙炼金选择「时髦的」。"
+      ],
+      "guideTarget": "costumes"
+    },
+    {
+      "id": "world",
+      "name": "世界的救济者",
+      "keyName": "世界的",
+      "part": "前缀",
+      "condition": "击败通关后剧情的最终头目，完成宿木世界。",
+      "howTo": "先完成主线结局，再推进宿木世界；只完成一周目尚不满足条件。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/222832"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "family": "？？？系",
+      "steps": [
+        "先完成主线结局，再按剧情攻略推进通关后的三处门与宿木世界。",
+        "在宿木塔推进剧情，按顺序完成勾玉与试炼；每轮都回塔顶交谈。",
+        "击败最后的无名暗王，完成宿木结局后确认称号，再到钥匙炼金选「世界的」。"
+      ],
+      "guideTarget": "story"
+    },
+    {
+      "id": "friend",
+      "name": "大设计师",
+      "keyName": "盟友的",
+      "part": "前缀",
+      "condition": "买齐流浪版型商人出售的全部版型。",
+      "howTo": "按商人的移动事件继续购买；购买全部版型与收齐全部服装是两项不同条件。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/bukikagi",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "打开「19套服装怎么拿」中的流浪版型商人路线，按商人的迁移顺序寻找，不能直接跳到最后一站。",
+        "每站先买下当前出售的版型，再按路线去下一处；缺钱时先记住停在哪一站。",
+        "确认商人全套版型买齐后检查称号。该条件是买齐商人版型，仍需另外完成服装制作才能收齐19套。"
+      ],
+      "guideTarget": "costumes"
+    },
+    {
+      "id": "priest",
+      "name": "资深配合师",
+      "keyName": "神官",
+      "part": "后缀",
+      "condition": "累计进行100次配合。",
+      "howTo": "通常配合可随图鉴收集一并积累；此项是配合次数，不是招募次数。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/haigouyarikata"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "补图鉴时把能直接招募的低阶材料先抓齐，不要为了次数消耗当前主力或稀有材料。",
+        "沙漠剧情后赢得儿童大师大会，解锁玛尔塔城一层东北的配合室；找博士进行配合。双亲都须至少10级且性别兼容。",
+        "反复进行「抓材料→练到可配合→配出新种」直到100次，出现称号提示后回炼金店检查「神官」。"
+      ],
+      "guideTarget": "breed"
+    },
+    {
+      "id": "wire",
+      "name": "钢线怪人猎手",
+      "keyName": "铁条",
+      "part": "后缀",
+      "condition": "将铁丝人招募为同伴。",
+      "howTo": "到水世界海神神殿1层东南侧，反复击败提线人偶，遇到转生种铁丝人后招募。",
+      "monsterIds": [
+        853,
+        813
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/tetsujyou",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "前往水世界的海神神殿1层，找东南侧的提线人偶。",
+        "反复击败提线人偶并观察出现的转生种；没有遇到铁丝人时继续寻找，不能保证固定次数出现。",
+        "看到铁丝人后改用招募，把它收入同伴；只击败它不会满足称号条件。"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "天空的地图师",
+      "keyName": "云",
+      "part": "后缀",
+      "condition": "天空世界地图探索达到90%以上。",
+      "howTo": "在天空世界补走尚未探索的区域；以游戏获得称号的提示为准。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/325622"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "先推进天空剧情，逐步开放佩伊镇、希塔诺镇及三宝路线；尚未开放的区域先完成剧情条件。",
+        "打开游戏中的天空地图，沿未探索区域逐段补走；不要把已经激活的传送点当作全区域已探索。",
+        "接近90%时检查主路外的可达岔路，持续补图直到出现「天空的地图师」称号提示。网页示意地图不能代替游戏探索率。"
+      ]
+    },
+    {
+      "id": "destroyer",
+      "name": "凶暴熊猫猎手",
+      "keyName": "破坏神",
+      "part": "后缀",
+      "condition": "将熊猫招募为同伴。",
+      "howTo": "下雪时到冰雪世界北之山入口前方，击败大熊后寻找其转生种熊猫并招募。",
+      "monsterIds": [
+        1101,
+        553
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/bukikagi",
+        "https://game8.jp/dqm2/314748",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/222797"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "在下雪时前往冰雪世界北之山入口前方区域，找大熊。",
+        "需要主动改变天气时：完成主线后，去海神神殿地下1层，按红→黄→绿的顺序操作开关，调查西侧石碑取得改变天气。",
+        "反复击败大熊，寻找转生种熊猫；未下雪或没有大熊时，先处理天气条件再刷。",
+        "遇到熊猫后招募入队。只抓大熊或击败熊猫都不满足这个称号。"
+      ]
+    },
+    {
+      "id": "mother",
+      "name": "资深猎手",
+      "keyName": "母亲",
+      "part": "后缀",
+      "condition": "累计成功招募100次。",
+      "howTo": "在正常收集过程中累计招募；配合次数不计入这个条件。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "选择队伍能轻松应付的早期区域，优先对未拥有的普通怪物进行招募。",
+        "成功招募才继续累计；遇到难抓目标可先换其他怪，顺便补图鉴，避免把打倒怪物当作招募。",
+        "累计100次成功招募后检查称号；配合得到的怪物不能替代招募次数。"
+      ]
+    },
+    {
+      "id": "slime-50",
+      "name": "史莱姆系收集50%",
+      "keyName": "颤动的",
+      "part": "前缀",
+      "condition": "史莱姆系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "史莱姆系",
+      "familyId": 1,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的史莱姆系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "slime-75",
+      "name": "史莱姆系收集75%",
+      "keyName": "闪耀的",
+      "part": "前缀",
+      "condition": "史莱姆系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "史莱姆系",
+      "familyId": 1,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的史莱姆系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "dragon-50",
+      "name": "龙系收集50%",
+      "keyName": "老练的",
+      "part": "前缀",
+      "condition": "龙系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "龙系",
+      "familyId": 2,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的龙系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "dragon-75",
+      "name": "龙系收集75%",
+      "keyName": "古老的",
+      "part": "前缀",
+      "condition": "龙系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "龙系",
+      "familyId": 2,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的龙系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "nature-50",
+      "name": "自然系收集50%",
+      "keyName": "伟大的",
+      "part": "前缀",
+      "condition": "自然系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "自然系",
+      "familyId": 3,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的自然系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "nature-75",
+      "name": "自然系收集75%",
+      "keyName": "雄伟的",
+      "part": "前缀",
+      "condition": "自然系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "自然系",
+      "familyId": 3,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的自然系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "beast-50",
+      "name": "魔兽系收集50%",
+      "keyName": "战栗的",
+      "part": "前缀",
+      "condition": "魔兽系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "魔兽系",
+      "familyId": 4,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的魔兽系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "beast-75",
+      "name": "魔兽系收集75%",
+      "keyName": "高贵的",
+      "part": "前缀",
+      "condition": "魔兽系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "魔兽系",
+      "familyId": 4,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的魔兽系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "material-50",
+      "name": "物质系收集50%",
+      "keyName": "燃烧的",
+      "part": "前缀",
+      "condition": "物质系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "物质系",
+      "familyId": 5,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的物质系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "material-75",
+      "name": "物质系收集75%",
+      "keyName": "耀眼的",
+      "part": "前缀",
+      "condition": "物质系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "物质系",
+      "familyId": 5,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的物质系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "demon-50",
+      "name": "恶魔系收集50%",
+      "keyName": "愤怒的",
+      "part": "前缀",
+      "condition": "恶魔系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "恶魔系",
+      "familyId": 6,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的恶魔系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "demon-75",
+      "name": "恶魔系收集75%",
+      "keyName": "迸发的",
+      "part": "前缀",
+      "condition": "恶魔系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "恶魔系",
+      "familyId": 6,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的恶魔系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "undead-50",
+      "name": "不死系收集50%",
+      "keyName": "被诅咒的",
+      "part": "前缀",
+      "condition": "不死系图鉴收集率达到50%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "不死系",
+      "familyId": 7,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的不死系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ]
+    },
+    {
+      "id": "undead-75",
+      "name": "不死系收集75%",
+      "keyName": "不可见的",
+      "part": "前缀",
+      "condition": "不死系图鉴收集率达到75%。",
+      "howTo": "通过招募或配合补齐尚未登录的种类；重复同一种怪物不能提高种类收集率。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "手机SP攻略列出的收集条件；称号栏以条件代称，钥匙前缀为参考译名，待汉化实机校对。",
+      "family": "不死系",
+      "familyId": 7,
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的不死系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ]
+    },
+    {
+      "id": "talent",
+      "name": "世界名人",
+      "keyName": "艺人",
+      "part": "后缀",
+      "condition": "获得20种金级称号。",
+      "howTo": "从已接近完成的金级目标补起；冰雪、天空探索称号可用，水世界探索称号是银级。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "先检查游戏里已获得的金级称号数量；这个目标统计金级，不是全部称号总数。",
+        "可先补冰雪或天空世界90%探索、宿木结局、全服装、全商人版型，以及铁丝人、古代树、熊猫等首次招募称号。",
+        "差额继续从游戏金级称号条件中选择接近完成的目标；这些例子不等于一套必够20种的完整清单。达到20种后再用「艺人」。"
+      ]
+    },
+    {
+      "id": "acrobat",
+      "name": "城镇超级明星",
+      "keyName": "杂技师",
+      "part": "后缀",
+      "condition": "获得40种银级称号。",
+      "howTo": "查看称号列表，优先补足接近完成的银级目标。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "检查游戏中的银级称号数量，列出还差多少种；金级和铜级不直接算进40种银级。",
+        "补各系50%／75%收集率时顺带做100次配合与100次招募；再检查总图鉴、技能、特技、特性和物品的收集进度。",
+        "可核对的额外银级例子：银行存款达到10万金币、交付100枚小徽章、水世界90%探索。钱需存入银行，小徽章需交付，不能只看携带数量。",
+        "这些是补缺方向，不是已列齐40种的最快路线；按游戏已得数量继续补齐，达标后选「杂技师」。"
+      ]
+    },
+    {
+      "id": "idol",
+      "name": "世界人气王",
+      "keyName": "偶像",
+      "part": "后缀",
+      "condition": "获得10种金级称号。",
+      "howTo": "金级称号尚不足20种时，可先用此后缀制作宝珠钥匙。",
+      "monsterIds": [],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "检查已获得的金级称号数量，先补最接近完成的目标。",
+        "可结合宿木结局、冰雪或天空90%探索、服装与版型收集，并招募尚未获得的转生怪；首次入手对应转生怪才会给该项称号。",
+        "取得10种金级称号即可使用「偶像」；先用它制作宝珠钥匙，再继续累积到20种解锁「艺人」。"
+      ]
+    },
+    {
+      "id": "ancient-tree",
+      "name": "千年妖树猎手",
+      "keyName": "千年树",
+      "part": "后缀",
+      "condition": "将古代树招募为同伴。",
+      "howTo": "到迷途森林击败人面树，遇到其转生种古代树后招募。",
+      "monsterIds": [
+        852,
+        111
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "versionNote": "按手机SP攻略核对；称号与钥匙词条为中文参考译名，尚未对齐汉化实机。",
+      "steps": [
+        "前往冰雪世界的迷途森林，找到人面树活动区域。",
+        "反复击败人面树，寻找出现的转生种古代树；这是随机出现过程。",
+        "遇到古代树后招募为同伴，确认得到千年妖树猎手称号，再选「千年树」后缀。"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "diamond-exp",
+      "title": "钻石史莱姆练级",
+      "purpose": "经验",
+      "prefixId": "fashion",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "筛选钻石史莱姆为讨伐头目的钥匙，适合已能稳定击败金属怪的队伍。",
+      "steps": [
+        "预览中找到钻石史莱姆讨伐目标，再确认制作。",
+        "首次进入先验证能否稳定取胜，再决定是否投入金币复原周回。"
+      ],
+      "caveats": [
+        "这条路线的经验主要来自战斗，不是钥匙结算奖励。",
+        "只选相同词条不会保证相同头目；金币回报低，连续付费复原会消耗积蓄。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://altema.jp/iruruka/tetsujyou"
+      ],
+      "monsterIds": [
+        35
+      ],
+      "tags": [
+        "后期练级",
+        "金属怪"
+      ]
+    },
+    {
+      "id": "gold-priest",
+      "title": "金色忍者史莱姆刷金币（神官）",
+      "purpose": "金币",
+      "prefixId": "fashion",
+      "suffixId": "priest",
+      "material": "白金钥匙",
+      "description": "筛选金色忍者史莱姆头目；随从带黄金史莱姆时兼顾经验。",
+      "steps": [
+        "制作预览检查头目；实际进入后再检查随从。",
+        "用咒文或可绕过斩击反射的体技应对，确认稳定击杀后周回。"
+      ],
+      "caveats": [
+        "头目有常驻斩击反射，普通物理阵容不能直接照搬。",
+        "神官与铁条的制作成本和奖励范围不同；按实际生成结果选择，不保证固定收益。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [
+        606,
+        15
+      ],
+      "tags": [
+        "金币",
+        "兼顾经验"
+      ]
+    },
+    {
+      "id": "gold-wire",
+      "title": "金色忍者史莱姆刷金币（铁条）",
+      "purpose": "金币",
+      "prefixId": "fashion",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "筛选金色忍者史莱姆头目；随从带黄金史莱姆时兼顾经验。",
+      "steps": [
+        "制作预览检查头目；实际进入后再检查随从。",
+        "用咒文或可绕过斩击反射的体技应对，确认稳定击杀后周回。"
+      ],
+      "caveats": [
+        "头目有常驻斩击反射，普通物理阵容不能直接照搬。",
+        "神官与铁条的制作成本和奖励范围不同；按实际生成结果选择，不保证固定收益。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [
+        606,
+        15
+      ],
+      "tags": [
+        "金币",
+        "兼顾经验"
+      ]
+    },
+    {
+      "id": "world-cloud",
+      "title": "金币任务与黄金魔像",
+      "purpose": "金币",
+      "prefixId": "world",
+      "suffixId": "cloud",
+      "material": "白金钥匙",
+      "description": "寻找有黄金魔像等高金币敌人的金币收集任务。",
+      "steps": [
+        "制作预览中检查普通敌人名单和任务条件。",
+        "进入后完成金币收集目标，并领取钥匙结算奖励。"
+      ],
+      "caveats": [
+        "与刷金色忍者史莱姆的路线不同；敌人与地图仍需筛选。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [
+        215
+      ],
+      "tags": [
+        "金币任务"
+      ]
+    },
+    {
+      "id": "friend-destroyer",
+      "title": "高阶武器与纹晶",
+      "purpose": "装备",
+      "prefixId": "friend",
+      "suffixId": "destroyer",
+      "material": "白金钥匙",
+      "description": "通过钥匙报酬寻找高阶武器；可能生成纹晶奖励。",
+      "steps": [
+        "优先挑路线短的地图和能应付的异国大师任务。",
+        "完成第一次任务，确认奖励种类后再决定是否保留周回。"
+      ],
+      "caveats": [
+        "制作预览不能确定最终武器；武器种类与星数不是输入词条后就固定保证。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/bukikagi"
+      ],
+      "tags": [
+        "武器",
+        "纹晶"
+      ]
+    },
+    {
+      "id": "ss-slime",
+      "title": "史莱姆系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "slime-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用史莱姆系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "史莱姆系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-dragon",
+      "title": "龙系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "dragon-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用龙系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "龙系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-nature",
+      "title": "自然系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "nature-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用自然系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "自然系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-beast",
+      "title": "魔兽系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "beast-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用魔兽系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "魔兽系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-material",
+      "title": "物质系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "material-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用物质系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "物质系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-demon",
+      "title": "恶魔系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "demon-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用恶魔系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "恶魔系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-undead",
+      "title": "不死系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "undead-50",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "用不死系前缀缩小奖励候选，铁条后缀用于寻找SS阶奖励。",
+      "steps": [
+        "先确认两个称号均已解锁，再在制作预览挑选可完成的任务。",
+        "第一次完成后核对实际奖励怪物；合适时提升钥匙等级继续挑战。"
+      ],
+      "caveats": [
+        "并非该系所有怪物都能作为奖励；任务头目与奖励怪物也不一定相同。",
+        "这是系别与阶级筛选路线，不能保证指定怪物或必定获得奖励。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "不死系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "ss-mystery",
+      "title": "？？？系 SS奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "world",
+      "suffixId": "wire",
+      "material": "白金钥匙",
+      "description": "以世界前缀和铁条后缀寻找？？？系SS奖励。",
+      "steps": [
+        "完成宿木剧情并招募铁丝人，解锁两项称号。",
+        "制作后至少完成一次，查看实际奖励怪物。"
+      ],
+      "caveats": [
+        "不会固定生成某一只魔王；不是全体SS怪物的通用入手方式。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "family": "？？？系",
+      "tags": [
+        "SS阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "s-mystery",
+      "title": "？？？系 S奖励筛选",
+      "purpose": "怪物",
+      "prefixId": "world",
+      "suffixId": "priest",
+      "material": "白金钥匙",
+      "description": "目标为S阶奖励时，改用神官后缀。",
+      "steps": [
+        "先累计100次配合解锁神官。",
+        "完成生成的任务，核对奖励种类后保留合适的钥匙。"
+      ],
+      "caveats": [
+        "前缀只缩小系别，后缀只缩小奖励范围；不保证某只指定怪物。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi"
+      ],
+      "family": "？？？系",
+      "tags": [
+        "S阶",
+        "奖励怪物"
+      ]
+    },
+    {
+      "id": "orb-talent",
+      "title": "装备强化宝珠",
+      "purpose": "装备",
+      "prefixId": "fashion",
+      "suffixId": "talent",
+      "material": "白金钥匙",
+      "description": "以艺人后缀寻找强化宝珠奖励；前缀可换成任意已解锁词条。",
+      "steps": [
+        "这里用时髦的作示例，实际可替换前缀。",
+        "挑容易连续讨伐的敌人；初次完成后确认是否为所需宝珠奖励。"
+      ],
+      "caveats": [
+        "目标是强化用宝珠，不是武器本体。",
+        "需进行多场讨伐；相对更高的奖励概率不等于必定获得。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb"
+      ],
+      "tags": [
+        "宝珠",
+        "强化材料"
+      ],
+      "prefixOptional": true
+    },
+    {
+      "id": "orb-ancient",
+      "title": "金币任务兼顾强化宝珠",
+      "purpose": "装备",
+      "prefixId": "material-75",
+      "suffixId": "ancient-tree",
+      "material": "白金钥匙",
+      "description": "以耀眼的＋千年树寻找黄金魔像和宝珠奖励。",
+      "steps": [
+        "制作预览挑黄金魔像等适合赚金币的敌人。",
+        "通过金币收集任务刷钱，顺带尝试获取强化宝珠。"
+      ],
+      "caveats": [
+        "宝珠奖励概率较低；偏重宝珠产量时优先考虑艺人后缀。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb"
+      ],
+      "monsterIds": [
+        215
+      ],
+      "tags": [
+        "宝珠",
+        "兼顾金币"
+      ]
+    }
+  ]
+}
