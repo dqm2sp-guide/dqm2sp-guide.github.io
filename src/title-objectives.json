@@ -1,0 +1,1566 @@
+{
+  "checked": "2026-11-09",
+  "scope": "金银称号补缺清单；收录条件明确且能给出操作步骤的项目，不是全称号全集。名称为中文参考译名，勾选不读取游戏存档。",
+  "coverage": {
+    "gold": 46,
+    "silver": 45,
+    "excluded": "尚未展开部分通信、纹晶、数值含糊或资料未核实的条件；铜级仅作为累计条件引用。"
+  },
+  "objectives": [
+    {
+      "id": "all-50",
+      "name": "全部怪物收集50%",
+      "grade": "银",
+      "condition": "怪物图鉴总收集率达到50%。",
+      "steps": [
+        "打开游戏图鉴，按全部系别对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到50%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "all-75",
+      "name": "全部怪物收集75%",
+      "grade": "银",
+      "condition": "怪物图鉴总收集率达到75%。",
+      "steps": [
+        "打开游戏图鉴，按全部系别对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到75%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "all-100",
+      "name": "全部怪物收集100%",
+      "grade": "金",
+      "condition": "怪物图鉴总收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按全部系别对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "slime-50",
+      "name": "史莱姆系收集50%",
+      "grade": "银",
+      "condition": "史莱姆系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的史莱姆系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "slime-50",
+      "familyId": 1
+    },
+    {
+      "id": "slime-75",
+      "name": "史莱姆系收集75%",
+      "grade": "银",
+      "condition": "史莱姆系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的史莱姆系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "slime-75",
+      "familyId": 1
+    },
+    {
+      "id": "slime-100",
+      "name": "史莱姆系收集100%",
+      "grade": "金",
+      "condition": "史莱姆系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按史莱姆系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 1
+    },
+    {
+      "id": "dragon-50",
+      "name": "龙系收集50%",
+      "grade": "银",
+      "condition": "龙系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的龙系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "dragon-50",
+      "familyId": 2
+    },
+    {
+      "id": "dragon-75",
+      "name": "龙系收集75%",
+      "grade": "银",
+      "condition": "龙系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的龙系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "dragon-75",
+      "familyId": 2
+    },
+    {
+      "id": "dragon-100",
+      "name": "龙系收集100%",
+      "grade": "金",
+      "condition": "龙系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按龙系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 2
+    },
+    {
+      "id": "nature-50",
+      "name": "自然系收集50%",
+      "grade": "银",
+      "condition": "自然系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的自然系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "nature-50",
+      "familyId": 3
+    },
+    {
+      "id": "nature-75",
+      "name": "自然系收集75%",
+      "grade": "银",
+      "condition": "自然系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的自然系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "nature-75",
+      "familyId": 3
+    },
+    {
+      "id": "nature-100",
+      "name": "自然系收集100%",
+      "grade": "金",
+      "condition": "自然系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按自然系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 3
+    },
+    {
+      "id": "beast-50",
+      "name": "魔兽系收集50%",
+      "grade": "银",
+      "condition": "魔兽系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的魔兽系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "beast-50",
+      "familyId": 4
+    },
+    {
+      "id": "beast-75",
+      "name": "魔兽系收集75%",
+      "grade": "银",
+      "condition": "魔兽系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的魔兽系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "beast-75",
+      "familyId": 4
+    },
+    {
+      "id": "beast-100",
+      "name": "魔兽系收集100%",
+      "grade": "金",
+      "condition": "魔兽系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按魔兽系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 4
+    },
+    {
+      "id": "material-50",
+      "name": "物质系收集50%",
+      "grade": "银",
+      "condition": "物质系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的物质系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "material-50",
+      "familyId": 5
+    },
+    {
+      "id": "material-75",
+      "name": "物质系收集75%",
+      "grade": "银",
+      "condition": "物质系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的物质系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "material-75",
+      "familyId": 5
+    },
+    {
+      "id": "material-100",
+      "name": "物质系收集100%",
+      "grade": "金",
+      "condition": "物质系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按物质系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 5
+    },
+    {
+      "id": "demon-50",
+      "name": "恶魔系收集50%",
+      "grade": "银",
+      "condition": "恶魔系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的恶魔系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "demon-50",
+      "familyId": 6
+    },
+    {
+      "id": "demon-75",
+      "name": "恶魔系收集75%",
+      "grade": "银",
+      "condition": "恶魔系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的恶魔系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "demon-75",
+      "familyId": 6
+    },
+    {
+      "id": "demon-100",
+      "name": "恶魔系收集100%",
+      "grade": "金",
+      "condition": "恶魔系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按恶魔系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 6
+    },
+    {
+      "id": "undead-50",
+      "name": "不死系收集50%",
+      "grade": "银",
+      "condition": "不死系图鉴收集率达到50%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的不死系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到50%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "undead-50",
+      "familyId": 7
+    },
+    {
+      "id": "undead-75",
+      "name": "不死系收集75%",
+      "grade": "银",
+      "condition": "不死系图鉴收集率达到75%。",
+      "steps": [
+        "打开下方本系怪物列表，对照游戏图鉴找出尚未登录的不死系怪物。",
+        "先看缺少怪物的入手方式：能直接抓的先去抓；需配合的点「怎么合成它」，再沿材料怪逐层补齐。",
+        "优先获得不同种类，已收录的同种怪重复获得不增加种类收集率；游戏内该系收集率达到75%后确认称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://altema.jp/iruruka/osusumekagi",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "undead-75",
+      "familyId": 7
+    },
+    {
+      "id": "undead-100",
+      "name": "僵尸系收集100%",
+      "grade": "金",
+      "condition": "僵尸系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按僵尸系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 7
+    },
+    {
+      "id": "mystery-50",
+      "name": "未知系收集50%",
+      "grade": "银",
+      "condition": "未知系图鉴收集率达到50%。",
+      "steps": [
+        "打开游戏图鉴，按未知系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到50%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 8
+    },
+    {
+      "id": "mystery-75",
+      "name": "未知系收集75%",
+      "grade": "银",
+      "condition": "未知系图鉴收集率达到75%。",
+      "steps": [
+        "打开游戏图鉴，按未知系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到75%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 8
+    },
+    {
+      "id": "mystery-100",
+      "name": "未知系收集100%",
+      "grade": "金",
+      "condition": "未知系图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏图鉴，按未知系对照缺少的种类；以游戏百分比为准。",
+        "点缺少怪物查看入手方式，直接招募的先抓，配合限定的沿「怎么合成它」补材料。",
+        "优先获得未收录的不同种类；重复取得同种怪物不会增加种类收集率，补到100%后检查称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "familyId": 8
+    },
+    {
+      "id": "skills-50",
+      "name": "技能博士",
+      "grade": "银",
+      "condition": "游戏技能图鉴收集率达到50%。",
+      "steps": [
+        "打开游戏技能图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "用技能搜索查所需技能的持有怪物，抓取或配合后在游戏技能图鉴确认记录。",
+        "完成一批后回图鉴核对进度，直到达到50%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "skills-100",
+      "name": "技能大师",
+      "grade": "金",
+      "condition": "游戏技能图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏技能图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "用技能搜索查所需技能的持有怪物，抓取或配合后在游戏技能图鉴确认记录。",
+        "完成一批后回图鉴核对进度，直到达到100%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "actions-50",
+      "name": "特技博士",
+      "grade": "银",
+      "condition": "游戏特技图鉴收集率达到50%。",
+      "steps": [
+        "打开游戏特技图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "先查特技对应的技能，再给怪物投入足够技能点，真正学会所缺特技。",
+        "完成一批后回图鉴核对进度，直到达到50%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "actions-100",
+      "name": "特技大师",
+      "grade": "金",
+      "condition": "游戏特技图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏特技图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "先查特技对应的技能，再给怪物投入足够技能点，真正学会所缺特技。",
+        "完成一批后回图鉴核对进度，直到达到100%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "traits-50",
+      "name": "特性博士",
+      "grade": "银",
+      "condition": "游戏特性图鉴收集率达到50%。",
+      "steps": [
+        "打开游戏特性图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "用特性搜索找持有怪物；按其解锁条件提高配合加值或体型，再检查游戏特性图鉴。",
+        "完成一批后回图鉴核对进度，直到达到50%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "traits-100",
+      "name": "特性大师",
+      "grade": "金",
+      "condition": "游戏特性图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏特性图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "用特性搜索找持有怪物；按其解锁条件提高配合加值或体型，再检查游戏特性图鉴。",
+        "完成一批后回图鉴核对进度，直到达到100%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "items-50",
+      "name": "物品博士",
+      "grade": "银",
+      "condition": "游戏物品图鉴收集率达到50%。",
+      "steps": [
+        "打开游戏物品图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "检查游戏物品图鉴空缺，逐类补商店物品、宝箱、任务奖励；反复拿同种物品不会补新条目。",
+        "完成一批后回图鉴核对进度，直到达到50%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "items-100",
+      "name": "物品大师",
+      "grade": "金",
+      "condition": "游戏物品图鉴收集率达到100%。",
+      "steps": [
+        "打开游戏物品图鉴，先记录空缺条目，避免只凭网页收录量推算。",
+        "检查游戏物品图鉴空缺，逐类补商店物品、宝箱、任务奖励；反复拿同种物品不会补新条目。",
+        "完成一批后回图鉴核对进度，直到达到100%；网页收藏与勾选不会写入游戏记录。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "fashion",
+      "name": "时尚大师",
+      "grade": "金",
+      "condition": "收集全部19套服装。",
+      "steps": [
+        "打开下方「19套服装怎么拿」，先勾选已取得的服装，找出缺少的那几套。",
+        "按每套条目去找指定人物、取得版型或完成对应条件；拿到版型后继续完成制衣，不能只把版型算作服装。",
+        "回游戏服装列表核对19套是否都已取得；达到条件会自动获得称号，再回钥匙炼金选择「时髦的」。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "fashion",
+      "guideTarget": "costumes"
+    },
+    {
+      "id": "friend",
+      "name": "大设计师",
+      "grade": "金",
+      "condition": "买齐流浪版型商人出售的全部版型。",
+      "steps": [
+        "打开「19套服装怎么拿」中的流浪版型商人路线，按商人的迁移顺序寻找，不能直接跳到最后一站。",
+        "每站先买下当前出售的版型，再按路线去下一处；缺钱时先记住停在哪一站。",
+        "确认商人全套版型买齐后检查称号。该条件是买齐商人版型，仍需另外完成服装制作才能收齐19套。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/bukikagi",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "friend",
+      "guideTarget": "costumes"
+    },
+    {
+      "id": "world",
+      "name": "世界的救济者",
+      "grade": "金",
+      "condition": "击败通关后剧情的最终头目，完成宿木世界。",
+      "steps": [
+        "先完成主线结局，再按剧情攻略推进通关后的三处门与宿木世界。",
+        "在宿木塔推进剧情，按顺序完成勾玉与试炼；每轮都回塔顶交谈。",
+        "击败最后的无名暗王，完成宿木结局后确认称号，再到钥匙炼金选「世界的」。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/222832"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "world",
+      "guideTarget": "story"
+    },
+    {
+      "id": "wire",
+      "name": "钢线怪人猎手",
+      "grade": "金",
+      "condition": "将铁丝人招募为同伴。",
+      "steps": [
+        "前往水世界的海神神殿1层，找东南侧的提线人偶。",
+        "反复击败提线人偶并观察出现的转生种；没有遇到铁丝人时继续寻找，不能保证固定次数出现。",
+        "看到铁丝人后改用招募，把它收入同伴；只击败它不会满足称号条件。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/tetsujyou",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        853,
+        813
+      ],
+      "keyTitleId": "wire"
+    },
+    {
+      "id": "cloud",
+      "name": "天空的地图师",
+      "grade": "金",
+      "condition": "天空世界地图探索达到90%以上。",
+      "steps": [
+        "先推进天空剧情，逐步开放佩伊镇、希塔诺镇及三宝路线；尚未开放的区域先完成剧情条件。",
+        "打开游戏中的天空地图，沿未探索区域逐段补走；不要把已经激活的传送点当作全区域已探索。",
+        "接近90%时检查主路外的可达岔路，持续补图直到出现「天空的地图师」称号提示。网页示意地图不能代替游戏探索率。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://kamigame.jp/dqm2_sp/page/119605535556239367.html",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/325622"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "cloud"
+    },
+    {
+      "id": "destroyer",
+      "name": "凶暴熊猫猎手",
+      "grade": "金",
+      "condition": "将熊猫招募为同伴。",
+      "steps": [
+        "在下雪时前往冰雪世界北之山入口前方区域，找大熊。",
+        "需要主动改变天气时：完成主线后，去海神神殿地下1层，按红→黄→绿的顺序操作开关，调查西侧石碑取得改变天气。",
+        "反复击败大熊，寻找转生种熊猫；未下雪或没有大熊时，先处理天气条件再刷。",
+        "遇到熊猫后招募入队。只抓大熊或击败熊猫都不满足这个称号。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/bukikagi",
+        "https://game8.jp/dqm2/314748",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/222797"
+      ],
+      "monsterIds": [
+        1101,
+        553
+      ],
+      "keyTitleId": "destroyer"
+    },
+    {
+      "id": "ancient-tree",
+      "name": "千年妖树猎手",
+      "grade": "金",
+      "condition": "将古代树招募为同伴。",
+      "steps": [
+        "前往冰雪世界的迷途森林，找到人面树活动区域。",
+        "反复击败人面树，寻找出现的转生种古代树；这是随机出现过程。",
+        "遇到古代树后招募为同伴，确认得到千年妖树猎手称号，再选「千年树」后缀。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        852,
+        111
+      ],
+      "keyTitleId": "ancient-tree"
+    },
+    {
+      "id": "priest",
+      "name": "资深配合师",
+      "grade": "银",
+      "condition": "累计进行100次配合。",
+      "steps": [
+        "补图鉴时把能直接招募的低阶材料先抓齐，不要为了次数消耗当前主力或稀有材料。",
+        "沙漠剧情后赢得儿童大师大会，解锁玛尔塔城一层东北的配合室；找博士进行配合。双亲都须至少10级且性别兼容。",
+        "反复进行「抓材料→练到可配合→配出新种」直到100次，出现称号提示后回炼金店检查「神官」。"
+      ],
+      "sourceUrls": [
+        "https://game8.jp/dqm2/314748",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/haigouyarikata"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "priest",
+      "guideTarget": "breed"
+    },
+    {
+      "id": "mother",
+      "name": "资深猎手",
+      "grade": "银",
+      "condition": "累计成功招募100次。",
+      "steps": [
+        "选择队伍能轻松应付的早期区域，优先对未拥有的普通怪物进行招募。",
+        "成功招募才继续累计；遇到难抓目标可先换其他怪，顺便补图鉴，避免把打倒怪物当作招募。",
+        "累计100次成功招募后检查称号；配合得到的怪物不能替代招募次数。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223461",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "mother"
+    },
+    {
+      "id": "talent",
+      "name": "世界名人",
+      "grade": "银",
+      "condition": "获得20种金级称号。",
+      "steps": [
+        "先检查游戏里已获得的金级称号数量；这个目标统计金级，不是全部称号总数。",
+        "可先补冰雪或天空世界90%探索、宿木结局、全服装、全商人版型，以及铁丝人、古代树、熊猫等首次招募称号。",
+        "差额继续从游戏金级称号条件中选择接近完成的目标；这些例子不等于一套必够20种的完整清单。达到20种后再用「艺人」。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "talent"
+    },
+    {
+      "id": "acrobat",
+      "name": "城镇超级明星",
+      "grade": "金",
+      "condition": "获得40种银级称号。",
+      "steps": [
+        "检查游戏中的银级称号数量，列出还差多少种；金级和铜级不直接算进40种银级。",
+        "补各系50%／75%收集率时顺带做100次配合与100次招募；再检查总图鉴、技能、特技、特性和物品的收集进度。",
+        "可核对的额外银级例子：银行存款达到10万金币、交付100枚小徽章、水世界90%探索。钱需存入银行，小徽章需交付，不能只看携带数量。",
+        "这些是补缺方向，不是已列齐40种的最快路线；按游戏已得数量继续补齐，达标后选「杂技师」。"
+      ],
+      "sourceUrls": [
+        "https://altema.jp/iruruka/orb",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "keyTitleId": "acrobat"
+    },
+    {
+      "id": "snow-map",
+      "name": "雪原的地图师",
+      "grade": "金",
+      "condition": "冰雪世界探索率达到90%。",
+      "steps": [
+        "先完成冰雪剧情，解锁各城镇与后续可进入的区域。",
+        "打开游戏地图，检查仍未探索的边缘与岔路，逐区补走；到过传送点不等于整区走完。",
+        "探索率达到90%并出现称号提示后再勾选；网页位置示意不计算游戏探索率。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "guideTarget": "story"
+    },
+    {
+      "id": "water-map",
+      "name": "群岛的地图师",
+      "grade": "银",
+      "condition": "水世界探索率达到90%。",
+      "steps": [
+        "先推进水世界剧情，取得水上移动所需能力。",
+        "沿地图未探索的岛屿、海域与可进入岔路补走，缺少通路时先推进对应剧情。",
+        "回游戏核对90%探索率和称号提示；这一项是银级，不能计入金级20种。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "guideTarget": "story"
+    },
+    {
+      "id": "gold-cactus",
+      "name": "黄金仙人球猎手",
+      "grade": "金",
+      "condition": "首次将黄金仙人球招募为同伴。",
+      "steps": [
+        "前往沙漠世界阿西亚城前的仙人球区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        871
+      ]
+    },
+    {
+      "id": "moon-chimaera",
+      "name": "月光奇美拉猎手",
+      "grade": "金",
+      "condition": "首次将月光奇美拉招募为同伴。",
+      "steps": [
+        "前往沙漠世界祠堂东南岩石附近的奇美拉区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        873
+      ]
+    },
+    {
+      "id": "pink-fur",
+      "name": "粉红绒球猎手",
+      "grade": "金",
+      "condition": "首次将粉红绒球招募为同伴。",
+      "steps": [
+        "前往水世界波洛尼亚村西北沙滩的毛球鼠区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        851
+      ]
+    },
+    {
+      "id": "heart-knight",
+      "name": "爱心骑士猎手",
+      "grade": "金",
+      "condition": "首次将爱心骑士招募为同伴。",
+      "steps": [
+        "前往冰雪世界西国城前的史莱姆骑士区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        891
+      ]
+    },
+    {
+      "id": "gold-rabbit",
+      "name": "黄金独角兔猎手",
+      "grade": "金",
+      "condition": "首次将黄金独角兔招募为同伴。",
+      "steps": [
+        "前往冰雪世界迷途森林入口前的独角兔区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        849
+      ]
+    },
+    {
+      "id": "alchemy-hat",
+      "name": "炼金猪兽猎手",
+      "grade": "金",
+      "condition": "首次将炼金帽招募为同伴。",
+      "steps": [
+        "前往天空世界风之塔前的帽子猪区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        850
+      ],
+      "versionNote": "部分旧SP攻略记录过帽子猪不响应口哨的问题；遇到时先确认游戏版本，不能保证旧版刷法有效。"
+    },
+    {
+      "id": "mad-smith",
+      "name": "疯狂不死者猎手",
+      "grade": "金",
+      "condition": "首次将疯狂史密斯招募为同伴。",
+      "steps": [
+        "前往天空世界死者之城前毒沼附近的腐尸区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        893,
+        296
+      ]
+    },
+    {
+      "id": "type-g",
+      "name": "杀戮机器猎手",
+      "grade": "金",
+      "condition": "首次将杀戮机器G型招募为同伴。",
+      "steps": [
+        "前往天空世界魔王城前高低台阶处的杀人机器区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        894
+      ]
+    },
+    {
+      "id": "queen-sanguini",
+      "name": "女王血魔猎手",
+      "grade": "金",
+      "condition": "首次将女王血魔招募为同伴。",
+      "steps": [
+        "前往宿木世界宿木塔前的血魔区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        890
+      ]
+    },
+    {
+      "id": "spiked-club",
+      "name": "狼牙棒妖精猎手",
+      "grade": "金",
+      "condition": "首次将狼牙棒怪招募为同伴。",
+      "steps": [
+        "前往宿木塔2层的布朗尼区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        848
+      ]
+    },
+    {
+      "id": "shadow-noble",
+      "name": "暗影贵族猎手",
+      "grade": "金",
+      "condition": "首次将暗影贵族招募为同伴。",
+      "steps": [
+        "前往宿木塔通往4层道路的骸骨骑士区域，先找到普通原种。",
+        "反复击败原种并观察附近出现的不同颜色转生怪；出现并非固定次数保证。",
+        "遇到目标后使用招募，成功收入同伴才获得该项称号；只击败转生怪不算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/tenseimonster"
+      ],
+      "monsterIds": [
+        854
+      ]
+    },
+    {
+      "id": "battles-silver",
+      "name": "资深魔物杀手",
+      "grade": "银",
+      "condition": "累计战斗胜利1000次。",
+      "steps": [
+        "选择能稳定获胜的区域，抓材料、练级与补图鉴时顺带积累。",
+        "以胜利结算为准，失败、逃跑和仅进入战斗不能当成获胜。",
+        "定期查看游戏记录，累计1000次后核对称号；不要用网页操作次数代替。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "battles-gold",
+      "name": "大魔物杀手",
+      "grade": "金",
+      "condition": "累计战斗胜利9999次。",
+      "steps": [
+        "选择能稳定获胜的区域，抓材料、练级与补图鉴时顺带积累。",
+        "以胜利结算为准，失败、逃跑和仅进入战斗不能当成获胜。",
+        "定期查看游戏记录，累计9999次后核对称号；不要用网页操作次数代替。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "combo-100",
+      "name": "资深连携者",
+      "grade": "银",
+      "condition": "累计发动100次连携。",
+      "steps": [
+        "安排至少两名能连续行动并攻击的伙伴，选择能安全打多回合的敌人。",
+        "连携需实际触发；可使用连锁相关招式帮助连携，但普通连续攻击不一定每次触发。",
+        "看到游戏连携提示再积累，直到100次；不需要为了提高概率故意让队伍濒死。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/315211"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "combo-1000",
+      "name": "连携大师",
+      "grade": "金",
+      "condition": "累计发动1000次连携。",
+      "steps": [
+        "安排至少两名能连续行动并攻击的伙伴，选择能安全打多回合的敌人。",
+        "连携需实际触发；可使用连锁相关招式帮助连携，但普通连续攻击不一定每次触发。",
+        "看到游戏连携提示再积累，直到1000次；不需要为了提高概率故意让队伍濒死。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/315211"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "scout-gold",
+      "name": "招募大师",
+      "grade": "金",
+      "condition": "累计招募1000次。",
+      "steps": [
+        "到能轻松应付的区域先招募缺少的普通怪物。",
+        "以成功成为同伴为准，打倒不算招募。",
+        "重复上述过程到1000次，再以游戏称号提示确认；属于长期目标，不是早期钥匙前置。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "breed-gold",
+      "name": "配合大师",
+      "grade": "金",
+      "condition": "累计配合1000次。",
+      "steps": [
+        "准备普通配合材料，先练到可配合等级，不要消耗唯一主力。",
+        "在配合时优先选择尚未收录的子代，顺带提高图鉴收集率。",
+        "重复上述过程到1000次，再以游戏称号提示确认；属于长期目标，不是早期钥匙前置。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "bank-100000",
+      "name": "超级富豪",
+      "grade": "银",
+      "condition": "金币银行中的存款达到10万金币。",
+      "steps": [
+        "先预留购买道具、配合育成和钥匙复原的钱，剩余金币再用于存款目标。",
+        "回玛尔塔的金币银行办理存入，确认余额达到10万；只把钱放身上不符合条件。",
+        "达到余额门槛后检查称号提示，再决定如何使用存款；不要按历史累计收入推算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "bank-1000000",
+      "name": "百万冒险家",
+      "grade": "金",
+      "condition": "金币银行中的存款达到100万金币。",
+      "steps": [
+        "先预留购买道具、配合育成和钥匙复原的钱，剩余金币再用于存款目标。",
+        "回玛尔塔的金币银行办理存入，确认余额达到100万；只把钱放身上不符合条件。",
+        "达到余额门槛后检查称号提示，再决定如何使用存款；不要按历史累计收入推算。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "medals-100",
+      "name": "徽章官僚",
+      "grade": "银",
+      "condition": "累计交给徽章老爷爷100枚小徽章。",
+      "steps": [
+        "到玛尔塔西街的徽章老爷爷家交付已有小徽章，并登记传送点。",
+        "缺徽章时继续探索或挑战能应付的异国大师；每次收集后回家交付。",
+        "以累计交付100枚为目标；只是放在背包里不算。150枚后的交换要按当次要求的组数进行。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314664"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "medals-1000",
+      "name": "徽章大臣",
+      "grade": "金",
+      "condition": "累计交给徽章老爷爷1000枚小徽章。",
+      "steps": [
+        "到玛尔塔西街的徽章老爷爷家交付已有小徽章，并登记传送点。",
+        "缺徽章时继续探索或挑战能应付的异国大师；每次收集后回家交付。",
+        "以累计交付1000枚为目标；只是放在背包里不算。150枚后的交换要按当次要求的组数进行。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314664"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "smith-100",
+      "name": "王国锻冶师",
+      "grade": "银",
+      "condition": "累计给100件武器附加效果。",
+      "steps": [
+        "完成儿童组格斗场后，到玛尔塔锻造屋，准备带星的武器和界面要求的强化材料。",
+        "选择一件武器，确认要附加的效果与材料消耗后完成锻造；普通购买或装备武器不算。",
+        "随装备收集累计到100件，再检查称号。不要假定同一件武器的多条效果会算成多件。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/316310"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "smith-1000",
+      "name": "世界锻冶师",
+      "grade": "金",
+      "condition": "累计给1000件武器附加效果。",
+      "steps": [
+        "完成儿童组格斗场后，到玛尔塔锻造屋，准备带星的武器和界面要求的强化材料。",
+        "选择一件武器，确认要附加的效果与材料消耗后完成锻造；普通购买或装备武器不算。",
+        "随装备收集累计到1000件，再检查称号。不要假定同一件武器的多条效果会算成多件。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/316310"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "hours-50",
+      "name": "无迷惘的旅人",
+      "grade": "银",
+      "condition": "游戏游玩时间达到50小时。",
+      "steps": [
+        "在游戏记录中查看当前游玩时间，按正常剧情、抓怪和育成推进。",
+        "浏览网页、关闭游戏或手机待机是否计时，不自行推定为有效游玩时间。",
+        "游戏记录达到50小时后核对称号；不需要修改设备时间。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "hours-500",
+      "name": "无尽的旅人",
+      "grade": "金",
+      "condition": "游戏游玩时间达到500小时。",
+      "steps": [
+        "在游戏记录中查看当前游玩时间，按正常剧情、抓怪和育成推进。",
+        "浏览网页、关闭游戏或手机待机是否计时，不自行推定为有效游玩时间。",
+        "游戏记录达到500小时后核对称号；不需要修改设备时间。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "keys-owned-100",
+      "name": "王国管理人",
+      "grade": "银",
+      "condition": "累计取得100把不可思议钥匙。",
+      "steps": [
+        "完成主线结局解锁钥匙炼金，在玛尔塔城1层锻造屋旁找炼金店。",
+        "优先制作确实要用的练级、金币或怪物钥匙；制作预览和取消不算真正取得。",
+        "累计取得100把后检查称号；已有钥匙反复进入不是又取得新钥匙。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [],
+      "guideTarget": "keys"
+    },
+    {
+      "id": "keys-clear-100",
+      "name": "王国征服者",
+      "grade": "银",
+      "condition": "累计完成不可思议钥匙任务100次。",
+      "steps": [
+        "选自己能稳定完成的短路线钥匙，先确认任务要求。",
+        "每次满足任务条件并完成结算；只走进地图或中途退出不算完成。",
+        "等待钥匙复原后继续，随育成累计100次；不是要求持有100把不同钥匙。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [],
+      "guideTarget": "keys"
+    },
+    {
+      "id": "keys-owned-1000",
+      "name": "世界管理人",
+      "grade": "金",
+      "condition": "累计取得1000把不可思议钥匙。",
+      "steps": [
+        "完成主线结局解锁钥匙炼金，在玛尔塔城1层锻造屋旁找炼金店。",
+        "优先制作确实要用的练级、金币或怪物钥匙；制作预览和取消不算真正取得。",
+        "累计取得1000把后检查称号；已有钥匙反复进入不是又取得新钥匙。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [],
+      "guideTarget": "keys"
+    },
+    {
+      "id": "keys-clear-1000",
+      "name": "世界征服者",
+      "grade": "金",
+      "condition": "累计完成不可思议钥匙任务1000次。",
+      "steps": [
+        "选自己能稳定完成的短路线钥匙，先确认任务要求。",
+        "每次满足任务条件并完成结算；只走进地图或中途退出不算完成。",
+        "等待钥匙复原后继续，随育成累计1000次；不是要求持有1000把不同钥匙。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/314748"
+      ],
+      "monsterIds": [],
+      "guideTarget": "keys"
+    },
+    {
+      "id": "sky-story",
+      "name": "天空支配者",
+      "grade": "银",
+      "condition": "完成天空世界剧情。",
+      "steps": [
+        "从国王取得天空钥匙，完成芬特村与贤者塔事件。",
+        "依剧情取得三件天空宝物，进入魔王城完成本世界最终战。",
+        "回剧情流程确认已结束天空章节，再勾选称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "guideTarget": "story"
+    },
+    {
+      "id": "main-story",
+      "name": "时之尽头探究者",
+      "grade": "银",
+      "condition": "击败主线最终头目并看到结局。",
+      "steps": [
+        "先完成天空世界，按剧情进入夹缝世界。",
+        "准备治疗、复活与持续输出，完成主线最终战。",
+        "看到主线结局后检查称号；宿木世界是后续剧情，另有金级称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "guideTarget": "story"
+    },
+    {
+      "id": "bronze-20",
+      "name": "岛上名人",
+      "grade": "银",
+      "condition": "获得20种铜级称号。",
+      "steps": [
+        "在游戏称号列表按铜级核对已得项目，先记录尚差数量。",
+        "选择接近完成的图鉴、剧情、招募或探索目标逐项补齐；同一称号只计一次。",
+        "获得20种后核对新称号提示；本页勾选只是辅助记录，不能自动解锁游戏称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "targetGrade": "铜",
+      "targetCount": 20,
+      "versionNote": "本页重点收录金银目标，铜级完整清单尚未展开；请以游戏铜级列表核对。"
+    },
+    {
+      "id": "silver-20",
+      "name": "城镇名人",
+      "grade": "银",
+      "condition": "获得20种银级称号。",
+      "steps": [
+        "在游戏称号列表按银级核对已得项目，先记录尚差数量。",
+        "选择接近完成的图鉴、剧情、招募或探索目标逐项补齐；同一称号只计一次。",
+        "获得20种后核对新称号提示；本页勾选只是辅助记录，不能自动解锁游戏称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "targetGrade": "银",
+      "targetCount": 20
+    },
+    {
+      "id": "bronze-40",
+      "name": "岛上超级明星",
+      "grade": "金",
+      "condition": "获得40种铜级称号。",
+      "steps": [
+        "在游戏称号列表按铜级核对已得项目，先记录尚差数量。",
+        "选择接近完成的图鉴、剧情、招募或探索目标逐项补齐；同一称号只计一次。",
+        "获得40种后核对新称号提示；本页勾选只是辅助记录，不能自动解锁游戏称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "targetGrade": "铜",
+      "targetCount": 40,
+      "versionNote": "本页重点收录金银目标，铜级完整清单尚未展开；请以游戏铜级列表核对。"
+    },
+    {
+      "id": "gold-40",
+      "name": "世界超级明星",
+      "grade": "金",
+      "condition": "获得40种金级称号。",
+      "steps": [
+        "在游戏称号列表按金级核对已得项目，先记录尚差数量。",
+        "选择接近完成的图鉴、剧情、招募或探索目标逐项补齐；同一称号只计一次。",
+        "获得40种后核对新称号提示；本页勾选只是辅助记录，不能自动解锁游戏称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "targetGrade": "金",
+      "targetCount": 40
+    },
+    {
+      "id": "titles-half",
+      "name": "千名之人",
+      "grade": "银",
+      "condition": "获得全体称号的50%。",
+      "steps": [
+        "打开游戏称号列表查看完成比例，不用本页条目总数作分母。",
+        "分金、银、铜选择接近达成的条件，并结合剧情、图鉴和服装同时推进。",
+        "游戏称号总进度达到50%后核对提示；本清单并非全称号全集。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "costumes-ten",
+      "name": "时尚博士",
+      "grade": "银",
+      "condition": "取得至少10套服装。",
+      "steps": [
+        "打开服装取得指南，勾选游戏中已经实际拿到的服装。",
+        "优先补剧情和前期版型对应服装，按照每套指南找人物、买版型并完成制衣。",
+        "游戏服装列表达到10套后检查称号；持有10张版型不能替代10套服装。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": [],
+      "guideTarget": "costumes"
+    },
+    {
+      "id": "expedition-10",
+      "name": "无迷惘的探访者",
+      "grade": "银",
+      "condition": "进行卡梅哈的不可思议冒险队10次。",
+      "steps": [
+        "主线结局后继续推进后日谈，到自宅旁牧场寻找卡梅哈；没出现时先推进后续剧情。",
+        "交出确定不再需要的怪物后派遣；这些怪物不会归还，不要交出唯一材料或主力。",
+        "等待3小时，在同处找船员领取结果，再进行下一次派遣；累计10次后核对称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223654"
+      ],
+      "monsterIds": [],
+      "versionNote": "不同攻略对最早解锁节点记载不一致，此处不把通关宿木写成必需条件。"
+    },
+    {
+      "id": "expedition-100",
+      "name": "无尽的探访者",
+      "grade": "金",
+      "condition": "进行卡梅哈的不可思议冒险队100次。",
+      "steps": [
+        "主线结局后继续推进后日谈，到自宅旁牧场寻找卡梅哈；没出现时先推进后续剧情。",
+        "交出确定不再需要的怪物后派遣；这些怪物不会归还，不要交出唯一材料或主力。",
+        "等待3小时，在同处找船员领取结果，再进行下一次派遣；累计100次后核对称号。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/223654"
+      ],
+      "monsterIds": [],
+      "versionNote": "不同攻略对最早解锁节点记载不一致，此处不把通关宿木写成必需条件。"
+    },
+    {
+      "id": "gold-egg",
+      "name": "金蛋孵化大师",
+      "grade": "银",
+      "condition": "孵化一枚金蛋。",
+      "steps": [
+        "通过小徽章后续交换等蛋奖励途径取得金蛋；随机奖励不保证一次得到目标颜色。",
+        "到星降祠堂找怪物博士，选择孵化并交付金蛋。",
+        "手机SP按时间等待，金蛋约12小时后回博士处领取孵化结果；只取得蛋不算完成。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/318555",
+        "https://altema.jp/iruruka/egg"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "rainbow-egg",
+      "name": "彩虹蛋孵化大师",
+      "grade": "银",
+      "condition": "孵化一枚彩虹蛋。",
+      "steps": [
+        "可检查玛尔塔城宝物库右侧彩虹蛋宝箱，或从游戏蛋奖励途径取得。",
+        "到星降祠堂找怪物博士，选择孵化并交付彩虹蛋。",
+        "手机SP按时间等待，彩虹蛋约24小时后回博士处领取孵化结果；只取得蛋不算完成。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://game8.jp/dqm2/318555",
+        "https://altema.jp/iruruka/egg"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "superg-ten",
+      "name": "超巨大体型博士",
+      "grade": "银",
+      "condition": "至少10只超巨大体型怪物成为同伴。",
+      "steps": [
+        "先在怪物筛选中查看4格怪物，逐个点开入手或配合方法。",
+        "从现阶段可取得的目标开始收集，每完成一只就在游戏记录中确认；不把普通巨大体型3格怪计入。",
+        "累计达到条件后检查称号提示；来源写10只，此处不把重复抓同种是否计数当作已验证捷径。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976"
+      ],
+      "monsterIds": []
+    },
+    {
+      "id": "superg-change",
+      "name": "巨大变身者",
+      "grade": "银",
+      "condition": "通过新生配合，将非超巨大体型怪物变为超巨大体型。",
+      "steps": [
+        "完成主线结局并解锁新生配合，准备新生宝珠及具有超巨大体型的亲代。",
+        "在新生配合预览中确保子代达到加值星级，选择继承超巨大体型。",
+        "确认原本不是4格的目标子代变为4格后再完成配合，检查称号；普通配合不会自动完成这个变化。"
+      ],
+      "sourceUrls": [
+        "https://gamewith.jp/dqm2-irurukasp/article/show/228976",
+        "https://altema.jp/iruruka/sizehenkou"
+      ],
+      "monsterIds": []
+    }
+  ]
+}

@@ -52,7 +52,8 @@
  }
  function matchesMonster(m,q,customName=''){
    const query=String(q||'').normalize('NFKC').trim().toLowerCase().replace(/^(?:#|no\.?\s*)/,'');
-   return !query||[m.name,...(m.aliases||[]),customName].some(n=>String(n).normalize('NFKC').toLowerCase().includes(query))||String(m.no)===String(Number(query));
+   const terms=[m.name,...(m.aliases||[]),customName,m.skillName,...(m.skillAliases||[]),...(m.slots||[]).flatMap(s=>[s.name,...(s.aliases||[])]),...(m.traits?.entries||[]).flatMap(t=>[t.name,...(t.aliases||[])])];
+   return !query||terms.some(n=>n!=null&&String(n).normalize('NFKC').toLowerCase().includes(query))||String(m.no)===String(Number(query));
  }
  function filterCatalog(monsters,filters,save,omit=''){
    const families=filters.families?.length?filters.families.map(Number):filters.family?[Number(filters.family)]:[],ranks=filters.ranks?.length?filters.ranks:filters.rank?[filters.rank]:[],sizes=filters.sizes?.length?filters.sizes.map(Number):filters.size?[Number(filters.size)]:[];
