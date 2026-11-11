@@ -25,3 +25,8 @@ Beta 测试网站：腾讯 https://www.dqm2sp-guide.cloud-ip.cc/ ，Cloudflare h
 参考资料：GameWith、Game8、soshage.com 等，具体链接见数据记录。角色图像与游戏内容权利属于各自权利人，本仓库不授予这些内容的再许可。
 
 本目录由 DQM2SP/tools/prepare-github.mjs 生成，不包含账号凭据、个人存档、Sites 部署配置或历史抓取文件。
+
+
+## Beta 2026.11.09
+
+新增技能培养、配合继承与技能进阶说明，以及钥匙、称号和衣服获取攻略。本次发布仅包含 DQM2 SP。
