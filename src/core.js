@@ -34,7 +34,7 @@
    function calculate(aId,bId,plusA=0,plusB=0){
      const a=byId.get(aId),b=byId.get(bId);if(!a||!b)return [];
      const fixed=exact.get([aId,bId].sort((x,y)=>x-y).join(':'));if(fixed)return fixed.map(id=>({id,type:'pair',reason:'双亲固定配合'}));
-     if([705,706].includes(aId)||[705,706].includes(bId))return [{id:[705,706].includes(aId)?aId:bId,type:'special',reason:'蒙特纳保留种族'}];
+     if([705,706].includes(aId)||[705,706].includes(bId))return [{id:[705,706].includes(aId)?aId:bId,type:'special',reason:'专属怪物保留种族'}];
      if(a.holyBeast||b.holyBeast){const other=a.holyBeast?b:a,rank=Math.max(a.baseRank,b.baseRank);const result=sorted.find(m=>m.holy.some(r=>r.family===other.family&&r.rankNumber===rank));return result?[{id:result.id,type:'special',reason:'神兽系别配合'}]:[]}
      if(aId===bId)return [{id:aId,type:'same',reason:'同种族配合'}];
      const high=Math.max(effectiveNo(a,plusA),effectiveNo(b,plusB)),low=Math.min(effectiveNo(a,plusA),effectiveNo(b,plusB)),out=[];

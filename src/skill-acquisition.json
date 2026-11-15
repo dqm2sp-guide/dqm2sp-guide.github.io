@@ -2,9 +2,9 @@
   "checked":"2026-11-09",
   "sources":[
     {"label":"Game8 · 攻击力之证","url":"https://game8.jp/dqm2/316382"},
-    {"label":"Game8 · 防御力之证","url":"https://game8.jp/dqm2/316383"},
-    {"label":"Game8 · 敏捷之证","url":"https://game8.jp/dqm2/316384"},
-    {"label":"Game8 · 智慧之证","url":"https://game8.jp/dqm2/316385"},
+    {"label":"Game8 · 守备力之证","url":"https://game8.jp/dqm2/316383"},
+    {"label":"Game8 · 速度之证","url":"https://game8.jp/dqm2/316384"},
+    {"label":"Game8 · 智力之证","url":"https://game8.jp/dqm2/316385"},
     {"label":"Altema · 通信商店商品","url":"https://altema.jp/iruruka/tsushinshop"},
     {"label":"Altema · 职业技能之证","url":"https://altema.jp/iruruka/spskill"},
     {"label":"神游攻略 · 通信商店位置","url":"https://kamigame.jp/dqm2_sp/page/120603377808703495.html"}
@@ -16,11 +16,11 @@
     "sourceUrls":["https://kamigame.jp/dqm2_sp/page/120603377808703495.html","https://altema.jp/iruruka/spskill"]
   },
   "skills":{
-    "142":{"item":"攻击力之证","price":2000,"day":"周三","steps":["在马鲁达国大街的书店购买攻击力之证，2000G；也可在周三通信商店购买。","对伙伴使用，获得基础攻击提升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316382","https://altema.jp/iruruka/tsushinshop"]},
-    "145":{"item":"防御力之证","price":2000,"day":"周四","steps":["在马鲁达国大街的书店购买防御力之证，2000G；也可在周四通信商店购买。","对伙伴使用，获得基础防御提升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316383","https://altema.jp/iruruka/tsushinshop"]},
-    "148":{"item":"敏捷之证","price":2000,"day":"周五","steps":["在马鲁达国大街的书店购买敏捷之证，2000G；也可在周五通信商店购买。","对伙伴使用，获得基础敏捷提升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316384","https://altema.jp/iruruka/tsushinshop"]},
-    "151":{"item":"智慧之证","price":2000,"day":"周六","steps":["在马鲁达国大街的书店购买智慧之证，2000G；也可在周六通信商店购买。","对伙伴使用，获得基础智慧提升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316385","https://altema.jp/iruruka/tsushinshop"]},
-    "187":{"item":"战士之证","price":7500,"day":"周四","steps":["周四更新通信商店商品，购买战士之证，7500G。","对伙伴使用，获得战士技能组；与攻击提升3分别练满，可作为攻击提升SP的素材。"],"sourceUrls":["https://altema.jp/iruruka/tsushinshop","https://altema.jp/iruruka/spskill"]},
+    "142":{"item":"攻击力之证","price":2000,"day":"周三","steps":["在马尔塔国大街的书店购买攻击力之证，2000G；也可在周三通信商店购买。","对伙伴使用，获得基础攻击力上升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316382","https://altema.jp/iruruka/tsushinshop"]},
+    "145":{"item":"守备力之证","price":2000,"day":"周四","steps":["在马尔塔国大街的书店购买守备力之证，2000G；也可在周四通信商店购买。","对伙伴使用，获得基础守备力上升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316383","https://altema.jp/iruruka/tsushinshop"]},
+    "148":{"item":"速度之证","price":2000,"day":"周五","steps":["在马尔塔国大街的书店购买速度之证，2000G；也可在周五通信商店购买。","对伙伴使用，获得基础速度上升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316384","https://altema.jp/iruruka/tsushinshop"]},
+    "151":{"item":"智力之证","price":2000,"day":"周六","steps":["在马尔塔国大街的书店购买智力之证，2000G；也可在周六通信商店购买。","对伙伴使用，获得基础智力上升技能组。"],"sourceUrls":["https://game8.jp/dqm2/316385","https://altema.jp/iruruka/tsushinshop"]},
+    "187":{"item":"战士之证","price":7500,"day":"周四","steps":["周四更新通信商店商品，购买战士之证，7500G。","对伙伴使用，获得战士技能组；与攻击力上升3分别练满，可作为攻击力上升SP的素材。"],"sourceUrls":["https://altema.jp/iruruka/tsushinshop","https://altema.jp/iruruka/spskill"]},
     "188":{"item":"魔法师之证","price":11500,"day":"周一","steps":["周一更新通信商店商品，购买魔法师之证，11500G。","对伙伴使用，获得魔法师技能组。"],"sourceUrls":["https://altema.jp/iruruka/tsushinshop","https://altema.jp/iruruka/spskill"]},
     "189":{"item":"僧侣之证","price":10500,"day":"周二","steps":["周二更新通信商店商品，购买僧侣之证，10500G。","对伙伴使用，获得僧侣技能组。"],"sourceUrls":["https://altema.jp/iruruka/tsushinshop","https://altema.jp/iruruka/spskill"]},
     "190":{"item":"武斗家之证","price":8500,"day":"周三","steps":["周三更新通信商店商品，购买武斗家之证，8500G。","对伙伴使用，获得武斗家技能组。"],"sourceUrls":["https://altema.jp/iruruka/tsushinshop","https://altema.jp/iruruka/spskill"]},
