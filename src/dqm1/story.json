@@ -1,0 +1,714 @@
+{
+  "checked": "2026-11-08",
+  "version": "story-20261108-2",
+  "note": "手机SP版流程；按推荐顺序补强，普通旅之门不全是竞技场的硬性前置。头目与结局涉及剧透。中文门名、专名采用编辑译法，可能与汉化补丁不同。",
+  "sources": [
+    {
+      "label": "SP主线推进与可跳过普通门说明",
+      "url": "https://altema.jp/terrysp/storykouryaku"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "g",
+      "title": "开场 → G级：先凑齐四个战斗位",
+      "phase": "主线",
+      "unlock": "开场剧情后",
+      "steps": [
+        "调查衣柜来到大树之国；先见国王，再到牧场领取史莱姆，回王座交谈。",
+        "从城堡地下进入启程之门，沿井口下到B4，击败治疗史莱姆。",
+        "回城补给、装备武器，再去竞技场报名G级。"
+      ],
+      "preparation": [
+        "沿途招募伙伴，避免只带初始史莱姆挑战头目。",
+        "检查竞技场接待处后方和观众席的宝箱，取得的武器要手动装备。"
+      ],
+      "bosses": [
+        {
+          "name": "治疗史莱姆",
+          "mechanics": [
+            "单体攻击对初始队伍仍有威胁。"
+          ],
+          "plan": [
+            "开战前补满HP，用人数分担伤害；保留回复手段。"
+          ]
+        },
+        {
+          "name": "G级竞技场",
+          "mechanics": [
+            "连续三场小队战。"
+          ],
+          "plan": [
+            "带齐输出与回复位再报名；先用普通战斗检查AI是否会回复。"
+          ]
+        }
+      ],
+      "after": "通过后开放等候之门、守护之门。",
+      "monsters": [
+        "healslime"
+      ],
+      "source": "https://gamewith.jp/terrysp/article/show/128714",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128714"
+        }
+      ]
+    },
+    {
+      "id": "f",
+      "title": "G级 → F级：招龙与石巨人，解锁配合",
+      "phase": "主线",
+      "unlock": "通过G级",
+      "steps": [
+        "等候之门B5击败龙；守护之门B5击败石巨人。两门用于补强，竞技场推进并不要求每扇普通门全部清完。",
+        "回城整理队伍后挑战F级；通过后去大树下层的星降祠堂，与怪物爷爷交谈。"
+      ],
+      "preparation": [
+        "准备全体攻击，F级对手多为四体队。",
+        "留一组能战斗的后备；不要把受伤伙伴直接带进下一场。"
+      ],
+      "bosses": [
+        {
+          "name": "龙",
+          "mechanics": [
+            "火焰吐息打全队。"
+          ],
+          "plan": [
+            "全员HP过低时先回复，别只治疗被普通攻击命中的一只。"
+          ]
+        },
+        {
+          "name": "石巨人",
+          "mechanics": [
+            "蓄力后接多段物理攻击，容易打倒单个伙伴。"
+          ],
+          "plan": [
+            "先保证回复位存活；刚取得的龙可参与输出，必要时换后备。"
+          ]
+        }
+      ],
+      "after": "F级后可配合，下一站为回忆、勇气之门。",
+      "monsters": [
+        "dragon",
+        "m187"
+      ],
+      "source": "https://gamewith.jp/terrysp/article/show/128720",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128720"
+        },
+        {
+          "label": "普通门与竞技场推进关系",
+          "url": "https://altema.jp/terrysp/storykouryaku"
+        }
+      ]
+    },
+    {
+      "id": "e",
+      "title": "F级 → E级：第一次配合与物理头目",
+      "phase": "主线",
+      "unlock": "通过F级，配合已开放",
+      "steps": [
+        "先规划技能继承，再配合一到两个位置；新生怪练起来后再替换其余主力。",
+        "回忆之门B6挑战杀人豹，勇气之门B6挑战斗鸡眼；之后挑战E级。"
+      ],
+      "preparation": [
+        "回复位不要与主输出同时配掉。",
+        "E级会遇到吐息队，带吐息防护或封锁手段，并确认技能已经学会。"
+      ],
+      "bosses": [
+        {
+          "name": "杀人豹",
+          "mechanics": [
+            "容易先行动，连续攻击压低HP。"
+          ],
+          "plan": [
+            "不要等濒死才治疗；输出位负责进攻，回复位保持专职。"
+          ]
+        },
+        {
+          "name": "斗鸡眼",
+          "mechanics": [
+            "以连续普通攻击为主。"
+          ],
+          "plan": [
+            "手动使用降低命中的技能，再维持回复；不是每回合全员抢输出。"
+          ]
+        }
+      ],
+      "after": "通过E级，开放安宁之门与困惑之门。",
+      "monsters": [
+        "m215",
+        "m136"
+      ],
+      "source": "https://gamewith.jp/terrysp/article/show/128737",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128737"
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "title": "E级 → D级：应对反击、休息与封咒",
+      "phase": "主线",
+      "unlock": "通过E级",
+      "steps": [
+        "安宁之门B6挑战尖刺史莱姆；困惑之门继续下到B8挑战人面树。",
+        "完成补强后回竞技场挑战D级。"
+      ],
+      "preparation": [
+        "带药草等道具，作为回复咒文被封时的备用。",
+        "队伍至少保留一种非咒文输出，避免全队被同一种封锁限制。"
+      ],
+      "bosses": [
+        {
+          "name": "尖刺史莱姆",
+          "mechanics": [
+            "会反击普通攻击，并用吼叫让伙伴休息。"
+          ],
+          "plan": [
+            "被反击压血时减少普通攻击，先恢复队形；不要依赖唯一回复位每回合必定行动。"
+          ]
+        },
+        {
+          "name": "人面树及两只树桩怪",
+          "mechanics": [
+            "人面树使用封咒，随从增加敌方行动数。"
+          ],
+          "plan": [
+            "用吐息或物理削减随从，治疗被封时用道具补位。"
+          ]
+        }
+      ],
+      "after": "通过D级，开放愤怒、力量之门。",
+      "monsters": [
+        "m74",
+        "m258"
+      ],
+      "source": "https://gamewith.jp/terrysp/article/show/128762",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128762"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "title": "D级 → C级：炎息与异常状态",
+      "phase": "主线",
+      "unlock": "通过D级",
+      "steps": [
+        "愤怒之门B9挑战斧龙；初访时绕开难以应付的巨型野怪。",
+        "力量之门B9挑战巨魔头；回城补给后挑战C级。"
+      ],
+      "preparation": [
+        "准备炎息抗性或吐息防护，不要只看攻击力。",
+        "带解除异常的道具，给被催眠或封咒的回复位留救场办法。"
+      ],
+      "bosses": [
+        {
+          "name": "斧龙",
+          "mechanics": [
+            "火焰吐息伤害覆盖全队。"
+          ],
+          "plan": [
+            "先保全队血线；耐炎息伙伴比单纯高攻击更稳。"
+          ]
+        },
+        {
+          "name": "巨魔头",
+          "mechanics": [
+            "使用封咒与睡眠攻击。"
+          ],
+          "plan": [
+            "回复位中异常时优先解除，再继续输出。"
+          ]
+        },
+        {
+          "name": "C级竞技场",
+          "mechanics": [
+            "四体队较多，中间一场带回复怪。"
+          ],
+          "plan": [
+            "配置全体伤害，避免伤害分散后被敌方回复拖住。"
+          ]
+        }
+      ],
+      "after": "通过C级，可继续攻略大空与喜悦之门。",
+      "monsters": [
+        "m213"
+      ],
+      "source": "https://gamewith.jp/terrysp/article/show/128780",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128780"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "title": "C级 → B级：处理蓄力吐息",
+      "phase": "主线",
+      "unlock": "通过C级",
+      "steps": [
+        "大空之门B10挑战天空龙；喜悦之门B10挑战舞鸟。",
+        "将能连续战斗的主力练好，再挑战B级三连战。"
+      ],
+      "preparation": [
+        "有逆风等反射吐息技能时先确认使用者速度与MP。",
+        "没有反射技能也可用抗性、回复和短时间集火应对。"
+      ],
+      "bosses": [
+        {
+          "name": "天空龙",
+          "mechanics": [
+            "吸气后强化吐息，是主要爆发点。"
+          ],
+          "plan": [
+            "看到蓄势先保护血线；可用逆风反射吐息，不要在这回合放任全队残血。"
+          ]
+        },
+        {
+          "name": "舞鸟",
+          "mechanics": [
+            "受到物理攻击时可能提升蓄力。"
+          ],
+          "plan": [
+            "物理连打让其越打越强时，改用咒文输出并保持回复。"
+          ]
+        }
+      ],
+      "after": "通过B级，开放毁灭与幸福之门。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/128786",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128786"
+        }
+      ]
+    },
+    {
+      "id": "a",
+      "title": "B级 → A级：高蓄力与火焰双威胁",
+      "phase": "主线",
+      "unlock": "通过B级",
+      "steps": [
+        "毁灭之门B10挑战恶魔骑士；幸福之门B13挑战加米拉斯。",
+        "整理回复、复活和群体伤害后参加A级。"
+      ],
+      "preparation": [
+        "检查火焰咒文和火焰吐息两项抗性，它们不能互相替代。",
+        "编辑建议：保留一个备用回复或复活者；主治疗倒下时仍能恢复队形。"
+      ],
+      "bosses": [
+        {
+          "name": "恶魔骑士",
+          "mechanics": [
+            "蓄力提高物理爆发。"
+          ],
+          "plan": [
+            "提前提高防御并保持高HP；不要为了最后一点输出放弃治疗。"
+          ]
+        },
+        {
+          "name": "加米拉斯",
+          "mechanics": [
+            "同时威胁单体的强火咒文与全队的烈焰吐息。"
+          ],
+          "plan": [
+            "分别安排咒文与吐息防护；回复位优先生存，输出位集中攻击。"
+          ]
+        }
+      ],
+      "after": "通过A级，开放诱惑、审判之门。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/128800",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128800"
+        }
+      ]
+    },
+    {
+      "id": "s",
+      "title": "A级 → S级：封锁与金属对策",
+      "phase": "主线",
+      "unlock": "通过A级",
+      "steps": [
+        "诱惑之门B13挑战魔王使者；审判之门B13挑战阿克巴。",
+        "准备能伤害金属怪的手段，再报名S级。"
+      ],
+      "preparation": [
+        "检查技能，而不是只确认怪物名字；继承后没加点的技能不能用于战斗。",
+        "竞技场以AI战术准备为主，手动指定集火的建议适用于旅之门头目。"
+      ],
+      "bosses": [
+        {
+          "name": "魔王使者与随从",
+          "mechanics": [
+            "强力咒文与多个敌人同时施压。"
+          ],
+          "plan": [
+            "封咒可减轻咒文压力，配合群体输出减少随从。"
+          ]
+        },
+        {
+          "name": "阿克巴",
+          "mechanics": [
+            "吐息、爆炸咒文等全体伤害。"
+          ],
+          "plan": [
+            "封吐息或封咒至少压住一类，同时维持群体回复。"
+          ]
+        },
+        {
+          "name": "S级第三场",
+          "mechanics": [
+            "有金属怪与会即死咒文的宝箱怪。"
+          ],
+          "plan": [
+            "准备金属对策和即死抗性；先在普通战斗中验证AI输出与回复配置。"
+          ]
+        }
+      ],
+      "after": "通过S级，镜子之门开放。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/128803",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128803"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "title": "镜子之门 → 星降大会 → 主线结局",
+      "phase": "主线",
+      "unlock": "通过S级",
+      "steps": [
+        "镜子之门B17连续挑战魔王使者、剑士特瑞、杜兰。",
+        "回竞技场参加星降大会，连胜三场后到牧场找怪物爷爷，按剧情前往星降祠堂并回到家中。"
+      ],
+      "preparation": [
+        "镜子三连战之间不会自动回复；补足HP、MP，并配置能接班的后备队。",
+        "这阶段的准备标准是能扛住一轮并恢复，攻略中的星级推荐不是硬性解锁条件。"
+      ],
+      "bosses": [
+        {
+          "name": "镜子之门三连战",
+          "mechanics": [
+            "后两战以物理压力为主。"
+          ],
+          "plan": [
+            "用防御提升、降低命中减伤；前一战结束前也要顾及下一战血量。"
+          ]
+        },
+        {
+          "name": "星降大会",
+          "mechanics": [
+            "首场八岐大蛇可多次行动，决赛含金属王。"
+          ],
+          "plan": [
+            "防止首场减员，带针对龙的武器与金属伤害手段，不把所有技能都改成纯群攻。"
+          ]
+        }
+      ],
+      "after": "看到结局后仍可继续树冰之国篇。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/128809",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/128809"
+        },
+        {
+          "label": "结局事件顺序",
+          "url": "https://altema.jp/terrysp/storykouryaku"
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "title": "通关后：进入树冰之国",
+      "phase": "通关后",
+      "unlock": "看过主线结局",
+      "steps": [
+        "再次调查家中的衣柜；到星降祠堂找怪物爷爷，再见大树国王。",
+        "靠近城门处的米蕾尤，回王座继续事件，随后前往树冰之国的星空竞技场。",
+        "四扇魔战士之门可以选择顺序；本攻略采用烈风→雷云→大地→绝海的补强顺序。"
+      ],
+      "preparation": [
+        "究极配合在结局后的王座事件阶段开放；先到配合预览确认，不必把树冰篇全部打完才去检查。",
+        "同种双亲、子代加值达到100以上是究极配合的核心条件；不要把等级100当成加值100。"
+      ],
+      "bosses": [],
+      "after": "开始四魔战士挑战；每次回城按下一名头目的攻击类型换防护。",
+      "monsters": [],
+      "source": "https://altema.jp/terrysp/chart10",
+      "sources": [
+        {
+          "label": "Altema SP 攻略",
+          "url": "https://altema.jp/terrysp/chart10"
+        },
+        {
+          "label": "究极配合条件",
+          "url": "https://altema.jp/terrysp/kyukyokuhaigou"
+        }
+      ]
+    },
+    {
+      "id": "post-four",
+      "title": "四魔战士：烈风、雷云、大地、绝海",
+      "phase": "通关后",
+      "unlock": "树冰之国事件完成，四门可进入",
+      "steps": [
+        "四门头目都在B9；分别击败后推进焰之门。",
+        "遇到卡关先换抗性、技能和同行伙伴，再尝试；没有统一的必过等级。"
+      ],
+      "preparation": [
+        "咒文减伤、防御提升、解除异常分配到不同伙伴，避免治疗者被控后整队失去救援。",
+        "大地、绝海尤其注意休息、混乱、麻痹和睡眠；装备与究极选择会改变结果。"
+      ],
+      "bosses": [
+        {
+          "name": "烈风：魔战士赛丰",
+          "mechanics": [
+            "敌队偏咒文输出。"
+          ],
+          "plan": [
+            "用魔法屏障或咒文反射减伤，别让回复位独自承担所有辅助。"
+          ]
+        },
+        {
+          "name": "雷云：魔战士霍盖拉",
+          "mechanics": [
+            "高蓄力、物理与体技爆发。"
+          ],
+          "plan": [
+            "提升防御、压低对方攻击，同时留复活；防御提升不能保证挡住会心。"
+          ]
+        },
+        {
+          "name": "大地：魔战士薇拉",
+          "mechanics": [
+            "先手与异常干扰，斩击压力大。"
+          ],
+          "plan": [
+            "保护回复位的抗性；用防御辅助或斩击封锁，红雾也会限制己方斩击。"
+          ]
+        },
+        {
+          "name": "绝海：魔战士阿尔戈",
+          "mechanics": [
+            "强咒文与异常攻击；随从可能反射斩击、咒文。"
+          ],
+          "plan": [
+            "带魔法防护，遇到反射时改用体技等其他输出，不盲目连打。"
+          ]
+        }
+      ],
+      "after": "四门完成后进入焰之门。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/129631",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/129631"
+        },
+        {
+          "label": "四魔战士攻击与同行伙伴",
+          "url": "https://altema.jp/terrysp/chart10"
+        }
+      ]
+    },
+    {
+      "id": "post-flame",
+      "title": "焰之门：魔战士鲁基乌斯",
+      "phase": "通关后",
+      "unlock": "四魔战士之门已通过",
+      "steps": [
+        "焰之门一路推进至B18；进入头目前补齐消耗品。",
+        "胜利后开启常暗之门的最终挑战。"
+      ],
+      "preparation": [
+        "准备斩击封锁与吐息防护。",
+        "使用红雾前检查己方主输出是否也依赖斩击，必要时换成体技或咒文。"
+      ],
+      "bosses": [
+        {
+          "name": "鲁基乌斯与龙系随从",
+          "mechanics": [
+            "鲁基乌斯偏斩击，白龙王随从带支援和吐息。"
+          ],
+          "plan": [
+            "封锁斩击后集中削减主威胁；同时用吐息防护，不能把封斩击当成全队无敌。"
+          ]
+        }
+      ],
+      "after": "常暗之门很长，先整理一套能持续回复的队伍。",
+      "monsters": [],
+      "source": "https://altema.jp/terrysp/chart11",
+      "sources": [
+        {
+          "label": "Altema SP 攻略",
+          "url": "https://altema.jp/terrysp/chart11"
+        }
+      ]
+    },
+    {
+      "id": "post-final",
+      "title": "常暗之门：两场最终头目",
+      "phase": "通关后",
+      "unlock": "焰之门通过",
+      "steps": [
+        "常暗之门推进到B29，先战凶魔兽梅扎，再战魔战神泽梅尔吉亚斯。",
+        "两战之间HP、MP会恢复；第一场可以全力应对。"
+      ],
+      "preparation": [
+        "准备休息抗性、群体回复与复活。",
+        "为咒文、吐息分别准备防护；封锁技能可能失败，不能替代生存准备。"
+      ],
+      "bosses": [
+        {
+          "name": "凶魔兽梅扎",
+          "mechanics": [
+            "吼叫与强力体技会打乱行动。"
+          ],
+          "plan": [
+            "保护回复位的休息抗性，体技封锁可作为对策；白雾也封己方体技，先检查技能。"
+          ]
+        },
+        {
+          "name": "魔战神泽梅尔吉亚斯",
+          "mechanics": [
+            "多次行动，混合斩击、咒文、吐息，并可强化自身。"
+          ],
+          "plan": [
+            "分层减伤，封斩击或封咒减少压力；强化出现后用清除增益的手段处理，不要全员同时贪输出。"
+          ]
+        }
+      ],
+      "after": "树冰篇完成，可进入更高效率的培养与通关后收集。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/129631",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/129631"
+        },
+        {
+          "label": "最终两战与减伤手段",
+          "url": "https://altema.jp/terrysp/chart11"
+        }
+      ]
+    },
+    {
+      "id": "gold-open",
+      "title": "黄金乡：先完成招募问答",
+      "phase": "黄金乡",
+      "unlock": "完成招募问答全部15题，并触发后续事件",
+      "steps": [
+        "完成15题后再攻略一扇旅之门，回城触发事件；到王妃房间找老管家问目的地。",
+        "到指定普通旅之门的第2层找王妃，按要求带来怪物或技能。",
+        "达成要求后，到普通头目层前一层寻找金色井口，进入黄金乡。"
+      ],
+      "preparation": [
+        "每天最多新开放一处，32处不能在同一天全部解锁；已经开放的区域可以重复挑战。",
+        "不要把普通井口当成黄金井口；先登记途中的传送水晶，方便回访。"
+      ],
+      "bosses": [],
+      "after": "先开通一处并击败头目，再继续后续要求；王妃当前要求以游戏对话为准。",
+      "monsters": [],
+      "source": "https://gamewith.jp/terrysp/article/show/129343",
+      "sources": [
+        {
+          "label": "GameWith SP 攻略",
+          "url": "https://gamewith.jp/terrysp/article/show/129343"
+        },
+        {
+          "label": "开放步骤与重复挑战",
+          "url": "https://altema.jp/terrysp/ougonkyo"
+        }
+      ]
+    },
+    {
+      "id": "gold-farm",
+      "title": "黄金乡：口传与重复收集",
+      "phase": "黄金乡",
+      "unlock": "至少开放一处黄金乡",
+      "steps": [
+        "按想要的口传技能选择目的地，进入黄金乡后登记水晶，再挑战最深处头目。",
+        "击败头目可获得对应怪物与口传；不满意口传的等级或附加能力时再周回。"
+      ],
+      "preparation": [
+        "口传给究极配合后的怪物使用，与普通继承技能分开。",
+        "编辑建议：先验证手动稳定获胜，再尝试自动；遇到反射、封锁或控制型头目时单独换队。"
+      ],
+      "bosses": [],
+      "after": "展示解锁怪物后，重新挑战时不必始终带着它；以能稳定战斗的队伍周回。",
+      "monsters": [],
+      "source": "https://altema.jp/terrysp/ougonkyo",
+      "sources": [
+        {
+          "label": "Altema SP 攻略",
+          "url": "https://altema.jp/terrysp/ougonkyo"
+        }
+      ]
+    },
+    {
+      "id": "gold-sea",
+      "title": "黄金乡实例：绝海之门",
+      "phase": "黄金乡",
+      "unlock": "前两组共16处黄金乡已开放，并轮到绝海要求",
+      "steps": [
+        "准备带有“防御力提升SP”的究极魔战士阿尔戈；在绝海普通第2层向王妃展示。",
+        "回到普通B8寻找金井；黄金乡前4层探索，第4层登记水晶，第5层挑战多梅迪。"
+      ],
+      "preparation": [
+        "“究极”与指定SP技能要同时满足，仅有普通阿尔戈不够。",
+        "编辑建议：展示用怪与战斗队可以分开；回城换成完整治疗、辅助、输出队再挑战。"
+      ],
+      "bosses": [],
+      "after": "这里可刷全体回复方向的口传；详细能力以实际掉落说明为准。",
+      "monsters": [],
+      "source": "https://game-cap.com/terry3ds/ougonkyo/027.html",
+      "sources": [
+        {
+          "label": "Altema SP 攻略",
+          "url": "https://game-cap.com/terry3ds/ougonkyo/027.html"
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "title": "先准备一队能稳定赢的伙伴",
+      "body": "编辑建议：回复、输出、辅助分工，并保留后备。新生怪先练级，别一次配掉全队。S、M、G体型通常可继承3、4、5组技能；配合前确认继承预览。",
+      "source": "https://gamewith.jp/terrysp/article/show/128759"
+    },
+    {
+      "title": "前期练级：先稳定，再追效率",
+      "body": "无金属券时，在已经能稳定取胜的旅之门练到10～20级。自动战斗前补满HP；不要用新生队硬碰大型野怪。轻松冒险可每小时使用一次，适合已通关的门。",
+      "source": "https://gamewith.jp/terrysp/article/show/128790"
+    },
+    {
+      "title": "金属区域与光辉之地",
+      "body": "金属区域消耗1张金属券，可停留10分钟。通关树冰之国后，希望之门B5的光辉之地消耗2张，可停留20分钟。带已培养的主力，不把“能进入”当成“能自动打赢”。",
+      "source": "https://gamewith.jp/terrysp/article/show/128790"
+    },
+    {
+      "title": "配合前检查四件事",
+      "body": "双亲至少10级，性别可配合；先确认技能继承、子代候选与性别。四体配合查看的是祖父母四体，不是把四只一次塞进普通双亲配合。",
+      "source": "https://gamewith.jp/terrysp/article/show/128759"
+    }
+  ]
+}

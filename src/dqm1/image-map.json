@@ -1,0 +1,3301 @@
+{
+  "checked": "2026-11-08",
+  "usage": "只复用同物种外观及中文名，不复制二代数值、抗性或配合。",
+  "monsters": [
+    {
+      "dqm1Id": "slime",
+      "dqm2Id": 1,
+      "identity": "スライム"
+    },
+    {
+      "dqm1Id": "m2",
+      "dqm2Id": 48,
+      "identity": "ドラゴンキッズ"
+    },
+    {
+      "dqm1Id": "m3",
+      "dqm2Id": 131,
+      "identity": "ズッキーニャ"
+    },
+    {
+      "dqm1Id": "m4",
+      "dqm2Id": 96,
+      "identity": "ももんじゃ"
+    },
+    {
+      "dqm1Id": "m5",
+      "dqm2Id": 193,
+      "identity": "おばけキャンドル"
+    },
+    {
+      "dqm1Id": "eyeball",
+      "dqm2Id": 242,
+      "identity": "おおめだま"
+    },
+    {
+      "dqm1Id": "m7",
+      "dqm2Id": 194,
+      "identity": "メラゴースト"
+    },
+    {
+      "dqm1Id": "m8",
+      "dqm2Id": 1042,
+      "identity": "からくりエッグ"
+    },
+    {
+      "dqm1Id": "m9",
+      "dqm2Id": 373,
+      "identity": "リーファ"
+    },
+    {
+      "dqm1Id": "m10",
+      "dqm2Id": 49,
+      "identity": "コドラ"
+    },
+    {
+      "dqm1Id": "m11",
+      "dqm2Id": 365,
+      "identity": "カバシラー"
+    },
+    {
+      "dqm1Id": "m12",
+      "dqm2Id": 144,
+      "identity": "いたずらもぐら"
+    },
+    {
+      "dqm1Id": "m13",
+      "dqm2Id": 192,
+      "identity": "わらいぶくろ"
+    },
+    {
+      "dqm1Id": "m14",
+      "dqm2Id": 240,
+      "identity": "ドラキー"
+    },
+    {
+      "dqm1Id": "m15",
+      "dqm2Id": 1018,
+      "identity": "マンドラ"
+    },
+    {
+      "dqm1Id": "m16",
+      "dqm2Id": 289,
+      "identity": "ゴースト"
+    },
+    {
+      "dqm1Id": "m17",
+      "dqm2Id": 371,
+      "identity": "タマゴロン"
+    },
+    {
+      "dqm1Id": "m18",
+      "dqm2Id": 73,
+      "identity": "リザードキッズ"
+    },
+    {
+      "dqm1Id": "m19",
+      "dqm2Id": 102,
+      "identity": "くしざしツインズ"
+    },
+    {
+      "dqm1Id": "m20",
+      "dqm2Id": 552,
+      "identity": "アントベア"
+    },
+    {
+      "dqm1Id": "m21",
+      "dqm2Id": 196,
+      "identity": "どろにんぎょう"
+    },
+    {
+      "dqm1Id": "m22",
+      "dqm2Id": 241,
+      "identity": "リップス"
+    },
+    {
+      "dqm1Id": "m23",
+      "dqm2Id": 290,
+      "identity": "きりかぶおばけ"
+    },
+    {
+      "dqm1Id": "m24",
+      "dqm2Id": 513,
+      "identity": "スライムツリー"
+    },
+    {
+      "dqm1Id": "m25",
+      "dqm2Id": 522,
+      "identity": "とさかへび"
+    },
+    {
+      "dqm1Id": "m26",
+      "dqm2Id": 538,
+      "identity": "ピッキー"
+    },
+    {
+      "dqm1Id": "m27",
+      "dqm2Id": 550,
+      "identity": "ファーラット"
+    },
+    {
+      "dqm1Id": "m28",
+      "dqm2Id": 560,
+      "identity": "ネジまきどり"
+    },
+    {
+      "dqm1Id": "m29",
+      "dqm2Id": 179,
+      "identity": "おにこぞう"
+    },
+    {
+      "dqm1Id": "evil_seed",
+      "dqm2Id": 571,
+      "identity": "エビルシード"
+    },
+    {
+      "dqm1Id": "bubble_slime",
+      "dqm2Id": 2,
+      "identity": "バブルスライム"
+    },
+    {
+      "dqm1Id": "m32",
+      "dqm2Id": 71,
+      "identity": "いばらドラゴン"
+    },
+    {
+      "dqm1Id": "m33",
+      "dqm2Id": 367,
+      "identity": "キャタピラー"
+    },
+    {
+      "dqm1Id": "m34",
+      "dqm2Id": 146,
+      "identity": "おおきづち"
+    },
+    {
+      "dqm1Id": "m35",
+      "dqm2Id": 1029,
+      "identity": "モコッキー"
+    },
+    {
+      "dqm1Id": "m36",
+      "dqm2Id": 224,
+      "identity": "ばくだんベビー"
+    },
+    {
+      "dqm1Id": "m37",
+      "dqm2Id": 147,
+      "identity": "プークプック"
+    },
+    {
+      "dqm1Id": "m38",
+      "dqm2Id": 294,
+      "identity": "おばけきのこ"
+    },
+    {
+      "dqm1Id": "healslime",
+      "dqm2Id": 4,
+      "identity": "ホイミスライム"
+    },
+    {
+      "dqm1Id": "m40",
+      "dqm2Id": 51,
+      "identity": "アルゴリザード"
+    },
+    {
+      "dqm1Id": "m41",
+      "dqm2Id": 132,
+      "identity": "ぐんたいアリ"
+    },
+    {
+      "dqm1Id": "m42",
+      "dqm2Id": 178,
+      "identity": "ポンポコだぬき"
+    },
+    {
+      "dqm1Id": "m43",
+      "dqm2Id": 209,
+      "identity": "ブリザード"
+    },
+    {
+      "dqm1Id": "m44",
+      "dqm2Id": 275,
+      "identity": "ヘルボックル"
+    },
+    {
+      "dqm1Id": "m45",
+      "dqm2Id": 579,
+      "identity": "アニマルゾンビ"
+    },
+    {
+      "dqm1Id": "m46",
+      "dqm2Id": 512,
+      "identity": "はねスライム"
+    },
+    {
+      "dqm1Id": "m47",
+      "dqm2Id": 55,
+      "identity": "デンデン竜"
+    },
+    {
+      "dqm1Id": "m48",
+      "dqm2Id": 133,
+      "identity": "はなカワセミ"
+    },
+    {
+      "dqm1Id": "m49",
+      "dqm2Id": 99,
+      "identity": "おおがらす"
+    },
+    {
+      "dqm1Id": "m50",
+      "dqm2Id": 126,
+      "identity": "イエティ"
+    },
+    {
+      "dqm1Id": "m51",
+      "dqm2Id": 549,
+      "identity": "ベロゴン"
+    },
+    {
+      "dqm1Id": "m52",
+      "dqm2Id": 201,
+      "identity": "シャイニング"
+    },
+    {
+      "dqm1Id": "m53",
+      "dqm2Id": 633,
+      "identity": "かまっち"
+    },
+    {
+      "dqm1Id": "m54",
+      "dqm2Id": 565,
+      "identity": "メーダ"
+    },
+    {
+      "dqm1Id": "m55",
+      "dqm2Id": 361,
+      "identity": "プチット族"
+    },
+    {
+      "dqm1Id": "m56",
+      "dqm2Id": 411,
+      "identity": "ドロル"
+    },
+    {
+      "dqm1Id": "m57",
+      "dqm2Id": 575,
+      "identity": "ガップリン"
+    },
+    {
+      "dqm1Id": "m58",
+      "dqm2Id": 5,
+      "identity": "ドラゴスライム"
+    },
+    {
+      "dqm1Id": "m59",
+      "dqm2Id": 85,
+      "identity": "リザードフライ"
+    },
+    {
+      "dqm1Id": "m60",
+      "dqm2Id": 545,
+      "identity": "キリキリバッタ"
+    },
+    {
+      "dqm1Id": "m61",
+      "dqm2Id": 106,
+      "identity": "じんめんガエル"
+    },
+    {
+      "dqm1Id": "m62",
+      "dqm2Id": 364,
+      "identity": "ガオン"
+    },
+    {
+      "dqm1Id": "m63",
+      "dqm2Id": 269,
+      "identity": "シーメーダ"
+    },
+    {
+      "dqm1Id": "m64",
+      "dqm2Id": 291,
+      "identity": "スモールグール"
+    },
+    {
+      "dqm1Id": "m65",
+      "dqm2Id": 698,
+      "identity": "エテポンゲ"
+    },
+    {
+      "dqm1Id": "m66",
+      "dqm2Id": 520,
+      "identity": "ポイズンリザード"
+    },
+    {
+      "dqm1Id": "m67",
+      "dqm2Id": 534,
+      "identity": "ミノーン"
+    },
+    {
+      "dqm1Id": "m68",
+      "dqm2Id": 619,
+      "identity": "ナスビナーラ"
+    },
+    {
+      "dqm1Id": "m69",
+      "dqm2Id": 180,
+      "identity": "キャットフライ"
+    },
+    {
+      "dqm1Id": "m70",
+      "dqm2Id": 1026,
+      "identity": "あおバチ騎兵"
+    },
+    {
+      "dqm1Id": "m71",
+      "dqm2Id": 292,
+      "identity": "マドハンド"
+    },
+    {
+      "dqm1Id": "m72",
+      "dqm2Id": 363,
+      "identity": "シャーマン"
+    },
+    {
+      "dqm1Id": "m73",
+      "dqm2Id": 301,
+      "identity": "ミイラおとこ"
+    },
+    {
+      "dqm1Id": "m74",
+      "dqm2Id": 8,
+      "identity": "スライムファング"
+    },
+    {
+      "dqm1Id": "m75",
+      "dqm2Id": 387,
+      "identity": "スノードラゴン"
+    },
+    {
+      "dqm1Id": "m76",
+      "dqm2Id": 118,
+      "identity": "おおにわとり"
+    },
+    {
+      "dqm1Id": "m77",
+      "dqm2Id": 551,
+      "identity": "スカルガルー"
+    },
+    {
+      "dqm1Id": "m78",
+      "dqm2Id": 226,
+      "identity": "ミステリドール"
+    },
+    {
+      "dqm1Id": "m79",
+      "dqm2Id": 157,
+      "identity": "コサックシープ"
+    },
+    {
+      "dqm1Id": "m80",
+      "dqm2Id": 573,
+      "identity": "ミストウィング"
+    },
+    {
+      "dqm1Id": "m81",
+      "dqm2Id": 72,
+      "identity": "いっかく竜"
+    },
+    {
+      "dqm1Id": "m82",
+      "dqm2Id": 108,
+      "identity": "あばれうしどり"
+    },
+    {
+      "dqm1Id": "m83",
+      "dqm2Id": 97,
+      "identity": "ベビーパンサー"
+    },
+    {
+      "dqm1Id": "m84",
+      "dqm2Id": 203,
+      "identity": "ばくだんいわ"
+    },
+    {
+      "dqm1Id": "m85",
+      "dqm2Id": 227,
+      "identity": "ブッチョマン"
+    },
+    {
+      "dqm1Id": "m86",
+      "dqm2Id": 572,
+      "identity": "やたがらす"
+    },
+    {
+      "dqm1Id": "evil_drive",
+      "dqm2Id": 297,
+      "identity": "エビルドライブ"
+    },
+    {
+      "dqm1Id": "m88",
+      "dqm2Id": 17,
+      "identity": "スライムベス"
+    },
+    {
+      "dqm1Id": "m89",
+      "dqm2Id": 76,
+      "identity": "ドラゴンブッシュ"
+    },
+    {
+      "dqm1Id": "m90",
+      "dqm2Id": 620,
+      "identity": "もみじこぞう"
+    },
+    {
+      "dqm1Id": "m91",
+      "dqm2Id": 150,
+      "identity": "ワンダーフール"
+    },
+    {
+      "dqm1Id": "m92",
+      "dqm2Id": 207,
+      "identity": "フレイム"
+    },
+    {
+      "dqm1Id": "m93",
+      "dqm2Id": 154,
+      "identity": "くびかり族"
+    },
+    {
+      "dqm1Id": "m94",
+      "dqm2Id": 584,
+      "identity": "ボーンプリズナー"
+    },
+    {
+      "dqm1Id": "m95",
+      "dqm2Id": 444,
+      "identity": "ドロルメイジ"
+    },
+    {
+      "dqm1Id": "m96",
+      "dqm2Id": 57,
+      "identity": "ダッシュラン"
+    },
+    {
+      "dqm1Id": "m97",
+      "dqm2Id": 362,
+      "identity": "マッドプラント"
+    },
+    {
+      "dqm1Id": "m98",
+      "dqm2Id": 553,
+      "identity": "グリズリー"
+    },
+    {
+      "dqm1Id": "m99",
+      "dqm2Id": 431,
+      "identity": "モーモン"
+    },
+    {
+      "dqm1Id": "m100",
+      "dqm2Id": 637,
+      "identity": "ドロヌーバ"
+    },
+    {
+      "dqm1Id": "m101",
+      "dqm2Id": 244,
+      "identity": "ドルイド"
+    },
+    {
+      "dqm1Id": "m102",
+      "dqm2Id": 311,
+      "identity": "スキッパー"
+    },
+    {
+      "dqm1Id": "m103",
+      "dqm2Id": 3,
+      "identity": "スライムつむり"
+    },
+    {
+      "dqm1Id": "dragon",
+      "dqm2Id": 53,
+      "identity": "ドラゴン"
+    },
+    {
+      "dqm1Id": "m105",
+      "dqm2Id": 134,
+      "identity": "サボテンボール"
+    },
+    {
+      "dqm1Id": "m106",
+      "dqm2Id": 245,
+      "identity": "よるのていおう"
+    },
+    {
+      "dqm1Id": "m107",
+      "dqm2Id": 197,
+      "identity": "リンリン"
+    },
+    {
+      "dqm1Id": "m108",
+      "dqm2Id": 293,
+      "identity": "ジャンバラヤン"
+    },
+    {
+      "dqm1Id": "m109",
+      "dqm2Id": 313,
+      "identity": "ダースウルフェン"
+    },
+    {
+      "dqm1Id": "m110",
+      "dqm2Id": 1019,
+      "identity": "トマトマーレ"
+    },
+    {
+      "dqm1Id": "m111",
+      "dqm2Id": 86,
+      "identity": "フェアリードラゴン"
+    },
+    {
+      "dqm1Id": "m112",
+      "dqm2Id": 542,
+      "identity": "オニオーン"
+    },
+    {
+      "dqm1Id": "m113",
+      "dqm2Id": 181,
+      "identity": "シードッグ"
+    },
+    {
+      "dqm1Id": "m114",
+      "dqm2Id": 100,
+      "identity": "プリズニャン"
+    },
+    {
+      "dqm1Id": "m115",
+      "dqm2Id": 198,
+      "identity": "おどるほうせき"
+    },
+    {
+      "dqm1Id": "m116",
+      "dqm2Id": 243,
+      "identity": "ベビーサタン"
+    },
+    {
+      "dqm1Id": "m117",
+      "dqm2Id": 580,
+      "identity": "マッドロン"
+    },
+    {
+      "dqm1Id": "m118",
+      "dqm2Id": 379,
+      "identity": "ぶちスライム"
+    },
+    {
+      "dqm1Id": "m119",
+      "dqm2Id": 523,
+      "identity": "おおイグアナ"
+    },
+    {
+      "dqm1Id": "m120",
+      "dqm2Id": 547,
+      "identity": "テールイーター"
+    },
+    {
+      "dqm1Id": "m121",
+      "dqm2Id": 621,
+      "identity": "どんぐりベビー"
+    },
+    {
+      "dqm1Id": "m122",
+      "dqm2Id": 125,
+      "identity": "アルミラージ"
+    },
+    {
+      "dqm1Id": "m123",
+      "dqm2Id": 564,
+      "identity": "あくまのつぼ"
+    },
+    {
+      "dqm1Id": "m124",
+      "dqm2Id": 566,
+      "identity": "グレムリン"
+    },
+    {
+      "dqm1Id": "m125",
+      "dqm2Id": 312,
+      "identity": "ハエおとこ"
+    },
+    {
+      "dqm1Id": "m126",
+      "dqm2Id": 525,
+      "identity": "ウィングスネーク"
+    },
+    {
+      "dqm1Id": "m127",
+      "dqm2Id": 535,
+      "identity": "かまいたち"
+    },
+    {
+      "dqm1Id": "m128",
+      "dqm2Id": 156,
+      "identity": "サーベルきつね"
+    },
+    {
+      "dqm1Id": "m129",
+      "dqm2Id": 200,
+      "identity": "ひとくい箱"
+    },
+    {
+      "dqm1Id": "m130",
+      "dqm2Id": 276,
+      "identity": "ヌボーン"
+    },
+    {
+      "dqm1Id": "m131",
+      "dqm2Id": 576,
+      "identity": "はなまどう"
+    },
+    {
+      "dqm1Id": "m132",
+      "dqm2Id": 18,
+      "identity": "スライムカルゴ"
+    },
+    {
+      "dqm1Id": "m133",
+      "dqm2Id": 70,
+      "identity": "スカルゴン"
+    },
+    {
+      "dqm1Id": "m134",
+      "dqm2Id": 546,
+      "identity": "じんめんちょう"
+    },
+    {
+      "dqm1Id": "m135",
+      "dqm2Id": 127,
+      "identity": "ポグフィッシュ"
+    },
+    {
+      "dqm1Id": "m136",
+      "dqm2Id": 394,
+      "identity": "ビックアイ"
+    },
+    {
+      "dqm1Id": "m137",
+      "dqm2Id": 199,
+      "identity": "シャドー"
+    },
+    {
+      "dqm1Id": "m138",
+      "dqm2Id": 246,
+      "identity": "びっくりサタン"
+    },
+    {
+      "dqm1Id": "m139",
+      "dqm2Id": 295,
+      "identity": "ポムポムボム"
+    },
+    {
+      "dqm1Id": "m140",
+      "dqm2Id": 60,
+      "identity": "ドラゴンバゲージ"
+    },
+    {
+      "dqm1Id": "m141",
+      "dqm2Id": 536,
+      "identity": "フェアリーラット"
+    },
+    {
+      "dqm1Id": "m142",
+      "dqm2Id": 153,
+      "identity": "オーク"
+    },
+    {
+      "dqm1Id": "m143",
+      "dqm2Id": 223,
+      "identity": "さつじんいかり"
+    },
+    {
+      "dqm1Id": "m144",
+      "dqm2Id": 249,
+      "identity": "レッサーデーモン"
+    },
+    {
+      "dqm1Id": "m145",
+      "dqm2Id": 370,
+      "identity": "パラサキス"
+    },
+    {
+      "dqm1Id": "m146",
+      "dqm2Id": 1030,
+      "identity": "かれくさネズミ"
+    },
+    {
+      "dqm1Id": "m147",
+      "dqm2Id": 384,
+      "identity": "スノーム"
+    },
+    {
+      "dqm1Id": "m148",
+      "dqm2Id": 50,
+      "identity": "フーセンドラゴン"
+    },
+    {
+      "dqm1Id": "m149",
+      "dqm2Id": 390,
+      "identity": "デッドペッカー"
+    },
+    {
+      "dqm1Id": "m150",
+      "dqm2Id": 554,
+      "identity": "ストロングアニマル"
+    },
+    {
+      "dqm1Id": "m151",
+      "dqm2Id": 1021,
+      "identity": "りゅうはかせ"
+    },
+    {
+      "dqm1Id": "m152",
+      "dqm2Id": 228,
+      "identity": "とっしんこぞう"
+    },
+    {
+      "dqm1Id": "m153",
+      "dqm2Id": 215,
+      "identity": "ゴールドマン"
+    },
+    {
+      "dqm1Id": "m154",
+      "dqm2Id": 568,
+      "identity": "ひとつめピエロ"
+    },
+    {
+      "dqm1Id": "m155",
+      "dqm2Id": 574,
+      "identity": "ふゆうじゅ"
+    },
+    {
+      "dqm1Id": "m156",
+      "dqm2Id": 75,
+      "identity": "ギャオース"
+    },
+    {
+      "dqm1Id": "m157",
+      "dqm2Id": 104,
+      "identity": "キメラ"
+    },
+    {
+      "dqm1Id": "m158",
+      "dqm2Id": 1025,
+      "identity": "ビーライダー"
+    },
+    {
+      "dqm1Id": "m159",
+      "dqm2Id": 175,
+      "identity": "ブラウニー"
+    },
+    {
+      "dqm1Id": "m160",
+      "dqm2Id": 563,
+      "identity": "ギズモ"
+    },
+    {
+      "dqm1Id": "m161",
+      "dqm2Id": 657,
+      "identity": "ピサロのてさき"
+    },
+    {
+      "dqm1Id": "m162",
+      "dqm2Id": 304,
+      "identity": "ぼうれいけんし"
+    },
+    {
+      "dqm1Id": "slime_knight",
+      "dqm2Id": 7,
+      "identity": "スライムナイト"
+    },
+    {
+      "dqm1Id": "m164",
+      "dqm2Id": 59,
+      "identity": "ダースドラゴン"
+    },
+    {
+      "dqm1Id": "m165",
+      "dqm2Id": 392,
+      "identity": "せみもぐら"
+    },
+    {
+      "dqm1Id": "m166",
+      "dqm2Id": 136,
+      "identity": "いわとびあくま"
+    },
+    {
+      "dqm1Id": "m167",
+      "dqm2Id": 160,
+      "identity": "とらおとこ"
+    },
+    {
+      "dqm1Id": "m168",
+      "dqm2Id": 195,
+      "identity": "メタッピー"
+    },
+    {
+      "dqm1Id": "m169",
+      "dqm2Id": 270,
+      "identity": "デザートデーモン"
+    },
+    {
+      "dqm1Id": "m170",
+      "dqm2Id": 298,
+      "identity": "がいこつ"
+    },
+    {
+      "dqm1Id": "m171",
+      "dqm2Id": 386,
+      "identity": "たつのこナイト"
+    },
+    {
+      "dqm1Id": "m172",
+      "dqm2Id": 530,
+      "identity": "ビーンファイター"
+    },
+    {
+      "dqm1Id": "m173",
+      "dqm2Id": 182,
+      "identity": "ダークホーン"
+    },
+    {
+      "dqm1Id": "m174",
+      "dqm2Id": 231,
+      "identity": "あばれこまいぬ"
+    },
+    {
+      "dqm1Id": "m175",
+      "dqm2Id": 409,
+      "identity": "スカルサーペント"
+    },
+    {
+      "dqm1Id": "m176",
+      "dqm2Id": 1043,
+      "identity": "パールモービル"
+    },
+    {
+      "dqm1Id": "m177",
+      "dqm2Id": 380,
+      "identity": "ストーンスライム"
+    },
+    {
+      "dqm1Id": "m178",
+      "dqm2Id": 609,
+      "identity": "バピラス"
+    },
+    {
+      "dqm1Id": "m179",
+      "dqm2Id": 107,
+      "identity": "ぐんたいガニ"
+    },
+    {
+      "dqm1Id": "m180",
+      "dqm2Id": 557,
+      "identity": "モーザ"
+    },
+    {
+      "dqm1Id": "m181",
+      "dqm2Id": 229,
+      "identity": "クラウンヘッド"
+    },
+    {
+      "dqm1Id": "m182",
+      "dqm2Id": 567,
+      "identity": "メドーサボール"
+    },
+    {
+      "dqm1Id": "m183",
+      "dqm2Id": 673,
+      "identity": "スカルブレード"
+    },
+    {
+      "dqm1Id": "m184",
+      "dqm2Id": 521,
+      "identity": "キングコブラ"
+    },
+    {
+      "dqm1Id": "m185",
+      "dqm2Id": 98,
+      "identity": "はさみくわがた"
+    },
+    {
+      "dqm1Id": "m186",
+      "dqm2Id": 183,
+      "identity": "リカント"
+    },
+    {
+      "dqm1Id": "m187",
+      "dqm2Id": 205,
+      "identity": "ゴーレム"
+    },
+    {
+      "dqm1Id": "m188",
+      "dqm2Id": 253,
+      "identity": "シルバーデビル"
+    },
+    {
+      "dqm1Id": "m189",
+      "dqm2Id": 578,
+      "identity": "おおなめくじ"
+    },
+    {
+      "dqm1Id": "m190",
+      "dqm2Id": 514,
+      "identity": "ボックススライム"
+    },
+    {
+      "dqm1Id": "m191",
+      "dqm2Id": 519,
+      "identity": "プテラノドン"
+    },
+    {
+      "dqm1Id": "m192",
+      "dqm2Id": 128,
+      "identity": "おおうつぼ"
+    },
+    {
+      "dqm1Id": "m193",
+      "dqm2Id": 137,
+      "identity": "キラーエイプ"
+    },
+    {
+      "dqm1Id": "m194",
+      "dqm2Id": 398,
+      "identity": "ひとくいサーベル"
+    },
+    {
+      "dqm1Id": "m195",
+      "dqm2Id": 273,
+      "identity": "あくましんかん"
+    },
+    {
+      "dqm1Id": "m196",
+      "dqm2Id": 372,
+      "identity": "あくまのめだま"
+    },
+    {
+      "dqm1Id": "m197",
+      "dqm2Id": 77,
+      "identity": "ギガントヒルズ"
+    },
+    {
+      "dqm1Id": "m198",
+      "dqm2Id": 114,
+      "identity": "おおさそり"
+    },
+    {
+      "dqm1Id": "m199",
+      "dqm2Id": 184,
+      "identity": "ガマキャノン"
+    },
+    {
+      "dqm1Id": "puppet_boy",
+      "dqm2Id": 151,
+      "identity": "パペットこぞう"
+    },
+    {
+      "dqm1Id": "m201",
+      "dqm2Id": 277,
+      "identity": "きりさきピエロ"
+    },
+    {
+      "dqm1Id": "m202",
+      "dqm2Id": 585,
+      "identity": "マネマネ"
+    },
+    {
+      "dqm1Id": "angel_slime",
+      "dqm2Id": 10,
+      "identity": "エンゼルスライム"
+    },
+    {
+      "dqm1Id": "m204",
+      "dqm2Id": 518,
+      "identity": "ガメゴン"
+    },
+    {
+      "dqm1Id": "m205",
+      "dqm2Id": 1038,
+      "identity": "メイデンドール"
+    },
+    {
+      "dqm1Id": "m206",
+      "dqm2Id": 101,
+      "identity": "プチアーノン"
+    },
+    {
+      "dqm1Id": "m207",
+      "dqm2Id": 649,
+      "identity": "おおみみず"
+    },
+    {
+      "dqm1Id": "m208",
+      "dqm2Id": 625,
+      "identity": "トドマン"
+    },
+    {
+      "dqm1Id": "m209",
+      "dqm2Id": 230,
+      "identity": "デビルアーマー"
+    },
+    {
+      "dqm1Id": "m210",
+      "dqm2Id": 145,
+      "identity": "リリパット"
+    },
+    {
+      "dqm1Id": "m211",
+      "dqm2Id": 317,
+      "identity": "ダーククラブ"
+    },
+    {
+      "dqm1Id": "m212",
+      "dqm2Id": 6,
+      "identity": "メタルスライム"
+    },
+    {
+      "dqm1Id": "m213",
+      "dqm2Id": 58,
+      "identity": "バトルレックス"
+    },
+    {
+      "dqm1Id": "m214",
+      "dqm2Id": 404,
+      "identity": "エビルアングラー"
+    },
+    {
+      "dqm1Id": "m215",
+      "dqm2Id": 116,
+      "identity": "キラーパンサー"
+    },
+    {
+      "dqm1Id": "m216",
+      "dqm2Id": 640,
+      "identity": "こうてつまじん"
+    },
+    {
+      "dqm1Id": "m217",
+      "dqm2Id": 653,
+      "identity": "サタンパピー"
+    },
+    {
+      "dqm1Id": "m218",
+      "dqm2Id": 1033,
+      "identity": "くらやみハーピー"
+    },
+    {
+      "dqm1Id": "m219",
+      "dqm2Id": 211,
+      "identity": "わかめおうじ"
+    },
+    {
+      "dqm1Id": "beshemoth_slime",
+      "dqm2Id": 20,
+      "identity": "もりもりスライム"
+    },
+    {
+      "dqm1Id": "m221",
+      "dqm2Id": 87,
+      "identity": "アイアンタートル"
+    },
+    {
+      "dqm1Id": "m222",
+      "dqm2Id": 537,
+      "identity": "スーパーテンツク"
+    },
+    {
+      "dqm1Id": "m223",
+      "dqm2Id": 185,
+      "identity": "タイガーランス"
+    },
+    {
+      "dqm1Id": "m224",
+      "dqm2Id": 641,
+      "identity": "あくまの書"
+    },
+    {
+      "dqm1Id": "m225",
+      "dqm2Id": 658,
+      "identity": "ふくぶくろ"
+    },
+    {
+      "dqm1Id": "m226",
+      "dqm2Id": 700,
+      "identity": "スペクテット"
+    },
+    {
+      "dqm1Id": "m227",
+      "dqm2Id": 581,
+      "identity": "ナイトウイプス"
+    },
+    {
+      "dqm1Id": "m228",
+      "dqm2Id": 597,
+      "identity": "スラ忍イエロー"
+    },
+    {
+      "dqm1Id": "m229",
+      "dqm2Id": 598,
+      "identity": "スラ忍レッド"
+    },
+    {
+      "dqm1Id": "m230",
+      "dqm2Id": 599,
+      "identity": "スラ忍ブラウン"
+    },
+    {
+      "dqm1Id": "m231",
+      "dqm2Id": 600,
+      "identity": "スラ忍グリーン"
+    },
+    {
+      "dqm1Id": "m232",
+      "dqm2Id": 601,
+      "identity": "スラ忍パープル"
+    },
+    {
+      "dqm1Id": "m233",
+      "dqm2Id": 602,
+      "identity": "スラ忍ブルー"
+    },
+    {
+      "dqm1Id": "m234",
+      "dqm2Id": 604,
+      "identity": "スラ忍オレンジ"
+    },
+    {
+      "dqm1Id": "m235",
+      "dqm2Id": 605,
+      "identity": "スラ忍ピンク"
+    },
+    {
+      "dqm1Id": "m236",
+      "dqm2Id": 603,
+      "identity": "スラ忍ブラック"
+    },
+    {
+      "dqm1Id": "m237",
+      "dqm2Id": 439,
+      "identity": "カンダタこぶん"
+    },
+    {
+      "dqm1Id": "m238",
+      "dqm2Id": 693,
+      "identity": "大魔王の右手"
+    },
+    {
+      "dqm1Id": "m239",
+      "dqm2Id": 694,
+      "identity": "大魔王の左手"
+    },
+    {
+      "dqm1Id": "m240",
+      "dqm2Id": 29,
+      "identity": "ぶちキング"
+    },
+    {
+      "dqm1Id": "m241",
+      "dqm2Id": 74,
+      "identity": "海竜"
+    },
+    {
+      "dqm1Id": "m242",
+      "dqm2Id": 105,
+      "identity": "ヘルコンドル"
+    },
+    {
+      "dqm1Id": "m243",
+      "dqm2Id": 159,
+      "identity": "ガーゴイル"
+    },
+    {
+      "dqm1Id": "m244",
+      "dqm2Id": 639,
+      "identity": "いどまじん"
+    },
+    {
+      "dqm1Id": "m245",
+      "dqm2Id": 652,
+      "identity": "エビルマスター"
+    },
+    {
+      "dqm1Id": "m246",
+      "dqm2Id": 670,
+      "identity": "かぼちゃの騎士"
+    },
+    {
+      "dqm1Id": "m247",
+      "dqm2Id": 515,
+      "identity": "スラッピー"
+    },
+    {
+      "dqm1Id": "m248",
+      "dqm2Id": 385,
+      "identity": "バルンバ"
+    },
+    {
+      "dqm1Id": "m249",
+      "dqm2Id": 540,
+      "identity": "ガンコどり"
+    },
+    {
+      "dqm1Id": "m250",
+      "dqm2Id": 626,
+      "identity": "ねこまどう"
+    },
+    {
+      "dqm1Id": "m251",
+      "dqm2Id": 562,
+      "identity": "エビルワンド"
+    },
+    {
+      "dqm1Id": "m252",
+      "dqm2Id": 1034,
+      "identity": "フェアリーバット"
+    },
+    {
+      "dqm1Id": "m253",
+      "dqm2Id": 655,
+      "identity": "オーガヘッド"
+    },
+    {
+      "dqm1Id": "m254",
+      "dqm2Id": 296,
+      "identity": "くさった死体"
+    },
+    {
+      "dqm1Id": "m255",
+      "dqm2Id": 23,
+      "identity": "メタルライダー"
+    },
+    {
+      "dqm1Id": "m256",
+      "dqm2Id": 56,
+      "identity": "メタルドラゴン"
+    },
+    {
+      "dqm1Id": "m257",
+      "dqm2Id": 1022,
+      "identity": "ドラゴビショップ"
+    },
+    {
+      "dqm1Id": "m258",
+      "dqm2Id": 111,
+      "identity": "じんめんじゅ"
+    },
+    {
+      "dqm1Id": "m259",
+      "dqm2Id": 593,
+      "identity": "キラースコップ"
+    },
+    {
+      "dqm1Id": "m260",
+      "dqm2Id": 629,
+      "identity": "プオーン"
+    },
+    {
+      "dqm1Id": "m261",
+      "dqm2Id": 400,
+      "identity": "エビルポット"
+    },
+    {
+      "dqm1Id": "m262",
+      "dqm2Id": 659,
+      "identity": "ヘルビースト"
+    },
+    {
+      "dqm1Id": "m263",
+      "dqm2Id": 299,
+      "identity": "さまようよろい"
+    },
+    {
+      "dqm1Id": "m264",
+      "dqm2Id": 21,
+      "identity": "もりもりベス"
+    },
+    {
+      "dqm1Id": "m265",
+      "dqm2Id": 54,
+      "identity": "ドラゴンマッド"
+    },
+    {
+      "dqm1Id": "m266",
+      "dqm2Id": 531,
+      "identity": "とうちゅうかそう"
+    },
+    {
+      "dqm1Id": "m267",
+      "dqm2Id": 627,
+      "identity": "ライノソルジャー"
+    },
+    {
+      "dqm1Id": "m268",
+      "dqm2Id": 232,
+      "identity": "くもの大王"
+    },
+    {
+      "dqm1Id": "m269",
+      "dqm2Id": 272,
+      "identity": "おおドラキー"
+    },
+    {
+      "dqm1Id": "m270",
+      "dqm2Id": 672,
+      "identity": "キラーストーカー"
+    },
+    {
+      "dqm1Id": "m271",
+      "dqm2Id": 22,
+      "identity": "スライムブレス"
+    },
+    {
+      "dqm1Id": "m272",
+      "dqm2Id": 516,
+      "identity": "ソードドラゴン"
+    },
+    {
+      "dqm1Id": "m273",
+      "dqm2Id": 395,
+      "identity": "グランドシャーク"
+    },
+    {
+      "dqm1Id": "m274",
+      "dqm2Id": 233,
+      "identity": "アイアンブルドー"
+    },
+    {
+      "dqm1Id": "m275",
+      "dqm2Id": 561,
+      "identity": "あくまのカガミ"
+    },
+    {
+      "dqm1Id": "m276",
+      "dqm2Id": 202,
+      "identity": "メタルハンター"
+    },
+    {
+      "dqm1Id": "m277",
+      "dqm2Id": 252,
+      "identity": "オクトセントリー"
+    },
+    {
+      "dqm1Id": "m278",
+      "dqm2Id": 288,
+      "identity": "ケルベロス"
+    },
+    {
+      "dqm1Id": "king_slime",
+      "dqm2Id": 11,
+      "identity": "キングスライム"
+    },
+    {
+      "dqm1Id": "m280",
+      "dqm2Id": 90,
+      "identity": "デンタザウルス"
+    },
+    {
+      "dqm1Id": "m281",
+      "dqm2Id": 391,
+      "identity": "とつげきうお"
+    },
+    {
+      "dqm1Id": "m282",
+      "dqm2Id": 248,
+      "identity": "マーマン"
+    },
+    {
+      "dqm1Id": "m283",
+      "dqm2Id": 636,
+      "identity": "ギガハンド"
+    },
+    {
+      "dqm1Id": "m284",
+      "dqm2Id": 250,
+      "identity": "サイレス"
+    },
+    {
+      "dqm1Id": "m285",
+      "dqm2Id": 583,
+      "identity": "しにがみ"
+    },
+    {
+      "dqm1Id": "m286",
+      "dqm2Id": 434,
+      "identity": "スライムタワー"
+    },
+    {
+      "dqm1Id": "m287",
+      "dqm2Id": 524,
+      "identity": "ライバーン"
+    },
+    {
+      "dqm1Id": "m288",
+      "dqm2Id": 529,
+      "identity": "かりゅうそう"
+    },
+    {
+      "dqm1Id": "m289",
+      "dqm2Id": 148,
+      "identity": "かくとうパンサー"
+    },
+    {
+      "dqm1Id": "m290",
+      "dqm2Id": 236,
+      "identity": "メガボーグ"
+    },
+    {
+      "dqm1Id": "m291",
+      "dqm2Id": 1037,
+      "identity": "セイレーンゴースト"
+    },
+    {
+      "dqm1Id": "m292",
+      "dqm2Id": 612,
+      "identity": "魔教師エルシオン"
+    },
+    {
+      "dqm1Id": "m293",
+      "dqm2Id": 278,
+      "identity": "じごくのもんばん"
+    },
+    {
+      "dqm1Id": "m294",
+      "dqm2Id": 1017,
+      "identity": "アラウネ"
+    },
+    {
+      "dqm1Id": "m295",
+      "dqm2Id": 613,
+      "identity": "ドラゴンヘビー"
+    },
+    {
+      "dqm1Id": "m296",
+      "dqm2Id": 112,
+      "identity": "エビラ"
+    },
+    {
+      "dqm1Id": "m297",
+      "dqm2Id": 186,
+      "identity": "イノブタマン"
+    },
+    {
+      "dqm1Id": "m298",
+      "dqm2Id": 1031,
+      "identity": "グリーンモッキー"
+    },
+    {
+      "dqm1Id": "m299",
+      "dqm2Id": 559,
+      "identity": "コハクそう"
+    },
+    {
+      "dqm1Id": "m300",
+      "dqm2Id": 660,
+      "identity": "コトブキーノ"
+    },
+    {
+      "dqm1Id": "m301",
+      "dqm2Id": 582,
+      "identity": "ウインドマージ"
+    },
+    {
+      "dqm1Id": "m302",
+      "dqm2Id": 19,
+      "identity": "ベホマスライム"
+    },
+    {
+      "dqm1Id": "m303",
+      "dqm2Id": 187,
+      "identity": "れんごく天馬"
+    },
+    {
+      "dqm1Id": "m304",
+      "dqm2Id": 539,
+      "identity": "ダックカイト"
+    },
+    {
+      "dqm1Id": "m305",
+      "dqm2Id": 622,
+      "identity": "デスフラッター"
+    },
+    {
+      "dqm1Id": "m306",
+      "dqm2Id": 213,
+      "identity": "サイコロン"
+    },
+    {
+      "dqm1Id": "m307",
+      "dqm2Id": 401,
+      "identity": "ひょうがまじん"
+    },
+    {
+      "dqm1Id": "m308",
+      "dqm2Id": 279,
+      "identity": "ジェネラルダンテ"
+    },
+    {
+      "dqm1Id": "m309",
+      "dqm2Id": 577,
+      "identity": "ダンスキャロット"
+    },
+    {
+      "dqm1Id": "m310",
+      "dqm2Id": 382,
+      "identity": "スライムボーグ"
+    },
+    {
+      "dqm1Id": "m311",
+      "dqm2Id": 69,
+      "identity": "シュプリンガー"
+    },
+    {
+      "dqm1Id": "m312",
+      "dqm2Id": 528,
+      "identity": "ファンキーバード"
+    },
+    {
+      "dqm1Id": "m313",
+      "dqm2Id": 165,
+      "identity": "ダンビラムーチョ"
+    },
+    {
+      "dqm1Id": "m314",
+      "dqm2Id": 375,
+      "identity": "ようがんまじん"
+    },
+    {
+      "dqm1Id": "m315",
+      "dqm2Id": 155,
+      "identity": "なぞのしんかん"
+    },
+    {
+      "dqm1Id": "m316",
+      "dqm2Id": 315,
+      "identity": "ソードファントム"
+    },
+    {
+      "dqm1Id": "m317",
+      "dqm2Id": 139,
+      "identity": "ティコ"
+    },
+    {
+      "dqm1Id": "m318",
+      "dqm2Id": 623,
+      "identity": "ククリ"
+    },
+    {
+      "dqm1Id": "m319",
+      "dqm2Id": 9,
+      "identity": "はぐれメタル"
+    },
+    {
+      "dqm1Id": "m320",
+      "dqm2Id": 61,
+      "identity": "アルゴングレート"
+    },
+    {
+      "dqm1Id": "m321",
+      "dqm2Id": 396,
+      "identity": "ホークブリザード"
+    },
+    {
+      "dqm1Id": "m322",
+      "dqm2Id": 1027,
+      "identity": "マッドハニービー"
+    },
+    {
+      "dqm1Id": "m323",
+      "dqm2Id": 113,
+      "identity": "コングヘッド"
+    },
+    {
+      "dqm1Id": "m324",
+      "dqm2Id": 235,
+      "identity": "プロトキラー"
+    },
+    {
+      "dqm1Id": "m325",
+      "dqm2Id": 1035,
+      "identity": "ブラッドレディ"
+    },
+    {
+      "dqm1Id": "m326",
+      "dqm2Id": 662,
+      "identity": "バリクナジャ"
+    },
+    {
+      "dqm1Id": "m327",
+      "dqm2Id": 314,
+      "identity": "しりょうのきし"
+    },
+    {
+      "dqm1Id": "m328",
+      "dqm2Id": 381,
+      "identity": "まどうスライム"
+    },
+    {
+      "dqm1Id": "m329",
+      "dqm2Id": 78,
+      "identity": "ドラゴンソルジャー"
+    },
+    {
+      "dqm1Id": "m330",
+      "dqm2Id": 119,
+      "identity": "ひくいどり"
+    },
+    {
+      "dqm1Id": "m331",
+      "dqm2Id": 152,
+      "identity": "かぶとこぞう"
+    },
+    {
+      "dqm1Id": "m332",
+      "dqm2Id": 555,
+      "identity": "ゴートドン"
+    },
+    {
+      "dqm1Id": "m333",
+      "dqm2Id": 212,
+      "identity": "ミミック"
+    },
+    {
+      "dqm1Id": "m334",
+      "dqm2Id": 281,
+      "identity": "デーモンレスラー"
+    },
+    {
+      "dqm1Id": "m335",
+      "dqm2Id": 300,
+      "identity": "ボーンナイト"
+    },
+    {
+      "dqm1Id": "m336",
+      "dqm2Id": 1039,
+      "identity": "デスマドモアゼル"
+    },
+    {
+      "dqm1Id": "m337",
+      "dqm2Id": 26,
+      "identity": "ダークスライム"
+    },
+    {
+      "dqm1Id": "m338",
+      "dqm2Id": 62,
+      "identity": "スカイドラゴン"
+    },
+    {
+      "dqm1Id": "m339",
+      "dqm2Id": 140,
+      "identity": "メダパニシックル"
+    },
+    {
+      "dqm1Id": "m340",
+      "dqm2Id": 163,
+      "identity": "バードファイター"
+    },
+    {
+      "dqm1Id": "m341",
+      "dqm2Id": 442,
+      "identity": "キラーピッケル"
+    },
+    {
+      "dqm1Id": "m342",
+      "dqm2Id": 225,
+      "identity": "エビルチャリオット"
+    },
+    {
+      "dqm1Id": "m343",
+      "dqm2Id": 654,
+      "identity": "メッサーラ"
+    },
+    {
+      "dqm1Id": "m344",
+      "dqm2Id": 674,
+      "identity": "デスタランチュラ"
+    },
+    {
+      "dqm1Id": "m345",
+      "dqm2Id": 443,
+      "identity": "ルーファ"
+    },
+    {
+      "dqm1Id": "m346",
+      "dqm2Id": 82,
+      "identity": "シャークマジュ"
+    },
+    {
+      "dqm1Id": "m347",
+      "dqm2Id": 541,
+      "identity": "キラーグース"
+    },
+    {
+      "dqm1Id": "m348",
+      "dqm2Id": 432,
+      "identity": "ピンクモーモン"
+    },
+    {
+      "dqm1Id": "m349",
+      "dqm2Id": 188,
+      "identity": "ポンポコあにき"
+    },
+    {
+      "dqm1Id": "m350",
+      "dqm2Id": 642,
+      "identity": "だいあくまの書"
+    },
+    {
+      "dqm1Id": "m351",
+      "dqm2Id": 162,
+      "identity": "ギガンテス"
+    },
+    {
+      "dqm1Id": "m352",
+      "dqm2Id": 302,
+      "identity": "エビルスピリッツ"
+    },
+    {
+      "dqm1Id": "m353",
+      "dqm2Id": 1044,
+      "identity": "キラーポッド"
+    },
+    {
+      "dqm1Id": "m354",
+      "dqm2Id": 383,
+      "identity": "ワンダーエッグ"
+    },
+    {
+      "dqm1Id": "m355",
+      "dqm2Id": 80,
+      "identity": "リザードファッツ"
+    },
+    {
+      "dqm1Id": "m356",
+      "dqm2Id": 544,
+      "identity": "ひとくいそう"
+    },
+    {
+      "dqm1Id": "m357",
+      "dqm2Id": 366,
+      "identity": "タイラントワーム"
+    },
+    {
+      "dqm1Id": "m358",
+      "dqm2Id": 368,
+      "identity": "ウイングタイガー"
+    },
+    {
+      "dqm1Id": "m359",
+      "dqm2Id": 271,
+      "identity": "キラーアーマー"
+    },
+    {
+      "dqm1Id": "m360",
+      "dqm2Id": 167,
+      "identity": "ボストロール"
+    },
+    {
+      "dqm1Id": "m361",
+      "dqm2Id": 569,
+      "identity": "オーガー"
+    },
+    {
+      "dqm1Id": "m362",
+      "dqm2Id": 376,
+      "identity": "ナイトリッチ"
+    },
+    {
+      "dqm1Id": "m363",
+      "dqm2Id": 320,
+      "identity": "病魔パンデルム"
+    },
+    {
+      "dqm1Id": "m364",
+      "dqm2Id": 428,
+      "identity": "スライダーヒーロー"
+    },
+    {
+      "dqm1Id": "m365",
+      "dqm2Id": 81,
+      "identity": "ヘルダイバー"
+    },
+    {
+      "dqm1Id": "m366",
+      "dqm2Id": 533,
+      "identity": "ダンジョンえび"
+    },
+    {
+      "dqm1Id": "m367",
+      "dqm2Id": 628,
+      "identity": "グレイトホーン"
+    },
+    {
+      "dqm1Id": "m368",
+      "dqm2Id": 634,
+      "identity": "ガスダンゴ"
+    },
+    {
+      "dqm1Id": "m369",
+      "dqm2Id": 247,
+      "identity": "あくまの騎士"
+    },
+    {
+      "dqm1Id": "m370",
+      "dqm2Id": 410,
+      "identity": "ゆうれい船長"
+    },
+    {
+      "dqm1Id": "m371",
+      "dqm2Id": 318,
+      "identity": "じごくのメンドーサ"
+    },
+    {
+      "dqm1Id": "m372",
+      "dqm2Id": 437,
+      "identity": "死神スライダーク"
+    },
+    {
+      "dqm1Id": "m373",
+      "dqm2Id": 88,
+      "identity": "ドラゴンライダー"
+    },
+    {
+      "dqm1Id": "m374",
+      "dqm2Id": 103,
+      "identity": "ヘルホーネット"
+    },
+    {
+      "dqm1Id": "m375",
+      "dqm2Id": 109,
+      "identity": "パオーム"
+    },
+    {
+      "dqm1Id": "m376",
+      "dqm2Id": 141,
+      "identity": "炎の戦士"
+    },
+    {
+      "dqm1Id": "m377",
+      "dqm2Id": 258,
+      "identity": "ジャミラス"
+    },
+    {
+      "dqm1Id": "m378",
+      "dqm2Id": 570,
+      "identity": "マンドラゴラ"
+    },
+    {
+      "dqm1Id": "m379",
+      "dqm2Id": 25,
+      "identity": "ダークナイト"
+    },
+    {
+      "dqm1Id": "m380",
+      "dqm2Id": 614,
+      "identity": "スマイルリザード"
+    },
+    {
+      "dqm1Id": "m381",
+      "dqm2Id": 110,
+      "identity": "デスファレーナ"
+    },
+    {
+      "dqm1Id": "m382",
+      "dqm2Id": 643,
+      "identity": "魔王の書"
+    },
+    {
+      "dqm1Id": "m383",
+      "dqm2Id": 255,
+      "identity": "アークデーモン"
+    },
+    {
+      "dqm1Id": "m384",
+      "dqm2Id": 669,
+      "identity": "デスゴーゴン"
+    },
+    {
+      "dqm1Id": "m385",
+      "dqm2Id": 319,
+      "identity": "黒騎士レオコーン"
+    },
+    {
+      "dqm1Id": "m386",
+      "dqm2Id": 176,
+      "identity": "少年レオソード"
+    },
+    {
+      "dqm1Id": "m387",
+      "dqm2Id": 27,
+      "identity": "スライムベホマズン"
+    },
+    {
+      "dqm1Id": "m388",
+      "dqm2Id": 93,
+      "identity": "トライワインダー"
+    },
+    {
+      "dqm1Id": "m389",
+      "dqm2Id": 1023,
+      "identity": "ドラゴンロード"
+    },
+    {
+      "dqm1Id": "m390",
+      "dqm2Id": 135,
+      "identity": "よろいムカデ"
+    },
+    {
+      "dqm1Id": "m391",
+      "dqm2Id": 234,
+      "identity": "ギリメカラ"
+    },
+    {
+      "dqm1Id": "m392",
+      "dqm2Id": 142,
+      "identity": "ブリザードマン"
+    },
+    {
+      "dqm1Id": "m393",
+      "dqm2Id": 218,
+      "identity": "キラーマシン"
+    },
+    {
+      "dqm1Id": "m394",
+      "dqm2Id": 280,
+      "identity": "ランプの魔王"
+    },
+    {
+      "dqm1Id": "m395",
+      "dqm2Id": 303,
+      "identity": "フラワーゾンビ"
+    },
+    {
+      "dqm1Id": "m396",
+      "dqm2Id": 31,
+      "identity": "スライムファミリー"
+    },
+    {
+      "dqm1Id": "m397",
+      "dqm2Id": 89,
+      "identity": "アンドレアル"
+    },
+    {
+      "dqm1Id": "m398",
+      "dqm2Id": 543,
+      "identity": "マンイーター"
+    },
+    {
+      "dqm1Id": "m399",
+      "dqm2Id": 699,
+      "identity": "とうだいタイガー"
+    },
+    {
+      "dqm1Id": "m400",
+      "dqm2Id": 360,
+      "identity": "ブオーン"
+    },
+    {
+      "dqm1Id": "m401",
+      "dqm2Id": 217,
+      "identity": "トラップボックス"
+    },
+    {
+      "dqm1Id": "m402",
+      "dqm2Id": 251,
+      "identity": "ウィングデビル"
+    },
+    {
+      "dqm1Id": "m403",
+      "dqm2Id": 661,
+      "identity": "トロルボンバー"
+    },
+    {
+      "dqm1Id": "m404",
+      "dqm2Id": 321,
+      "identity": "ギガミュータント"
+    },
+    {
+      "dqm1Id": "m405",
+      "dqm2Id": 12,
+      "identity": "バブルキング"
+    },
+    {
+      "dqm1Id": "m406",
+      "dqm2Id": 91,
+      "identity": "ずしおうまる"
+    },
+    {
+      "dqm1Id": "m407",
+      "dqm2Id": 257,
+      "identity": "バッファロン"
+    },
+    {
+      "dqm1Id": "m408",
+      "dqm2Id": 238,
+      "identity": "シールドオーガ"
+    },
+    {
+      "dqm1Id": "m409",
+      "dqm2Id": 274,
+      "identity": "魔王の使い"
+    },
+    {
+      "dqm1Id": "m410",
+      "dqm2Id": 675,
+      "identity": "デッドマスカー"
+    },
+    {
+      "dqm1Id": "m411",
+      "dqm2Id": 596,
+      "identity": "スライダーキッズ"
+    },
+    {
+      "dqm1Id": "m412",
+      "dqm2Id": 115,
+      "identity": "ワニバーン"
+    },
+    {
+      "dqm1Id": "m413",
+      "dqm2Id": 143,
+      "identity": "ウパソルジャー"
+    },
+    {
+      "dqm1Id": "m414",
+      "dqm2Id": 558,
+      "identity": "グレンデル"
+    },
+    {
+      "dqm1Id": "m415",
+      "dqm2Id": 189,
+      "identity": "キマイラロード"
+    },
+    {
+      "dqm1Id": "m416",
+      "dqm2Id": 208,
+      "identity": "ボル"
+    },
+    {
+      "dqm1Id": "m417",
+      "dqm2Id": 210,
+      "identity": "ブル"
+    },
+    {
+      "dqm1Id": "m418",
+      "dqm2Id": 204,
+      "identity": "バル"
+    },
+    {
+      "dqm1Id": "m419",
+      "dqm2Id": 206,
+      "identity": "ベル"
+    },
+    {
+      "dqm1Id": "m420",
+      "dqm2Id": 285,
+      "identity": "ライオネック"
+    },
+    {
+      "dqm1Id": "m421",
+      "dqm2Id": 676,
+      "identity": "皇帝ガナサダイ"
+    },
+    {
+      "dqm1Id": "m422",
+      "dqm2Id": 595,
+      "identity": "ダークキング"
+    },
+    {
+      "dqm1Id": "m423",
+      "dqm2Id": 611,
+      "identity": "黒竜丸"
+    },
+    {
+      "dqm1Id": "m424",
+      "dqm2Id": 526,
+      "identity": "サンダーバード"
+    },
+    {
+      "dqm1Id": "m425",
+      "dqm2Id": 556,
+      "identity": "ユニコーン"
+    },
+    {
+      "dqm1Id": "m426",
+      "dqm2Id": 635,
+      "identity": "木馬の騎士"
+    },
+    {
+      "dqm1Id": "m427",
+      "dqm2Id": 656,
+      "identity": "コスモファントム"
+    },
+    {
+      "dqm1Id": "m428",
+      "dqm2Id": 586,
+      "identity": "がいこつけんし"
+    },
+    {
+      "dqm1Id": "m429",
+      "dqm2Id": 610,
+      "identity": "イデアラゴン"
+    },
+    {
+      "dqm1Id": "m430",
+      "dqm2Id": 130,
+      "identity": "ヘラクレイザー"
+    },
+    {
+      "dqm1Id": "m431",
+      "dqm2Id": 149,
+      "identity": "マポレーナ"
+    },
+    {
+      "dqm1Id": "m432",
+      "dqm2Id": 239,
+      "identity": "タイムマスター"
+    },
+    {
+      "dqm1Id": "m433",
+      "dqm2Id": 671,
+      "identity": "セバスチャン"
+    },
+    {
+      "dqm1Id": "m434",
+      "dqm2Id": 1020,
+      "identity": "黄泉の花"
+    },
+    {
+      "dqm1Id": "m435",
+      "dqm2Id": 1028,
+      "identity": "ブラッドポリス"
+    },
+    {
+      "dqm1Id": "m436",
+      "dqm2Id": 1032,
+      "identity": "いなずまビリー"
+    },
+    {
+      "dqm1Id": "m437",
+      "dqm2Id": 1045,
+      "identity": "グレイトボンバー"
+    },
+    {
+      "dqm1Id": "m438",
+      "dqm2Id": 1036,
+      "identity": "ダークサキュバス"
+    },
+    {
+      "dqm1Id": "m439",
+      "dqm2Id": 1040,
+      "identity": "オカルトビスク"
+    },
+    {
+      "dqm1Id": "m440",
+      "dqm2Id": 170,
+      "identity": "カンダタ"
+    },
+    {
+      "dqm1Id": "m441",
+      "dqm2Id": 416,
+      "identity": "アサシンブロス"
+    },
+    {
+      "dqm1Id": "m442",
+      "dqm2Id": 403,
+      "identity": "プチットガールズ"
+    },
+    {
+      "dqm1Id": "m443",
+      "dqm2Id": 663,
+      "identity": "ダブルイーター"
+    },
+    {
+      "dqm1Id": "m444",
+      "dqm2Id": 414,
+      "identity": "デスソシスト"
+    },
+    {
+      "dqm1Id": "m445",
+      "dqm2Id": 24,
+      "identity": "メタルカイザー"
+    },
+    {
+      "dqm1Id": "m446",
+      "dqm2Id": 129,
+      "identity": "オーシャンクロー"
+    },
+    {
+      "dqm1Id": "m447",
+      "dqm2Id": 259,
+      "identity": "モヒカント"
+    },
+    {
+      "dqm1Id": "m448",
+      "dqm2Id": 261,
+      "identity": "グラコス"
+    },
+    {
+      "dqm1Id": "m449",
+      "dqm2Id": 308,
+      "identity": "なげきのぼうれい"
+    },
+    {
+      "dqm1Id": "m450",
+      "dqm2Id": 306,
+      "identity": "死神きぞく"
+    },
+    {
+      "dqm1Id": "m451",
+      "dqm2Id": 64,
+      "identity": "グレイトドラゴン"
+    },
+    {
+      "dqm1Id": "m452",
+      "dqm2Id": 418,
+      "identity": "ローズダンス"
+    },
+    {
+      "dqm1Id": "m453",
+      "dqm2Id": 191,
+      "identity": "ゴンズ"
+    },
+    {
+      "dqm1Id": "m454",
+      "dqm2Id": 216,
+      "identity": "うごくせきぞう"
+    },
+    {
+      "dqm1Id": "m455",
+      "dqm2Id": 420,
+      "identity": "じごくのマドンナ"
+    },
+    {
+      "dqm1Id": "m456",
+      "dqm2Id": 322,
+      "identity": "ドラゴンコープス"
+    },
+    {
+      "dqm1Id": "m457",
+      "dqm2Id": 32,
+      "identity": "スライダーガール"
+    },
+    {
+      "dqm1Id": "m458",
+      "dqm2Id": 117,
+      "identity": "ガルーダ"
+    },
+    {
+      "dqm1Id": "m459",
+      "dqm2Id": 256,
+      "identity": "アンクルホーン"
+    },
+    {
+      "dqm1Id": "m460",
+      "dqm2Id": 283,
+      "identity": "ほうらい大王"
+    },
+    {
+      "dqm1Id": "m461",
+      "dqm2Id": 407,
+      "identity": "ゲモン"
+    },
+    {
+      "dqm1Id": "m462",
+      "dqm2Id": 412,
+      "identity": "ナイトキング"
+    },
+    {
+      "dqm1Id": "m463",
+      "dqm2Id": 666,
+      "identity": "妖女イシュダル"
+    },
+    {
+      "dqm1Id": "m464",
+      "dqm2Id": 305,
+      "identity": "ピサロナイト"
+    },
+    {
+      "dqm1Id": "m465",
+      "dqm2Id": 433,
+      "identity": "スライムジェネラル"
+    },
+    {
+      "dqm1Id": "m466",
+      "dqm2Id": 63,
+      "identity": "メカバーン"
+    },
+    {
+      "dqm1Id": "m467",
+      "dqm2Id": 527,
+      "identity": "ロック鳥"
+    },
+    {
+      "dqm1Id": "m468",
+      "dqm2Id": 169,
+      "identity": "ドン・モグーラ"
+    },
+    {
+      "dqm1Id": "m469",
+      "dqm2Id": 405,
+      "identity": "デュラン"
+    },
+    {
+      "dqm1Id": "m470",
+      "dqm2Id": 262,
+      "identity": "ベリアル"
+    },
+    {
+      "dqm1Id": "m471",
+      "dqm2Id": 164,
+      "identity": "ヒヒュルデの使い"
+    },
+    {
+      "dqm1Id": "m472",
+      "dqm2Id": 307,
+      "identity": "デュラハーン"
+    },
+    {
+      "dqm1Id": "m473",
+      "dqm2Id": 37,
+      "identity": "ジャミ"
+    },
+    {
+      "dqm1Id": "m474",
+      "dqm2Id": 417,
+      "identity": "マリンデュエル"
+    },
+    {
+      "dqm1Id": "m475",
+      "dqm2Id": 237,
+      "identity": "どぐう戦士"
+    },
+    {
+      "dqm1Id": "m476",
+      "dqm2Id": 260,
+      "identity": "バズズ"
+    },
+    {
+      "dqm1Id": "m477",
+      "dqm2Id": 413,
+      "identity": "スカルスパイダー"
+    },
+    {
+      "dqm1Id": "m478",
+      "dqm2Id": 13,
+      "identity": "メタルキング"
+    },
+    {
+      "dqm1Id": "m479",
+      "dqm2Id": 284,
+      "identity": "イブール"
+    },
+    {
+      "dqm1Id": "m480",
+      "dqm2Id": 415,
+      "identity": "タウラス"
+    },
+    {
+      "dqm1Id": "m481",
+      "dqm2Id": 419,
+      "identity": "カプリゴン"
+    },
+    {
+      "dqm1Id": "m482",
+      "dqm2Id": 323,
+      "identity": "ゲマ"
+    },
+    {
+      "dqm1Id": "m483",
+      "dqm2Id": 352,
+      "identity": "ヘルクラウド"
+    },
+    {
+      "dqm1Id": "m484",
+      "dqm2Id": 121,
+      "identity": "大王イカ"
+    },
+    {
+      "dqm1Id": "m485",
+      "dqm2Id": 350,
+      "identity": "ゾーマズデビル"
+    },
+    {
+      "dqm1Id": "m486",
+      "dqm2Id": 696,
+      "identity": "プチターク"
+    },
+    {
+      "dqm1Id": "m487",
+      "dqm2Id": 587,
+      "identity": "ミルドラース"
+    },
+    {
+      "dqm1Id": "m488",
+      "dqm2Id": 588,
+      "identity": "デスタムーア"
+    },
+    {
+      "dqm1Id": "m489",
+      "dqm2Id": 590,
+      "identity": "オルゴ・デミーラ"
+    },
+    {
+      "dqm1Id": "m490",
+      "dqm2Id": 336,
+      "identity": "スペディオ"
+    },
+    {
+      "dqm1Id": "m491",
+      "dqm2Id": 1004,
+      "identity": "ウィンデオ"
+    },
+    {
+      "dqm1Id": "m492",
+      "dqm2Id": 337,
+      "identity": "ガルハート"
+    },
+    {
+      "dqm1Id": "m493",
+      "dqm2Id": 1005,
+      "identity": "フレイシャ"
+    },
+    {
+      "dqm1Id": "m494",
+      "dqm2Id": 338,
+      "identity": "グラブゾン"
+    },
+    {
+      "dqm1Id": "m495",
+      "dqm2Id": 1006,
+      "identity": "アックル"
+    },
+    {
+      "dqm1Id": "m496",
+      "dqm2Id": 339,
+      "identity": "ディアノーグ"
+    },
+    {
+      "dqm1Id": "m497",
+      "dqm2Id": 1007,
+      "identity": "ガオガイヤ"
+    },
+    {
+      "dqm1Id": "m498",
+      "dqm2Id": 120,
+      "identity": "長老ピピット"
+    },
+    {
+      "dqm1Id": "m499",
+      "dqm2Id": 190,
+      "identity": "ゴレオン将軍"
+    },
+    {
+      "dqm1Id": "m500",
+      "dqm2Id": 282,
+      "identity": "ゲルニック将軍"
+    },
+    {
+      "dqm1Id": "m501",
+      "dqm2Id": 40,
+      "identity": "ギュメイ将軍"
+    },
+    {
+      "dqm1Id": "m502",
+      "dqm2Id": 445,
+      "identity": "勇車スラリンガル"
+    },
+    {
+      "dqm1Id": "m503",
+      "dqm2Id": 79,
+      "identity": "ブラックドラゴン"
+    },
+    {
+      "dqm1Id": "m504",
+      "dqm2Id": 138,
+      "identity": "ぬしさま"
+    },
+    {
+      "dqm1Id": "m505",
+      "dqm2Id": 631,
+      "identity": "怪力軍曹イボイノス"
+    },
+    {
+      "dqm1Id": "m506",
+      "dqm2Id": 664,
+      "identity": "邪眼皇帝アウルート"
+    },
+    {
+      "dqm1Id": "m507",
+      "dqm2Id": 630,
+      "identity": "魔剣神レパルド"
+    },
+    {
+      "dqm1Id": "m508",
+      "dqm2Id": 1041,
+      "identity": "メルトア"
+    },
+    {
+      "dqm1Id": "m509",
+      "dqm2Id": 399,
+      "identity": "キラーマシン2"
+    },
+    {
+      "dqm1Id": "m510",
+      "dqm2Id": 168,
+      "identity": "アトラス"
+    },
+    {
+      "dqm1Id": "m511",
+      "dqm2Id": 1024,
+      "identity": "フールフール"
+    },
+    {
+      "dqm1Id": "m512",
+      "dqm2Id": 34,
+      "identity": "スライダークロボ"
+    },
+    {
+      "dqm1Id": "m513",
+      "dqm2Id": 65,
+      "identity": "ギガントドラゴン"
+    },
+    {
+      "dqm1Id": "m514",
+      "dqm2Id": 1048,
+      "identity": "リーズレット"
+    },
+    {
+      "dqm1Id": "m515",
+      "dqm2Id": 124,
+      "identity": "レティス"
+    },
+    {
+      "dqm1Id": "m516",
+      "dqm2Id": 397,
+      "identity": "キングレオ"
+    },
+    {
+      "dqm1Id": "m517",
+      "dqm2Id": 638,
+      "identity": "ダーククリスタル"
+    },
+    {
+      "dqm1Id": "m518",
+      "dqm2Id": 388,
+      "identity": "やまたのおろち"
+    },
+    {
+      "dqm1Id": "m519",
+      "dqm2Id": 393,
+      "identity": "ローズバトラー"
+    },
+    {
+      "dqm1Id": "m520",
+      "dqm2Id": 263,
+      "identity": "おにこんぼう"
+    },
+    {
+      "dqm1Id": "m521",
+      "dqm2Id": 402,
+      "identity": "ゴールデンゴーレム"
+    },
+    {
+      "dqm1Id": "m522",
+      "dqm2Id": 286,
+      "identity": "アクバー"
+    },
+    {
+      "dqm1Id": "m523",
+      "dqm2Id": 316,
+      "identity": "ワイトキング"
+    },
+    {
+      "dqm1Id": "m524",
+      "dqm2Id": 607,
+      "identity": "スラ忍シルバー"
+    },
+    {
+      "dqm1Id": "m525",
+      "dqm2Id": 92,
+      "identity": "セルゲイナス"
+    },
+    {
+      "dqm1Id": "m526",
+      "dqm2Id": 532,
+      "identity": "ホーンビートル"
+    },
+    {
+      "dqm1Id": "m527",
+      "dqm2Id": 38,
+      "identity": "にじくじゃく"
+    },
+    {
+      "dqm1Id": "m528",
+      "dqm2Id": 644,
+      "identity": "デスマシーン"
+    },
+    {
+      "dqm1Id": "m529",
+      "dqm2Id": 682,
+      "identity": "死神の騎士"
+    },
+    {
+      "dqm1Id": "m530",
+      "dqm2Id": 677,
+      "identity": "バラモスゾンビ"
+    },
+    {
+      "dqm1Id": "m531",
+      "dqm2Id": 606,
+      "identity": "スラ忍ゴールド"
+    },
+    {
+      "dqm1Id": "m532",
+      "dqm2Id": 517,
+      "identity": "コアトル"
+    },
+    {
+      "dqm1Id": "m533",
+      "dqm2Id": 43,
+      "identity": "ガマデウス"
+    },
+    {
+      "dqm1Id": "m534",
+      "dqm2Id": 645,
+      "identity": "ドラゴンマシン"
+    },
+    {
+      "dqm1Id": "m535",
+      "dqm2Id": 287,
+      "identity": "エビルプリースト"
+    },
+    {
+      "dqm1Id": "m536",
+      "dqm2Id": 678,
+      "identity": "名をうばわれし王"
+    },
+    {
+      "dqm1Id": "m537",
+      "dqm2Id": 695,
+      "identity": "キャット・リベリオ"
+    },
+    {
+      "dqm1Id": "m538",
+      "dqm2Id": 28,
+      "identity": "スライムマデュラ"
+    },
+    {
+      "dqm1Id": "m539",
+      "dqm2Id": 83,
+      "identity": "はくりゅうおう"
+    },
+    {
+      "dqm1Id": "m540",
+      "dqm2Id": 548,
+      "identity": "さそりアーマー"
+    },
+    {
+      "dqm1Id": "m541",
+      "dqm2Id": 44,
+      "identity": "バルザック"
+    },
+    {
+      "dqm1Id": "m542",
+      "dqm2Id": 646,
+      "identity": "キラーマシン3"
+    },
+    {
+      "dqm1Id": "m543",
+      "dqm2Id": 378,
+      "identity": "タイタニス"
+    },
+    {
+      "dqm1Id": "m544",
+      "dqm2Id": 679,
+      "identity": "ゆうれい船"
+    },
+    {
+      "dqm1Id": "m545",
+      "dqm2Id": 166,
+      "identity": "キングモーモン"
+    },
+    {
+      "dqm1Id": "m546",
+      "dqm2Id": 219,
+      "identity": "バベルボブル"
+    },
+    {
+      "dqm1Id": "m547",
+      "dqm2Id": 650,
+      "identity": "ヘルバトラー"
+    },
+    {
+      "dqm1Id": "m548",
+      "dqm2Id": 355,
+      "identity": "りゅうおう"
+    },
+    {
+      "dqm1Id": "m549",
+      "dqm2Id": 377,
+      "identity": "ハーゴン"
+    },
+    {
+      "dqm1Id": "m550",
+      "dqm2Id": 374,
+      "identity": "バラモス"
+    },
+    {
+      "dqm1Id": "m551",
+      "dqm2Id": 408,
+      "identity": "ムドー"
+    },
+    {
+      "dqm1Id": "m552",
+      "dqm2Id": 346,
+      "identity": "ドーク"
+    },
+    {
+      "dqm1Id": "m553",
+      "dqm2Id": 589,
+      "identity": "魔王デスタムーア"
+    },
+    {
+      "dqm1Id": "m554",
+      "dqm2Id": 667,
+      "identity": "フォロボシータ"
+    },
+    {
+      "dqm1Id": "m555",
+      "dqm2Id": 264,
+      "identity": "シドー"
+    },
+    {
+      "dqm1Id": "m556",
+      "dqm2Id": 430,
+      "identity": "フォロボス"
+    },
+    {
+      "dqm1Id": "m557",
+      "dqm2Id": 309,
+      "identity": "キャプテン・クロウ"
+    },
+    {
+      "dqm1Id": "m558",
+      "dqm2Id": 14,
+      "identity": "グランスライム"
+    },
+    {
+      "dqm1Id": "m559",
+      "dqm2Id": 422,
+      "identity": "スラキャンサー"
+    },
+    {
+      "dqm1Id": "m560",
+      "dqm2Id": 122,
+      "identity": "オセアーノン"
+    },
+    {
+      "dqm1Id": "m561",
+      "dqm2Id": 171,
+      "identity": "ドルマゲス"
+    },
+    {
+      "dqm1Id": "m562",
+      "dqm2Id": 214,
+      "identity": "キラーマジンガ"
+    },
+    {
+      "dqm1Id": "m563",
+      "dqm2Id": 15,
+      "identity": "ゴールデンスライム"
+    },
+    {
+      "dqm1Id": "m564",
+      "dqm2Id": 325,
+      "identity": "暗黒皇帝ガナサダイ"
+    },
+    {
+      "dqm1Id": "m565",
+      "dqm2Id": 220,
+      "identity": "暗黒の魔神"
+    },
+    {
+      "dqm1Id": "m566",
+      "dqm2Id": 47,
+      "identity": "カンダタワイフ"
+    },
+    {
+      "dqm1Id": "m567",
+      "dqm2Id": 438,
+      "identity": "カンダタおやぶん"
+    },
+    {
+      "dqm1Id": "m568",
+      "dqm2Id": 690,
+      "identity": "エッグラ＆チキーラ"
+    },
+    {
+      "dqm1Id": "m569",
+      "dqm2Id": 1049,
+      "identity": "魔軍司令ホメロス"
+    },
+    {
+      "dqm1Id": "m570",
+      "dqm2Id": 685,
+      "identity": "カカロン"
+    },
+    {
+      "dqm1Id": "m571",
+      "dqm2Id": 686,
+      "identity": "クシャラミ"
+    },
+    {
+      "dqm1Id": "m572",
+      "dqm2Id": 687,
+      "identity": "バルバルー"
+    },
+    {
+      "dqm1Id": "m573",
+      "dqm2Id": 688,
+      "identity": "ドメディ"
+    },
+    {
+      "dqm1Id": "m574",
+      "dqm2Id": 340,
+      "identity": "キングスペーディオ"
+    },
+    {
+      "dqm1Id": "m575",
+      "dqm2Id": 1000,
+      "identity": "皇帝ウィンディオ"
+    },
+    {
+      "dqm1Id": "m576",
+      "dqm2Id": 341,
+      "identity": "クインガルハート"
+    },
+    {
+      "dqm1Id": "m577",
+      "dqm2Id": 1001,
+      "identity": "女帝フレイシャ"
+    },
+    {
+      "dqm1Id": "m578",
+      "dqm2Id": 342,
+      "identity": "グラブゾンジャック"
+    },
+    {
+      "dqm1Id": "m579",
+      "dqm2Id": 1002,
+      "identity": "戦帝アックル"
+    },
+    {
+      "dqm1Id": "m580",
+      "dqm2Id": 343,
+      "identity": "ディアノーグエース"
+    },
+    {
+      "dqm1Id": "m581",
+      "dqm2Id": 1003,
+      "identity": "義帝ガオガイヤ"
+    },
+    {
+      "dqm1Id": "m582",
+      "dqm2Id": 429,
+      "identity": "スーパーキラーマシン"
+    },
+    {
+      "dqm1Id": "m584",
+      "dqm2Id": 33,
+      "identity": "スラ・ブラスター"
+    },
+    {
+      "dqm1Id": "m585",
+      "dqm2Id": 689,
+      "identity": "ジェノダーク"
+    },
+    {
+      "dqm1Id": "m586",
+      "dqm2Id": 651,
+      "identity": "メタルスコーピオン"
+    },
+    {
+      "dqm1Id": "m587",
+      "dqm2Id": 123,
+      "identity": "レオパルド"
+    },
+    {
+      "dqm1Id": "m588",
+      "dqm2Id": 46,
+      "identity": "ギガデーモン"
+    },
+    {
+      "dqm1Id": "m589",
+      "dqm2Id": 616,
+      "identity": "キングヒドラ"
+    },
+    {
+      "dqm1Id": "m590",
+      "dqm2Id": 221,
+      "identity": "デスピサロ"
+    },
+    {
+      "dqm1Id": "m591",
+      "dqm2Id": 266,
+      "identity": "魔王ミルドラース"
+    },
+    {
+      "dqm1Id": "m592",
+      "dqm2Id": 66,
+      "identity": "竜王"
+    },
+    {
+      "dqm1Id": "m593",
+      "dqm2Id": 591,
+      "identity": "スラリン船"
+    },
+    {
+      "dqm1Id": "m594",
+      "dqm2Id": 592,
+      "identity": "スライバ船"
+    },
+    {
+      "dqm1Id": "m595",
+      "dqm2Id": 95,
+      "identity": "魔王ジェイム"
+    },
+    {
+      "dqm1Id": "m596",
+      "dqm2Id": 16,
+      "identity": "トロデ"
+    },
+    {
+      "dqm1Id": "m597",
+      "dqm2Id": 647,
+      "identity": "魔壺インヘーラー"
+    },
+    {
+      "dqm1Id": "m598",
+      "dqm2Id": 624,
+      "identity": "魔戦車ダビド"
+    },
+    {
+      "dqm1Id": "m599",
+      "dqm2Id": 608,
+      "identity": "魔戦士ホゲイラ"
+    },
+    {
+      "dqm1Id": "m600",
+      "dqm2Id": 632,
+      "identity": "魔戦士ヴェーラ"
+    },
+    {
+      "dqm1Id": "m601",
+      "dqm2Id": 668,
+      "identity": "魔戦士アルゴ"
+    },
+    {
+      "dqm1Id": "m602",
+      "dqm2Id": 680,
+      "identity": "魔戦士サイフォン"
+    },
+    {
+      "dqm1Id": "m603",
+      "dqm2Id": 618,
+      "identity": "魔戦士ルギウス"
+    },
+    {
+      "dqm1Id": "m604",
+      "dqm2Id": 692,
+      "identity": "魔戦士メイザー"
+    },
+    {
+      "dqm1Id": "m605",
+      "dqm2Id": 1014,
+      "identity": "アルダララ"
+    },
+    {
+      "dqm1Id": "m606",
+      "dqm2Id": 617,
+      "identity": "竜皇帝バルグディス"
+    },
+    {
+      "dqm1Id": "m607",
+      "dqm2Id": 701,
+      "identity": "ゴールドマジンガ"
+    },
+    {
+      "dqm1Id": "m608",
+      "dqm2Id": 369,
+      "identity": "ワルぼう"
+    },
+    {
+      "dqm1Id": "m609",
+      "dqm2Id": 310,
+      "identity": "ガルマッゾ"
+    },
+    {
+      "dqm1Id": "m610",
+      "dqm2Id": 1016,
+      "identity": "闇の王ヴラート"
+    },
+    {
+      "dqm1Id": "m611",
+      "dqm2Id": 265,
+      "identity": "大魔王ゾーマ"
+    },
+    {
+      "dqm1Id": "m612",
+      "dqm2Id": 35,
+      "identity": "ダイヤモンドスライム"
+    },
+    {
+      "dqm1Id": "m613",
+      "dqm2Id": 436,
+      "identity": "かみさま"
+    },
+    {
+      "dqm1Id": "m614",
+      "dqm2Id": 435,
+      "identity": "わたぼう"
+    },
+    {
+      "dqm1Id": "m615",
+      "dqm2Id": 427,
+      "identity": "エリスグール"
+    },
+    {
+      "dqm1Id": "m616",
+      "dqm2Id": 267,
+      "identity": "大魔王デスタムーア"
+    },
+    {
+      "dqm1Id": "m617",
+      "dqm2Id": 348,
+      "identity": "邪獣ヒヒュルデ"
+    },
+    {
+      "dqm1Id": "m618",
+      "dqm2Id": 36,
+      "identity": "はぐれメタルキング"
+    },
+    {
+      "dqm1Id": "m619",
+      "dqm2Id": 358,
+      "identity": "バルボロス"
+    },
+    {
+      "dqm1Id": "m620",
+      "dqm2Id": 357,
+      "identity": "グレイナル"
+    },
+    {
+      "dqm1Id": "m621",
+      "dqm2Id": 41,
+      "identity": "エグドラシル"
+    },
+    {
+      "dqm1Id": "m622",
+      "dqm2Id": 347,
+      "identity": "マガルギ"
+    },
+    {
+      "dqm1Id": "m623",
+      "dqm2Id": 424,
+      "identity": "サージタウス"
+    },
+    {
+      "dqm1Id": "m624",
+      "dqm2Id": 268,
+      "identity": "魔王オルゴ・デミーラ"
+    },
+    {
+      "dqm1Id": "m625",
+      "dqm2Id": 351,
+      "identity": "ガーディス"
+    },
+    {
+      "dqm1Id": "m626",
+      "dqm2Id": 1012,
+      "identity": "闇竜シャムダ"
+    },
+    {
+      "dqm1Id": "m627",
+      "dqm2Id": 441,
+      "identity": "神竜"
+    },
+    {
+      "dqm1Id": "m628",
+      "dqm2Id": 42,
+      "identity": "トーポ"
+    },
+    {
+      "dqm1Id": "m629",
+      "dqm2Id": 648,
+      "identity": "絶望と憎悪の魔宮"
+    },
+    {
+      "dqm1Id": "m630",
+      "dqm2Id": 172,
+      "identity": "魔王ラプソーン"
+    },
+    {
+      "dqm1Id": "m631",
+      "dqm2Id": 594,
+      "identity": "メタルスター"
+    },
+    {
+      "dqm1Id": "m632",
+      "dqm2Id": 1010,
+      "identity": "ガルビルス"
+    },
+    {
+      "dqm1Id": "m633",
+      "dqm2Id": 94,
+      "identity": "じげんりゅう"
+    },
+    {
+      "dqm1Id": "m634",
+      "dqm2Id": 423,
+      "identity": "海王神"
+    },
+    {
+      "dqm1Id": "m635",
+      "dqm2Id": 1013,
+      "identity": "真・魔王ザラーム"
+    },
+    {
+      "dqm1Id": "m636",
+      "dqm2Id": 222,
+      "identity": "エスターク"
+    },
+    {
+      "dqm1Id": "m637",
+      "dqm2Id": 406,
+      "identity": "ダークドレアム"
+    },
+    {
+      "dqm1Id": "m638",
+      "dqm2Id": 173,
+      "identity": "大魔王ラプソーン"
+    },
+    {
+      "dqm1Id": "m639",
+      "dqm2Id": 440,
+      "identity": "神鳥レティス"
+    },
+    {
+      "dqm1Id": "m640",
+      "dqm2Id": 697,
+      "identity": "ラーミア"
+    },
+    {
+      "dqm1Id": "m641",
+      "dqm2Id": 174,
+      "identity": "デモンスペーディオ"
+    },
+    {
+      "dqm1Id": "m642",
+      "dqm2Id": 344,
+      "identity": "JOKER"
+    },
+    {
+      "dqm1Id": "m643",
+      "dqm2Id": 1008,
+      "identity": "JESTER"
+    },
+    {
+      "dqm1Id": "m644",
+      "dqm2Id": 254,
+      "identity": "邪神レオソード"
+    },
+    {
+      "dqm1Id": "m645",
+      "dqm2Id": 426,
+      "identity": "闘神レオソード"
+    },
+    {
+      "dqm1Id": "m646",
+      "dqm2Id": 421,
+      "identity": "オムド・ロレス"
+    },
+    {
+      "dqm1Id": "m647",
+      "dqm2Id": 681,
+      "identity": "ギスヴァーグ"
+    },
+    {
+      "dqm1Id": "m648",
+      "dqm2Id": 68,
+      "identity": "竜神王"
+    },
+    {
+      "dqm1Id": "m649",
+      "dqm2Id": 359,
+      "identity": "エルギオス"
+    },
+    {
+      "dqm1Id": "m650",
+      "dqm2Id": 1047,
+      "identity": "魔王ウルノーガ"
+    },
+    {
+      "dqm1Id": "m651",
+      "dqm2Id": 389,
+      "identity": "マスタードラゴン"
+    },
+    {
+      "dqm1Id": "m652",
+      "dqm2Id": 349,
+      "identity": "ヒヒュドラード"
+    },
+    {
+      "dqm1Id": "m653",
+      "dqm2Id": 615,
+      "identity": "アギロゴス"
+    },
+    {
+      "dqm1Id": "m654",
+      "dqm2Id": 1015,
+      "identity": "魔王オムド・レクス"
+    },
+    {
+      "dqm1Id": "m655",
+      "dqm2Id": 683,
+      "identity": "凶魔獣メイザー"
+    },
+    {
+      "dqm1Id": "m656",
+      "dqm2Id": 684,
+      "identity": "魔戦神ゼメルギアス"
+    },
+    {
+      "dqm1Id": "m658",
+      "dqm2Id": 1011,
+      "identity": "大魔王マデュラージャ"
+    },
+    {
+      "dqm1Id": "m659",
+      "dqm2Id": 1009,
+      "identity": "WORLD"
+    },
+    {
+      "dqm1Id": "m583",
+      "dqm2Id": 691,
+      "identity": "カンダタレディース"
+    },
+    {
+      "dqm1Id": "m657",
+      "dqm2Id": 1046,
+      "identity": "大魔王ウルノーガ"
+    }
+  ]
+}
