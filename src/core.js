@@ -60,6 +60,19 @@
    const query=(filters.q||'').normalize('NFKC').trim().toLowerCase().replace(/^(?:#|no\.?\s*)/,'');
    return monsters.filter(m=>(filters.view!=='collection'||save.favorites.includes(m.id))&&(!filters.onlyOwned||save.owned[m.id]>0)&&(omit==='family'||!families.length||families.includes(m.family))&&(omit==='rank'||!ranks.length||ranks.includes(m.rank))&&(omit==='size'||!sizes.length||sizes.includes(m.size))&&matchesMonster(m,query,save.aliases[m.id]||''));
  }
- function catalogFacets(monsters,filters,save){const counts={family:{},rank:{},size:{}};for(const facet of Object.keys(counts))for(const m of filterCatalog(monsters,filters,save,facet))counts[facet][m[facet]]=(counts[facet][m[facet]]||0)+1;return counts;}
+ function catalogFacets(monsters,filters,save){
+  const counts={family:{},rank:{},size:{}};
+  const choiceFilters=filters.facetMode==='single'
+   ? {...filters,family:'',rank:'',families:[],ranks:[]}
+   : filters;
+  for(const facet of Object.keys(counts)){
+   const matches=filterCatalog(monsters,facet==='size'?filters:choiceFilters,save,facet);
+   for(const monster of matches){
+    const value=monster[facet];
+    counts[facet][value]=(counts[facet][value]||0)+1;
+   }
+  }
+  return counts;
+ }
  const api={needCounts,readiness,validateSave,mergeSaves,createBreedingEngine,filterCatalog,catalogFacets,matchesMonster};if(typeof module!=='undefined')module.exports=api;else root.DQM_CORE=api;
 })(typeof window!=='undefined'?window:globalThis);

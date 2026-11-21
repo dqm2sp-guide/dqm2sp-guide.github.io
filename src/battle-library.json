@@ -1,0 +1,1421 @@
+{
+  "checked": "2026-11-09",
+  "version": 1,
+  "scope": "DQM2 SP 历史构筑与机制查询；不表示当前胜率或在线服务可用。",
+  "count": 32,
+  "entries": [
+    {
+      "id": "team-reverse",
+      "title": "逆转队",
+      "kind": "完整阵容",
+      "category": "慢速抢先",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        263,
+        286,
+        629,
+        18
+      ],
+      "skillIds": [
+        76,
+        354,
+        179,
+        126,
+        182,
+        276,
+        378,
+        137,
+        32,
+        262
+      ],
+      "summary": "以突发里巴斯改变行动顺序，让慢速成员先攻。",
+      "steps": [
+        "配合前：确认负责启动的成员已换成“突发里巴斯”，不要把技能组里的主动逆转误当成开场自动特性。",
+        "第一回合：支援负责强化，物理与咒文位输出；观察真正行动顺序是否符合预期。",
+        "后续：敌方用雾覆盖逆转时，由可重新布场的成员恢复节奏；无法恢复就转入生存，不继续盲目强化。"
+      ],
+      "requirements": [
+        "开场能启动逆转",
+        "主攻在逆转中能先行动",
+        "场地被覆盖后仍有恢复方案"
+      ],
+      "weaknesses": [
+        "没开出逆转：查新生替换结果与当前战斗模式，不要只查敏捷。",
+        "开了仍后手：查行动特性、对方固定先手动作，不能按面板敏捷简单排序。",
+        "第二回合失控：查逆转是否被雾或乱序覆盖，并检查重新布场者是否被控或缺MP。"
+      ],
+      "alternatives": "GameWith列出鲸鱼法师可作逆转候选，但它占2格，不能直接替换一只S怪；必须重新安排队伍。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/323729",
+        "https://gamewith.jp/dqm2-irurukasp/article/show/221590",
+        "https://kamigame.jp/dqm2_sp/page/120476175188361223.html"
+      ],
+      "evidenceNote": "历史来源构筑；完整成员、技能与新生替换见原阵容详情。未测胜率，不能保证自动战斗复现。",
+      "teamId": "reverse",
+      "familyIds": [
+        4,
+        6,
+        1
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "team-black-fog",
+      "title": "黑雾物理队",
+      "kind": "完整阵容",
+      "category": "封咒文与控场",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        123,
+        632,
+        174,
+        783
+      ],
+      "skillIds": [
+        179,
+        277,
+        238,
+        424,
+        304,
+        354,
+        298,
+        410,
+        281
+      ],
+      "summary": "维持黑雾限制咒文，再由物理成员输出。",
+      "steps": [
+        "开场先观察黑雾是否成立；攻击手负责输出，干扰位负责阻止对手重新布场。",
+        "第一轮以当前能用的招式攻击。红雾出现后斩击停用，白雾出现后体技停用，要有另一类别。",
+        "第二轮以后优先观察场地和成员存活；黑雾下不要等咒文奶妈救场。"
+      ],
+      "requirements": [
+        "黑雾下仍能输出与维持",
+        "攻击手有不同类别的备用招式",
+        "AI不会被无关招式分散"
+      ],
+      "weaknesses": [
+        "对手突然能施法：确认黑雾被覆盖，而不是默认对方无视黑雾。",
+        "己方攻击手发呆：查看当前封的是斩击还是体技，以及MP和招式许可。",
+        "己方一直没人回血：检查回复是不是咒文；黑雾同样限制自己。"
+      ],
+      "alternatives": "魔战士薇拉可改用杀戮魔神，并把AI1～2回行动换成有时黑雾；这是维持场地的替代路线，输出节奏会改变。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/350662"
+      ],
+      "evidenceNote": "历史来源构筑；完整成员、技能与新生替换见原阵容详情。未测胜率，不能保证自动战斗复现。",
+      "teamId": "black-fog",
+      "familyIds": [
+        4,
+        8,
+        3
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "team-metal-guard",
+      "title": "金属替身队",
+      "kind": "完整阵容",
+      "category": "保护输出",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        13,
+        263,
+        214,
+        783
+      ],
+      "skillIds": [
+        63,
+        374,
+        32,
+        93,
+        381,
+        179,
+        335,
+        354,
+        278,
+        286,
+        298
+      ],
+      "summary": "金属盾承担攻击，其他成员输出并维护场地。",
+      "steps": [
+        "准备盾：把“防御”累计点到86点学替身（替身），或使用“自我牺牲”累计70点；两条路线任选其一。",
+        "进入AI作战设置，让盾只使用替身；开战观察是否真的把可代受的攻击引向自己。",
+        "其余成员趁保护窗口输出；护盾倒下或被解除时先处理原因，不要只给盾堆防御。"
+      ],
+      "requirements": [
+        "盾已学会并实际使用替身",
+        "关键异常抗性与会心对策已核对",
+        "保护失效时仍有生存方案"
+      ],
+      "weaknesses": [
+        "有金属盾却队友挨打：先看盾是否出招，再看攻击是否能穿透替身。",
+        "盾突然不能保护：检查白雾、体技封印、替身封印或冰冻波动。",
+        "盾被异常或会心击倒：逐项补抗性和会心对策；高防御不是完全免疫。"
+      ],
+      "alternatives": "盾位可考虑钻石史莱姆；材料不足时金属史莱姆或流浪金属史莱姆可试用，但HP与耐久不同，并非等价替换。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/323729",
+        "https://game8.jp/dqm2/315000",
+        "https://game8.jp/dqm2/316863",
+        "https://game8.jp/dqm2/316893"
+      ],
+      "evidenceNote": "历史来源构筑；完整成员、技能与新生替换见原阵容详情。未测胜率，不能保证自动战斗复现。",
+      "teamId": "metal-guard",
+      "familyIds": [
+        1,
+        4,
+        5,
+        3
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "red-chain",
+      "title": "红雾连锁爆发",
+      "kind": "核心打法",
+      "category": "场地与连携",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        13,
+        406
+      ],
+      "skillIds": [
+        23,
+        38
+      ],
+      "skillRefs": [
+        {
+          "skillId": 23,
+          "actionId": 259,
+          "name": "红雾",
+          "sp": 100
+        },
+        {
+          "skillId": 38,
+          "actionId": 252,
+          "name": "连锁",
+          "sp": 30
+        }
+      ],
+      "summary": "用红雾限制斩击，再靠连锁集中行动。",
+      "steps": [
+        "先保证红雾在场。",
+        "安全回合施放连锁，下一回合集中输出。"
+      ],
+      "requirements": [
+        "队员须有红雾下可用的攻击手段。",
+        "连锁负责者不能被黑雾封住。"
+      ],
+      "weaknesses": [
+        "黑雾、冻结波动或场地被改写会拆掉连携。"
+      ],
+      "alternatives": "先练单次连锁的顺序，再增加伤害岗位。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/318286"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        1,
+        6
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "shuffle-zero",
+      "title": "乱序＋回合零",
+      "kind": "核心打法",
+      "category": "行动顺序",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        38
+      ],
+      "skillRefs": [
+        {
+          "skillId": 38,
+          "actionId": 223,
+          "name": "回合零",
+          "sp": 120
+        }
+      ],
+      "summary": "利用乱序抢到行动窗口，以一次归零截断对方回合。",
+      "steps": [
+        "先建立乱序。",
+        "我方关键行动完成后再归零。"
+      ],
+      "requirements": [
+        "需要乱序特性或招式。",
+        "归零每场我方只能用一次，也会跳过尚未行动的队友。"
+      ],
+      "weaknesses": [
+        "零冲击、先手击杀或对方硬化拖回合。"
+      ],
+      "alternatives": "无法控制时机时，改用稳定输出与防守。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/323729",
+        "https://game8.jp/dqm2/316758"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "white-field",
+      "title": "白雾压制体技",
+      "kind": "核心打法",
+      "category": "场地与连携",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        33
+      ],
+      "skillIds": [
+        257
+      ],
+      "skillRefs": [
+        {
+          "skillId": 257,
+          "actionId": 260,
+          "name": "白雾",
+          "sp": 120
+        }
+      ],
+      "summary": "白雾限制体技，针对依赖替身或隐身斩的核心。",
+      "steps": [
+        "辨认敌方主要攻击类别。",
+        "布置白雾后改用咒文、斩击等可用输出。"
+      ],
+      "requirements": [
+        "自己的回复和输出不能完全依赖体技。"
+      ],
+      "weaknesses": [
+        "其他场地可以覆盖白雾。"
+      ],
+      "alternatives": "白雾不是万能盾；另备对咒文或斩击的防守。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/kirikouka",
+        "https://altema.jp/iruruka/migameta"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        1
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "nether-denial",
+      "title": "冥界断回复",
+      "kind": "核心打法",
+      "category": "场地与连携",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        214
+      ],
+      "skillIds": [
+        8
+      ],
+      "skillRefs": [
+        {
+          "skillId": 8,
+          "actionId": 231,
+          "name": "冥界之雾",
+          "sp": 120
+        }
+      ],
+      "summary": "通过冥界之雾阻碍回复与复活循环。",
+      "steps": [
+        "确认己方能承受停用回复的代价。",
+        "抢到场地后快速收尾。"
+      ],
+      "requirements": [
+        "自队也受场地影响。",
+        "杀戮魔神的开场冥界特性要求4格。"
+      ],
+      "weaknesses": [
+        "敌人换雾即可解除；自己误用回复也会受害。"
+      ],
+      "alternatives": "不适合以里霍伊米为唯一生存手段的队伍。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/kirikouka"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        5
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "zero-lock",
+      "title": "零冲击封场地",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        11
+      ],
+      "skillRefs": [
+        {
+          "skillId": 11,
+          "actionId": 42,
+          "name": "零冲击",
+          "sp": 150
+        }
+      ],
+      "summary": "预判敌人改场地或使用归零，阻止其计划。",
+      "steps": [
+        "先观察敌方场地需求。",
+        "关键回合使用零冲击。"
+      ],
+      "requirements": [
+        "仅针对对应招式，不阻止开场或时而场地特性。"
+      ],
+      "weaknesses": [
+        "对手不改场地就可能白耗行动。"
+      ],
+      "alternatives": "对自动场地特性，准备自己的场地或直接处理发动者。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/316759",
+        "https://altema.jp/iruruka/kirikouka"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "revenant-shield",
+      "title": "亡者替身＋复活接力",
+      "kind": "核心打法",
+      "category": "复活与耐久",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        263
+      ],
+      "skillIds": [
+        63,
+        85
+      ],
+      "skillRefs": [
+        {
+          "skillId": 63,
+          "actionId": 218,
+          "name": "替身",
+          "sp": 86
+        },
+        {
+          "skillId": 85,
+          "actionId": 222,
+          "name": "利扎奥拉尔",
+          "sp": 120
+        }
+      ],
+      "summary": "让盾役在亡者状态继续保护，再安排复活。",
+      "steps": [
+        "盾役先承受伤害并进入亡者状态。",
+        "由后行动者处理复活窗口。"
+      ],
+      "requirements": [
+        "鬼棍棒的亡者的执念在配合值＋25解锁。",
+        "提前施放利扎奥拉尔可能破坏所需顺序。"
+      ],
+      "weaknesses": [
+        "冥界之雾、消除效果、控制回复手。"
+      ],
+      "alternatives": "先用普通替身＋回复过渡，不急于压低等级。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/316865"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        4
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-revenant",
+      "title": "超G亡者自循环",
+      "kind": "核心打法",
+      "category": "复活与耐久",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        809
+      ],
+      "skillIds": [
+        85
+      ],
+      "skillRefs": [
+        {
+          "skillId": 85,
+          "actionId": 222,
+          "name": "利扎奥拉尔",
+          "sp": 120
+        }
+      ],
+      "summary": "四格核心把亡者与复活集中在自身。",
+      "steps": [
+        "完成亡者特性替换。",
+        "调低速或等级以建立受击后复活顺序。"
+      ],
+      "requirements": [
+        "魔神艾斯塔克原生不自带亡者，需新生替换。",
+        "占满4格，不能再塞一个奶。"
+      ],
+      "weaknesses": [
+        "冥界、冻结波动和异常会破坏循环。"
+      ],
+      "alternatives": "若时序不稳定，保留常规等级做耐久攻击型。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chogigaikusei"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        8
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "stealth",
+      "title": "多动隐身斩",
+      "kind": "核心打法",
+      "category": "输出机制",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        399,
+        632
+      ],
+      "skillIds": [
+        262
+      ],
+      "skillRefs": [
+        {
+          "skillId": 262,
+          "actionId": 258,
+          "name": "隐身斩",
+          "sp": 5
+        }
+      ],
+      "summary": "借多次行动缩短潜行到出手的间隔。",
+      "steps": [
+        "取得隐身斩。",
+        "补攻击与必要抗性，再测试AI出招顺序。"
+      ],
+      "requirements": [
+        "杀戮机器2原生AI2次行动。",
+        "魔战士薇拉技能组105点可学隐身斩。"
+      ],
+      "weaknesses": [
+        "白雾体技封印，不能只留这一种攻击。"
+      ],
+      "alternatives": "用另一种攻击类别覆盖白雾环境。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/sterussattack"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        5,
+        4
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "anchor",
+      "title": "后制拳后手穿盾",
+      "kind": "核心打法",
+      "category": "输出机制",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        263
+      ],
+      "skillIds": [
+        303
+      ],
+      "skillRefs": [
+        {
+          "skillId": 303,
+          "actionId": 194,
+          "name": "后制拳",
+          "sp": 120
+        }
+      ],
+      "summary": "以后制拳的后手特性与替身贯穿处理受保护目标。",
+      "steps": [
+        "先保障攻击手能活到回合后段。",
+        "使用后制拳处理盾后目标。"
+      ],
+      "requirements": [
+        "后手出招需足够耐久。",
+        "本条技能链接提供后制拳，不把它与仁王斩混为一招。"
+      ],
+      "weaknesses": [
+        "未出手即被控制或击倒。"
+      ],
+      "alternatives": "红雾环境考虑隐身斩；两者不是同类攻击。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/migameta"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        4
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "last-guard",
+      "title": "低血替身最后的挣扎",
+      "kind": "核心打法",
+      "category": "反击与牺牲",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        713,
+        763,
+        827
+      ],
+      "skillIds": [
+        63,
+        26
+      ],
+      "skillRefs": [
+        {
+          "skillId": 63,
+          "actionId": 218,
+          "name": "替身",
+          "sp": 86
+        },
+        {
+          "skillId": 26,
+          "actionId": 163,
+          "name": "美加扎尔之舞",
+          "sp": 120
+        }
+      ],
+      "summary": "低血盾吸收伤害，以最后的挣扎反击，并由后手拉起。",
+      "steps": [
+        "保留低血量的最后的挣扎核心。",
+        "后手复活者避开被一起击倒。"
+      ],
+      "requirements": [
+        "最后的挣扎与复活岗位必须分工。",
+        "列出的候选不代表未经培养即拥有全部所需条件。"
+      ],
+      "weaknesses": [
+        "替身贯穿、冥界与复活失败。"
+      ],
+      "alternatives": "普通通关不建议照搬低等级配置。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/saigonoagakipa"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        6,
+        7,
+        5
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "last-strike",
+      "title": "先攻牺牲换血",
+      "kind": "核心打法",
+      "category": "反击与牺牲",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        862
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "把先攻进攻与最后的挣扎结合，争取交换对方输出。",
+      "steps": [
+        "确认最后的挣扎已在当前体型解锁。",
+        "进攻失败后借倒下时的反击交换。"
+      ],
+      "requirements": [
+        "需要先攻招式与最后的挣扎配置。",
+        "不是自爆招式，也不是保证同归于尽。"
+      ],
+      "weaknesses": [
+        "红雾限制斩击先攻；对方不直接击倒你时收益下降。"
+      ],
+      "alternatives": "改为耐久反击可降低主动送掉核心的风险。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/saigonoagakipa"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        1
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "panda-lowlevel",
+      "title": "超G永不服输压级",
+      "kind": "核心打法",
+      "category": "超G培养",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        1101
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "让凶暴熊猫巨大化，利用永不服输与连续攻击形成输出核心。",
+      "steps": [
+        "先准备技能和所需特性。",
+        "新生为4格，控制等级并补能力。"
+      ],
+      "requirements": [
+        "永不服输＋25；暴走机关至少3格。",
+        "新生后的体型再配合会丢失，顺序要先安排。"
+      ],
+      "weaknesses": [
+        "低等级不等于低培养成本，能力不足仍会被击倒。"
+      ],
+      "alternatives": "先以正常等级练成超G，再决定是否投入压级种子。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chougigaarakurepanda"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        4
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-opener",
+      "title": "超G暴走抢攻",
+      "kind": "核心打法",
+      "category": "超G培养",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        214
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "杀戮魔神以超G全体攻击和暴走机关争取先手压制。",
+      "steps": [
+        "补齐暴走机关及先手方案。",
+        "4格化后检查攻击、抗性和行动次数。"
+      ],
+      "requirements": [
+        "暴走机关＋100；4格会取得突发冥界之雾。"
+      ],
+      "weaknesses": [
+        "逆转、红雾与针对性耐久使首轮爆发失效。"
+      ],
+      "alternatives": "不用超G时保留1格多动配置，给队友留空间。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chogigakillermazinga"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        5
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-counter",
+      "title": "超G反击堡垒",
+      "kind": "核心打法",
+      "category": "反击与牺牲",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        1075
+      ],
+      "skillIds": [
+        11
+      ],
+      "skillRefs": [
+        {
+          "skillId": 11,
+          "actionId": 187,
+          "name": "体技预测",
+          "sp": 120
+        }
+      ],
+      "summary": "把高耐久与反击结合，让对方物理进攻承担代价。",
+      "steps": [
+        "4格核心先补抗性。",
+        "根据敌人的攻击类别配预判或场地。"
+      ],
+      "requirements": [
+        "反击不是对所有攻击类型都有效。",
+        "盾小鬼型属于特定培养方案，不能把所有盾怪视为同等。"
+      ],
+      "weaknesses": [
+        "体技、持续控制或不触发反击的攻击。"
+      ],
+      "alternatives": "不做4格时可用普通替身盾提供队伍防护。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chougigashieldkids"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        5
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-copy",
+      "title": "超G模仿反打",
+      "kind": "核心打法",
+      "category": "反击与牺牲",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        799
+      ],
+      "skillIds": [
+        293
+      ],
+      "skillRefs": [
+        {
+          "skillId": 293,
+          "actionId": 266,
+          "name": "模仿",
+          "sp": 150
+        }
+      ],
+      "summary": "减少主动攻击投资，靠模仿返还所受攻击。",
+      "steps": [
+        "安排模仿和耐久技能。",
+        "确认能扛住关键一击后再反打。"
+      ],
+      "requirements": [
+        "不是所有招式都能复制。"
+      ],
+      "weaknesses": [
+        "封印、无可复制攻击或对方先耗干资源。"
+      ],
+      "alternatives": "保留一个独立攻击手段，防止模仿被封后停摆。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chogigaikusei"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        8
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "asura-one",
+      "title": "阿修罗单动高能力",
+      "kind": "核心打法",
+      "category": "超G培养",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        799
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "去掉原生AI4次行动，换取单动型能力与技能取舍空间。",
+      "steps": [
+        "新生时明确替换AI4次行动。",
+        "按照主攻方式补耐久与输出。"
+      ],
+      "requirements": [
+        "与原生多动型是不同培养方向。",
+        "不能同时宣称保留AI4次行动和单动能力。"
+      ],
+      "weaknesses": [
+        "每次控制损失更大，多段针对超G的攻击仍危险。"
+      ],
+      "alternatives": "材料不足时先保留原生多动，不必强追单动成品。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/asurazoma"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        8
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "metal-mp",
+      "title": "金属女神耗魔爆发",
+      "kind": "核心打法",
+      "category": "超G培养",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        888
+      ],
+      "skillIds": [
+        35,
+        269
+      ],
+      "skillRefs": [
+        {
+          "skillId": 35,
+          "actionId": 95,
+          "name": "玛达恩特",
+          "sp": 200
+        },
+        {
+          "skillId": 269,
+          "actionId": 262,
+          "name": "诅咒铁锤",
+          "sp": 150
+        }
+      ],
+      "summary": "先用玛达恩特，再靠自动回魔接诅咒铁锤。",
+      "steps": [
+        "移除AI3～4次行动并培养MP。",
+        "确认实际每轮回魔足以支付后续招式。"
+      ],
+      "requirements": [
+        "需要自动MP恢复SP；来源建议MP3350以上。",
+        "此为高投入特化型，非裸配金属女神。"
+      ],
+      "weaknesses": [
+        "吸魔、针对性穿透和回复循环被打断。"
+      ],
+      "alternatives": "未达到回魔阈值时不要照抄连续输出计划。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/madantemetarugods"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        1
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "slime-fortress",
+      "title": "卫星史莱姆双反射",
+      "kind": "核心打法",
+      "category": "复活与耐久",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        33
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "利用常驻咒文与物理反射构成耐久核心。",
+      "steps": [
+        "确认体型与反射特性。",
+        "补HP、回复和能对付反射外攻击的手段。"
+      ],
+      "requirements": [
+        "原生3格，超G型需另行新生。",
+        "反射不等于对所有伤害免疫。"
+      ],
+      "weaknesses": [
+        "穿透技、体技或地狱之舞等针对方案。"
+      ],
+      "alternatives": "保留3格＋1格辅助也是不同构筑方向。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chaintaisaku"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        1
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "sleep-breath",
+      "title": "睡眠吐息控制",
+      "kind": "核心打法",
+      "category": "异常与封印",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        86
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "通过睡眠破坏与叹息争取停手窗口。",
+      "steps": [
+        "先确认目标睡眠抗性。",
+        "控制成功后处理未被控住的威胁。"
+      ],
+      "requirements": [
+        "需睡眠破坏及对应吐息。",
+        "不可把多动、突破等新生配置当原生属性。"
+      ],
+      "weaknesses": [
+        "高抗性、解除异常、全部吸入或封息。"
+      ],
+      "alternatives": "改用另一种状态，而非只叠相同睡眠招式。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/joutaiijouparty"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        2
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "book-seal",
+      "title": "恶魔之书封印",
+      "kind": "核心打法",
+      "category": "异常与封印",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        641
+      ],
+      "skillIds": [
+        11,
+        23
+      ],
+      "skillRefs": [
+        {
+          "skillId": 11,
+          "actionId": 221,
+          "name": "体技封印",
+          "sp": 50
+        },
+        {
+          "skillId": 23,
+          "actionId": 228,
+          "name": "斩击封印之息",
+          "sp": 20
+        }
+      ],
+      "summary": "借封印破坏限制敌方主要招式类别。",
+      "steps": [
+        "判断敌人的伤害类别。",
+        "针对该类封印，再由输出手收尾。"
+      ],
+      "requirements": [
+        "恶魔之书初始具封印破坏；多动需要额外培养。"
+      ],
+      "weaknesses": [
+        "封错类别、免疫或无封印也能输出的队伍。"
+      ],
+      "alternatives": "封印技能组作为起点，按对手选择保留招式。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/joutaiijouparty"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        5
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "mind-pressure",
+      "title": "独角龙停行动压制",
+      "kind": "核心打法",
+      "category": "异常与封印",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        72
+      ],
+      "skillIds": [
+        8
+      ],
+      "skillRefs": [
+        {
+          "skillId": 8,
+          "actionId": 122,
+          "name": "碎心锤",
+          "sp": 15
+        }
+      ],
+      "summary": "独角龙的停止破坏配合控制，争取先出手。",
+      "steps": [
+        "先解锁行动迅速。",
+        "对缺乏行动不能防护的目标集中施压。"
+      ],
+      "requirements": [
+        "行动迅速＋50，瞪眼＋25。"
+      ],
+      "weaknesses": [
+        "完全免疫或抢不到出手。"
+      ],
+      "alternatives": "用能造成其他异常的岗位分担，而不是四只同类控制。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/joutaiijouparty"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        2
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "mp-denial",
+      "title": "吸魔拆续航",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        14
+      ],
+      "skillRefs": [
+        {
+          "skillId": 14,
+          "actionId": 43,
+          "name": "基加玛霍托拉",
+          "sp": 150
+        }
+      ],
+      "summary": "把依赖大额MP的耐久核心拖入资源不足。",
+      "steps": [
+        "识别高耗魔或回魔循环。",
+        "限制其MP后再处理防守。"
+      ],
+      "requirements": [
+        "需确认目标吸魔抗性。"
+      ],
+      "weaknesses": [
+        "对方高吸魔抗性、迅速爆发或被动回复。"
+      ],
+      "alternatives": "资源削弱应配合直接输出，不能只吸魔不收尾。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/saikyoparty"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "dispel-chain",
+      "title": "冻结波动拆强化",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        799
+      ],
+      "skillIds": [
+        32
+      ],
+      "skillRefs": [
+        {
+          "skillId": 32,
+          "actionId": 171,
+          "name": "冻结波动",
+          "sp": 150
+        }
+      ],
+      "summary": "去掉连锁或能力强化，打断对方已建立的优势。",
+      "steps": [
+        "观察强化是否已生效。",
+        "在关键伤害前安排解除。"
+      ],
+      "requirements": [
+        "招式波动和自动特性发动不是同一种可靠性。"
+      ],
+      "weaknesses": [
+        "行动顺序失控、特性未触发或马上被重新强化。"
+      ],
+      "alternatives": "与黑雾封连锁配合，但不要让己方核心依赖同一连锁。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/chaintaisaku"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        8
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "metal-mind",
+      "title": "控制盾役开缺口",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [
+        72
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "针对缺少防护的金属盾，用停行动或降防解除其压力。",
+      "steps": [
+        "先看盾的行动不能和降防抗性。",
+        "控制或削弱后集中解决盾后输出。"
+      ],
+      "requirements": [
+        "敌方补过抗性时不能照搬。"
+      ],
+      "weaknesses": [
+        "盾役免疫、异常被解除。"
+      ],
+      "alternatives": "改用贯穿替身招式，不执着于单一控制。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/migameta"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [
+        2
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-dance",
+      "title": "撞击＋地狱之舞",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        53,
+        32
+      ],
+      "skillRefs": [
+        {
+          "skillId": 53,
+          "actionId": 152,
+          "name": "身体冲撞",
+          "sp": 28
+        },
+        {
+          "skillId": 32,
+          "actionId": 201,
+          "name": "地狱之舞",
+          "sp": 110
+        }
+      ],
+      "summary": "利用比例削血与舞蹈攻击处理部分超G耐久怪。",
+      "steps": [
+        "先确认对方舞蹈封印抗性与防护。",
+        "安排削血后接舞蹈的行动顺序。"
+      ],
+      "requirements": [
+        "地狱之舞在当前译名显示为地狱之舞。",
+        "并非对所有超G必定成功。"
+      ],
+      "weaknesses": [
+        "舞蹈抗性、防护技能或步骤间被击倒。"
+      ],
+      "alternatives": "舞蹈被针对时改用多段伤害。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/asurazoma"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "giga-multihit",
+      "title": "多段攻击集火超G",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        200,
+        26
+      ],
+      "skillRefs": [
+        {
+          "skillId": 200,
+          "actionId": 10,
+          "name": "天衣无缝斩",
+          "sp": 85
+        },
+        {
+          "skillId": 26,
+          "actionId": 159,
+          "name": "玛霍托拉之舞",
+          "sp": 20
+        }
+      ],
+      "summary": "对单个大体型集中多段伤害。",
+      "steps": [
+        "先去掉关键防御强化。",
+        "选择有效攻击类别的多段招式。"
+      ],
+      "requirements": [
+        "先查反射和封印，不以段数代替伤害判断。"
+      ],
+      "weaknesses": [
+        "高防御、反射或被相应雾封住。"
+      ],
+      "alternatives": "斩击受限时查看舞蹈等其他类别。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/asurazoma"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "counter-contact",
+      "title": "麻痹身躯替身",
+      "kind": "核心打法",
+      "category": "反击与牺牲",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        63
+      ],
+      "skillIds": [
+        63
+      ],
+      "skillRefs": [
+        {
+          "skillId": 63,
+          "actionId": 218,
+          "name": "替身",
+          "sp": 86
+        }
+      ],
+      "summary": "非金属盾用接触型反制与咒文反射保护队友。",
+      "steps": [
+        "查看机械暴龙特性解锁条件。",
+        "保持替身，配队友回复。"
+      ],
+      "requirements": [
+        "需麻痹身躯、常时玛霍卡恩塔等实际解锁。"
+      ],
+      "weaknesses": [
+        "不触发接触反制的攻击及麻痹免疫。"
+      ],
+      "alternatives": "没有机械暴龙时先用耐久盾过渡，不把它视为金属免伤。",
+      "sourceUrls": [
+        "https://altema.jp/iruruka/migameta"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        2
+      ],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "anti-revive",
+      "title": "后手清除复活准备",
+      "kind": "核心打法",
+      "category": "反制工具",
+      "contexts": [
+        "历史手动"
+      ],
+      "monsterIds": [],
+      "skillIds": [
+        32,
+        8
+      ],
+      "skillRefs": [
+        {
+          "skillId": 32,
+          "actionId": 171,
+          "name": "冻结波动",
+          "sp": 150
+        },
+        {
+          "skillId": 8,
+          "actionId": 231,
+          "name": "冥界之雾",
+          "sp": 120
+        }
+      ],
+      "summary": "在对方复活布局完成后，尝试清除或以冥界阻断。",
+      "steps": [
+        "识别亡者与复活施放者。",
+        "选择后手解除或争夺冥界场地。"
+      ],
+      "requirements": [
+        "手动时序要求高；不是自动挂机保证解。"
+      ],
+      "weaknesses": [
+        "对方更换场地、零冲击或你的解除者被控。"
+      ],
+      "alternatives": "优先控制复活手，也可打断整个循环。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/316865",
+        "https://altema.jp/iruruka/saigonoagakipa"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 依赖出招时机，不直接推荐给自动战斗。",
+      "familyIds": [],
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "black-nonspell",
+      "title": "黑雾下非咒文续航",
+      "kind": "核心打法",
+      "category": "复活与耐久",
+      "contexts": [
+        "历史手动",
+        "异国大师AI"
+      ],
+      "monsterIds": [
+        783
+      ],
+      "skillIds": [],
+      "skillRefs": [],
+      "summary": "给黑雾队安排不依赖咒文的回复，避免封住自己。",
+      "steps": [
+        "逐项检查回复招式类别。",
+        "保留黑雾下能用的体技或舞蹈回复。"
+      ],
+      "requirements": [
+        "不把黑雾当作只影响敌方。"
+      ],
+      "weaknesses": [
+        "白雾、舞蹈封印与冥界会针对替代续航。"
+      ],
+      "alternatives": "准备不同类别的后备回复，但先确认AI不会乱用。",
+      "sourceUrls": [
+        "https://game8.jp/dqm2/350662"
+      ],
+      "evidenceNote": "来源确认核心机制；步骤与替代为编辑整理，并非完整队伍或实测胜率。关联技能只表示可学习所需招式，不是整套最优技能配置。 AI需设置招式开关并自行试战。",
+      "familyIds": [
+        3
+      ],
+      "checked": "2026-11-09"
+    }
+  ]
+}
