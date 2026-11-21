@@ -30,3 +30,9 @@
 .cave-search svg circle{fill:#285d52}
 .cave-search svg .cave-entry,.cave-search svg .cave-north{fill:#34584e}
 .cave-search div{display:flex;gap:4px 12px;flex-wrap:wrap;margin:6px 0;font-size:.9rem}
+.full-route-body h4{margin:1rem 0 .4rem}
+.route-materials{list-style:none;padding:0;display:grid;gap:.4rem}
+.route-materials li,.route-steps li{padding:.4rem 0;border-bottom:1px solid #d5d9ce}
+.route-materials li>small,.route-steps li>small{display:inline-block;margin:.25rem .5rem;color:#4d625b}
+.route-steps{padding-left:1.7rem}
+.route-steps li>div{margin:.25rem 0;overflow-wrap:anywhere}
