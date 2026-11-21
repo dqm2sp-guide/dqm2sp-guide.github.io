@@ -5,7 +5,7 @@ const D=window.DQM_DATA,C=window.DQM_CORE,byId=new Map(D.monsters.map(m=>[m.id,m
 const engine=C.createBreedingEngine(D.monsters);
 const EARLIER_RELEASE={version:'Beta 2026.11.08',date:'2026-11-08',changes:['中文名称：本轮新增修正 25 个怪物名，累计修正 71 个怪物名、3 个招式名。','搜索：保留旧译名与参考别名，地图找怪同步使用校对名称。','攻略：同步相关怪物名称，避免图鉴与剧情攻略叫法不一致。','网站：腾讯、Cloudflare 和 GitHub 三个入口同步更新。'],note:'本轮 6 个名称仍为编辑暂译；尚未逐条对齐手机 SP 汉化实机。'};
 const PREVIOUS_RELEASE={version:'Beta 2026.11.20',date:'2026-11-20',changes:['修复手机底部导航遮住图鉴分页的问题。','怪物位置逐条复核；可查看洞内搜索方位、容器线索和其他出没地点。','武器查询：查看装备条件及可装备的怪物。'],note:'洞内旧版分布图单独标注；有分歧的 SP 出没记录保留来源说明。'};
-const RELEASE={version:'Beta 2026.11.21',date:'2026-11-21',changes:['图鉴默认单选系别或阶级，勾选组合筛选可同时选。','合成树新增终极配合路线图，可查基础材料数量和逐步配合顺序。','开放 DQM2 SP 对战攻略与配队查询。','开放 DQM1 SP 独立图鉴、配合查询及剧情与练级攻略。'],note:'普通配合按双亲 +0 推算；对战资料为历史构筑参考。'};
+const RELEASE={version:'Beta 2026.11.21.1',date:'2026-11-21',changes:['系别与阶级可直接叠加，换选只影响当前栏。','合成树新增终极配合路线图，可查基础材料数量和逐步配合顺序。','开放 DQM2 SP 对战攻略与配队查询。','开放 DQM1 SP 独立图鉴、配合查询及剧情与练级攻略。'],note:'普通配合按双亲 +0 推算；对战资料为历史构筑参考。'};
 const STORE='dqm2sp-handbook-v1';let storageOk=true,save={owned:{},favorites:[],aliases:{}};
 try{const raw=localStorage.getItem(STORE);if(raw)save=C.validateSave({format:'dqm2sp-save',version:1,data:JSON.parse(raw)},new Set(byId.keys()))}catch{storageOk=false}
 const state={view:'catalog',facetMode:'single',q:'',family:'',rank:'',size:'',sort:'no',page:1,onlyOwned:false,families:[],ranks:[],sizes:[],advancedFilters:false,breedMode:'target',detailTab:'in',normalLimit:3,resistanceMode:'current',parentA:1,parentB:133,plusA:0,plusB:0,readyOnly:false,nearOnly:false,recipeKind:'all',skillQ:'',trail:[],selected:null,selectedSkill:null};

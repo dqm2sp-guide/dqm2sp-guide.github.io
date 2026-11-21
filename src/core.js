@@ -62,11 +62,8 @@
  }
  function catalogFacets(monsters,filters,save){
   const counts={family:{},rank:{},size:{}};
-  const choiceFilters=filters.facetMode==='single'
-   ? {...filters,family:'',rank:'',families:[],ranks:[]}
-   : filters;
   for(const facet of Object.keys(counts)){
-   const matches=filterCatalog(monsters,facet==='size'?filters:choiceFilters,save,facet);
+   const matches=filterCatalog(monsters,filters,save,facet);
    for(const monster of matches){
     const value=monster[facet];
     counts[facet][value]=(counts[facet][value]||0)+1;

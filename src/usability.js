@@ -3,7 +3,7 @@ function selectedFacet(kind){const plural={family:'families',rank:'ranks',size:'
 function facetRow(kind,label,options,counts){const selected=selectedFacet(kind);return `<div class="facet-row"><span class="facet-label">${label}</span><div class="facet-choices" role="group" aria-label="${label}筛选"><button class="facet-choice ${!selected.length?'active':''}" data-facet="${kind}" data-value="" aria-pressed="${!selected.length}">全部</button>${options.map(([value,title])=>`<button class="facet-choice ${selected.includes(String(value))?'active':''}" data-facet="${kind}" data-value="${value}" aria-pressed="${selected.includes(String(value))}" aria-label="${label}：${title}"><span>${title}</span><small>${counts[value]||0}</small></button>`).join('')}</div></div>`}
 function renderFacets(){const root=$('#catalog-facets');if(!root)return;const c=C.catalogFacets(D.monsters,state,save);root.innerHTML=facetRow('family','系别',D.families.slice(1).map((x,i)=>[i+1,x]),c.family)+facetRow('rank','阶级',RANK_ORDER.map(x=>[x,x]),c.rank);const advanced=$('#advanced-facets');if(advanced)advanced.innerHTML=facetRow('size','体型',[1,2,3,4].map(x=>[x,x+'格']),c.size)+`<div class="advanced-options"><label><input id="only-owned" type="checkbox" ${state.onlyOwned?'checked':''}> 已拥有</label><label>排序 <select id="sort" aria-label="排序">${[['no','图鉴顺序'],['rank','阶级从高到低'],['atk','攻击从高到低'],['agi','敏捷从高到低']].map(([k,v])=>`<option value="${k}" ${state.sort===k?'selected':''}>${v}</option>`).join('')}</select></label></div>`;renderActiveFilters();}
 function renderActiveFilters(){const root=$('#active-filters');if(!root)return;const items=[...selectedFacet('family').map(v=>['family',v,D.families[+v]]),...selectedFacet('rank').map(v=>['rank',v,v+'阶']),...selectedFacet('size').map(v=>['size',v,v+'格'])];root.innerHTML=items.map(([k,v,label])=>`<button class="active-filter" data-facet="${k}" data-value="${v}" aria-label="移除${esc(label)}筛选">${esc(label)} ×</button>`).join('')+(state.onlyOwned?'<span class="active-filter">已拥有</span>':'')+((items.length||state.onlyOwned||state.q)?'<button class="link-button" data-reset-filters>清空筛选</button>':'');}
-function renderCatalogScreen(){const v=state.view,pair=v==='breed'&&state.breedMode==='pair';$('#main').innerHTML=`<div class="catalog-heading"><h1>${v==='collection'?'我的收藏':v==='breed'?'配合查询':'怪物图鉴'}</h1><span class="catalog-total">903 种</span>${v!=='breed'?'<button class="link-button" data-pair-open>两只配合</button>':''}</div>${v==='breed'?`<div class="breed-mode" role="group" aria-label="配合查询方式"><button data-breed-mode="target" aria-pressed="${!pair}" class="${!pair?'active':''}">找目标 · 怎么合成</button><button data-breed-mode="pair" aria-pressed="${pair}" class="${pair?'active':''}">选两只 · 查子代</button></div>`:''}${pair?pairLab():''}<div class="catalog-search-row"><label class="search"><span class="glass" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="怪物名、技能、特性或编号" aria-label="搜索怪物" value="${esc(state.q)}"></label><button class="filter-toggle ${state.advancedFilters?'active':''}" data-more-filters aria-expanded="${!!state.advancedFilters}">更多筛选</button></div><section class="catalog-filter-panel" aria-label="怪物筛选"><label class="facet-mode"><input type="checkbox" id="combine-facets" ${state.facetMode==='combined'?'checked':''}> 组合筛选（系别、阶级可多选）</label><div id="catalog-facets"></div><div id="advanced-facets" ${!state.advancedFilters?'hidden':''}></div></section><div id="active-filters" class="active-filters"></div><div id="results"></div>`;renderFacets();renderResults();if(pair)renderPairResult();}
+function renderCatalogScreen(){const v=state.view,pair=v==='breed'&&state.breedMode==='pair';$('#main').innerHTML=`<div class="catalog-heading"><h1>${v==='collection'?'我的收藏':v==='breed'?'配合查询':'怪物图鉴'}</h1><span class="catalog-total">903 种</span>${v!=='breed'?'<button class="link-button" data-pair-open>两只配合</button>':''}</div>${v==='breed'?`<div class="breed-mode" role="group" aria-label="配合查询方式"><button data-breed-mode="target" aria-pressed="${!pair}" class="${!pair?'active':''}">找目标 · 怎么合成</button><button data-breed-mode="pair" aria-pressed="${pair}" class="${pair?'active':''}">选两只 · 查子代</button></div>`:''}${pair?pairLab():''}<div class="catalog-search-row"><label class="search"><span class="glass" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" placeholder="怪物名、技能、特性或编号" aria-label="搜索怪物" value="${esc(state.q)}"></label><button class="filter-toggle ${state.advancedFilters?'active':''}" data-more-filters aria-expanded="${!!state.advancedFilters}">更多筛选</button></div><section class="catalog-filter-panel" aria-label="怪物筛选"><label class="facet-mode"><input type="checkbox" id="combine-facets" ${state.facetMode==='combined'?'checked':''}> 同一栏可多选</label><div id="catalog-facets"></div><div id="advanced-facets" ${!state.advancedFilters?'hidden':''}></div></section><div id="active-filters" class="active-filters"></div><div id="results"></div>`;renderFacets();renderResults();if(pair)renderPairResult();}
 function updateCatalog(){renderFacets();renderResults();}
 const facetKeys={family:'families',rank:'ranks',size:'sizes'};
 function setFacet(kind,values){
@@ -13,12 +13,10 @@ function setFacet(kind,values){
 function toggleFacet(kind,value){
  const selected=selectedFacet(kind), removing=selected.includes(value);
  if(kind!=='size' && state.facetMode==='single' && value && !removing){
-  setFacet(kind==='family'?'rank':'family',[]);
   setFacet(kind,[value]);
  }else{
   setFacet(kind,value?(removing?selected.filter(x=>x!==value):[...selected,value]):[]);
  }
- if(kind!=='size' && value && !removing)state.lastFacet=kind;
  state.page=1;
  updateCatalog();
 }
@@ -26,12 +24,7 @@ document.addEventListener('change',e=>{
  if(e.target.id!=='combine-facets')return;
  state.facetMode=e.target.checked?'combined':'single';
  if(!e.target.checked){
-  const kind=[state.lastFacet,'family','rank'].find(k=>k&&selectedFacet(k).length);
-  if(kind){
-   const last=selectedFacet(kind).at(-1);
-   setFacet(kind,[last]);
-   setFacet(kind==='family'?'rank':'family',[]);
-  }
+  for(const kind of ['family','rank'])setFacet(kind,selectedFacet(kind).slice(-1));
  }
  state.page=1;
  updateCatalog();
