@@ -1,7 +1,18 @@
 let mapWorld='',mapPlace='323261',mapSearch='';
 const mapById=new Map(D.maps.map(m=>[m.id,m]));
 function acquisitionSummary(m){const a=m.acquisition;return `<div class="obtain-summary"><div><b>入手线索</b><span>${a.encounters.length?`${a.encounters.length} 处地图出现记录`:a.areaHints.length?'已有区域线索':'详细野外位置未收录'}${a.methods.some(x=>x.type==='egg')?' · 可查孵蛋候选':''}${a.methods.some(x=>x.type==='story')?' · 剧情入手':''}</span></div><button class="btn small" data-tab="obtain">入手与位置 →</button></div>`}
-function encounterCard(e){const map=mapById.get(e.map);return `<article class="obtain-card"><div class="obtain-tags"><span>地图出现</span><span>${esc(e.precision)}级资料</span></div><h4>${esc(map.world)}${map.name===map.world?'':' → '+esc(map.name)}</h4><p><b>位置：</b>${esc(e.position||'已定位到本区域；具体方向、楼层与坐标未收录。')}</p><p><b>出现条件：</b>${esc(e.condition)}</p><div class="obtain-actions"><button class="btn small" data-map-place="${map.id}" data-map-focus="${state.selected||''}">在地图标出 →</button><a href="${esc(map.url)}" target="_blank" rel="noopener noreferrer">查看原站地图 ↗</a>${e.positionSource?`<a href="${esc(e.positionSource)}" target="_blank" rel="noopener noreferrer">位置依据 ↗</a>`:''}</div></article>`}
+function encounterSearchNotes(e){
+ const notes=[];
+ if(e.legacyAreas?.length){
+  notes.push('3DS 版分布图：'+e.legacyAreas.join('、')+'。SP 版洞内位置待验证。');
+ }
+ if(e.monster===200||e.monster===212){
+  const container=e.monster===200?'棕色木箱':'绿色宝箱';
+  notes.push('找'+container+'。站远一点跳舞，观察箱子是否有反应。离开这个世界再回来，可重新检查。');
+ }
+ return notes;
+}
+function encounterCard(e){const map=mapById.get(e.map);return `<article class="obtain-card"><div class="obtain-tags"><span>${e.disputed?'SP 出没存疑':'地图出现'}</span><span>${esc(e.spScope||e.precision+'级资料')}</span></div><h4>${esc(map.world)}${map.name===map.world?'':' → '+esc(map.name)}</h4><p><b>位置：</b>${esc(e.position||(e.disputed?'原表列在此处，SP 出没记录有分歧。':'已确认该区域，具体点位待核实。'))}</p>${e.candidateSpot?`<p><b>先查容器：</b>${esc(e.candidateSpot)}。<a href="${esc(e.candidateSource)}" target="_blank" rel="noopener noreferrer">看楼层图 ↗</a></p>`:''}${e.searchHint?`<p>${esc(e.searchHint)} ${e.hintSource?`<a href="${esc(e.hintSource)}" target="_blank" rel="noopener noreferrer">查看依据 ↗</a>`:''}</p>`:''}${encounterSearchNotes(e).map(note=>'<p>'+esc(note)+'</p>').join('')}<p><b>出现条件：</b>${esc(e.condition)}</p><div class="obtain-actions"><button class="btn small" data-map-place="${map.id}" data-map-focus="${state.selected||''}">${e.disputed?'查看其他地点':'在地图标出'} →</button><a href="${esc(map.url)}" target="_blank" rel="noopener noreferrer">查看原站地图 ↗</a>${e.positionSource?`<a href="${esc(e.positionSource)}" target="_blank" rel="noopener noreferrer">位置依据 ↗</a>`:''}</div></article>`}
 function acquisitionPanel(m){const a=m.acquisition;return `<div class="section-title"><h3>入手与位置：${esc(name(m))}</h3></div>${a.methods.length?`<div class="obtain-methods">${a.methods.map(x=>`<article class="obtain-card"><div class="obtain-tags"><span>${esc(x.label)}</span></div><p>${esc(x.detail)}</p>${x.position?`<p><b>位置：</b>${esc(x.position)}</p>`:''}<div class="obtain-actions">${x.type==='breed'?'<button class="btn small" data-tab="in">查看配合材料 →</button>':''}${x.map?`<button class="btn small" data-map-place="${x.map}">前往地图 →</button>`:''}${x.source?`<a href="${esc(x.source)}" target="_blank" rel="noopener noreferrer">途径依据 ↗</a>`:''}</div></article>`).join('')}</div>`:''}<h3 class="obtain-heading">地图位置与出现条件</h3>${a.encounters.length?`<div class="obtain-methods">${a.encounters.map(encounterCard).join('')}</div>`:`<div class="empty"><strong>详细野外位置尚未收录</strong>不据此判断此怪物只能配合取得；可继续查下方区域线索或配合路线。</div>`}${a.areaHints.length?`<details class="obtain-hints"><summary>原数据的区域线索（${a.areaHints.length}）</summary><p>这些记录没有细分出现条件，也未全部对应到上方地图；仅用于补充查找。</p>${locations(m)}</details>`:''}<div class="obtain-actions"><button class="btn" data-tab="in">返回“怎么合成它” →</button></div>`}
 function mapWorlds(){return [...new Set(D.maps.map(m=>m.world))]}
 function renderMaps(){return renderInteractiveAtlas();}
