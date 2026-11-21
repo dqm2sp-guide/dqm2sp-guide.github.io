@@ -4,15 +4,15 @@
 const D=window.DQM_DATA,C=window.DQM_CORE,byId=new Map(D.monsters.map(m=>[m.id,m])),bySkill=new Map(D.skills.map(s=>[s.id,s]));
 const engine=C.createBreedingEngine(D.monsters);
 const EARLIER_RELEASE={version:'Beta 2026.11.08',date:'2026-11-08',changes:['中文名称：本轮新增修正 25 个怪物名，累计修正 71 个怪物名、3 个招式名。','搜索：保留旧译名与参考别名，地图找怪同步使用校对名称。','攻略：同步相关怪物名称，避免图鉴与剧情攻略叫法不一致。','网站：腾讯、Cloudflare 和 GitHub 三个入口同步更新。'],note:'本轮 6 个名称仍为编辑暂译；尚未逐条对齐手机 SP 汉化实机。'};
-const PREVIOUS_RELEASE={version:'Beta 2026.11.08',date:'2026-11-08',changes:['中文怪兽图鉴、配合、抗性、入手方式与剧情攻略。'],note:'中文参考译名仍需对齐汉化实机。'};
-const RELEASE={version:'Beta 2026.11.14',date:'2026-11-14',changes:['中文名称统一采用指定查询站译名：怪物、技能、招式、特性、抗性和相关术语。','旧名称仍可搜索；保留原有技能点、能力数值与配方。','技能培养：技能点获取、配合继承、技能升级与组合路线。','钥匙与称号：获取步骤、91个金银称号目标、19套衣服与65张纸样的位置清单。','搜怪支持技能、招式和特性；合成方法、合成树与后续合成相邻排列。'],note:'Beta测试版；采用用户指定查询站译名，未宣称汉化实机逐条核对。'};
+const PREVIOUS_RELEASE={version:'Beta 2026.11.14',date:'2026-11-14',changes:['中文名称统一采用指定查询站译名：怪物、技能、招式、特性、抗性和相关术语。','旧名称仍可搜索；保留原有技能点、能力数值与配方。','技能培养：技能点获取、配合继承、技能升级与组合路线。','钥匙与称号：获取步骤、91个金银称号目标、19套衣服与65张纸样的位置清单。','搜怪支持技能、招式和特性；合成方法、合成树与后续合成相邻排列。'],note:'Beta测试版；采用用户指定查询站译名，未宣称汉化实机逐条核对。'};
+const RELEASE={version:'Beta 2026.11.20',date:'2026-11-20',changes:['修复手机底部导航遮住图鉴分页的问题。','怪物位置逐条复核；可查看洞内搜索方位、容器线索和其他出没地点。','武器查询：查看装备条件及可装备的怪物。'],note:'洞内旧版分布图单独标注；有分歧的 SP 出没记录保留来源说明。'};
 const STORE='dqm2sp-handbook-v1';let storageOk=true,save={owned:{},favorites:[],aliases:{}};
 try{const raw=localStorage.getItem(STORE);if(raw)save=C.validateSave({format:'dqm2sp-save',version:1,data:JSON.parse(raw)},new Set(byId.keys()))}catch{storageOk=false}
 const state={view:'catalog',q:'',family:'',rank:'',size:'',sort:'no',page:1,onlyOwned:false,families:[],ranks:[],sizes:[],advancedFilters:false,breedMode:'target',detailTab:'in',normalLimit:3,resistanceMode:'current',parentA:1,parentB:133,plusA:0,plusB:0,readyOnly:false,nearOnly:false,recipeKind:'all',skillQ:'',trail:[],selected:null,selectedSkill:null};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=s=>document.querySelector(s),name=m=>save.aliases[m.id]||m.name,own=id=>save.owned[id]||0,fav=id=>save.favorites.includes(id),countOwned=()=>Object.keys(save.owned).filter(id=>own(id)>0).length;
-const icons={catalog:'▦',breed:'⑂',skills:'✧',maps:'⌖',guides:'☷',keys:'⚿',collection:'☆',about:'⚙'};
-const labels={catalog:'怪物图鉴',breed:'配合查询',skills:'技能手册',maps:'地图找怪',guides:'冒险攻略',keys:'钥匙与称号',collection:'我的收藏',about:'数据与备份'};
+const icons={weapons:'⚒',catalog:'▦',breed:'⑂',skills:'✧',maps:'⌖',guides:'☷',keys:'⚿',collection:'☆',about:'⚙'};
+const labels={catalog:'怪物图鉴',breed:'配合查询',skills:'技能手册',weapons:'武器图鉴',maps:'地图找怪',guides:'冒险攻略',keys:'钥匙与称号',collection:'我的收藏',about:'数据与备份'};
 let toastTimer,focusBefore=null;
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2600)}
 function persist(){try{localStorage.setItem(STORE,JSON.stringify(save));storageOk=true}catch{storageOk=false;toast('浏览器未能保存记录，请导出备份')}}
@@ -24,9 +24,42 @@ function shell(){
  renderMain();renderModal();
 }
 function intro(title,subtitle){return `<div class="intro"><div><h1>${title}</h1><p>${subtitle}</p></div><div class="intro-art">${image(byId.get(1))}${image(byId.get(218))}</div></div>`}
-function renderMain(){const v=state.view;if(['catalog','breed','collection'].includes(v))return renderCatalogScreen();const main=$('#main');if(v==='skills'){main.innerHTML=intro('技能手册','')+skillTrainingGuide()+`<div class="toolbar"><label class="search"><span class="glass" aria-hidden="true">⌕</span><input id="skill-search" type="search" placeholder="搜索技能组或招式" aria-label="搜索技能" value="${esc(state.skillQ)}"></label></div><div id="skill-results"></div>`;renderSkills();}else if(v==='maps')renderMaps();else if(v==='guides')renderGuides();else if(v==='keys')renderKeys();else renderAbout();}
+function renderMain(){const v=state.view;if(['catalog','breed','collection'].includes(v))return renderCatalogScreen();const main=$('#main');if(v==='skills'){main.innerHTML=intro('技能手册','')+skillTrainingGuide()+`<div class="toolbar"><label class="search"><span class="glass" aria-hidden="true">⌕</span><input id="skill-search" type="search" placeholder="搜索技能组或招式" aria-label="搜索技能" value="${esc(state.skillQ)}"></label></div><div id="skill-results"></div>`;renderSkills();}else if(v==='weapons')renderWeapons();else if(v==='maps')renderMaps();else if(v==='guides')renderGuides();else if(v==='keys')renderKeys();else renderAbout();}
 function filtered(){return C.filterCatalog(D.monsters,state,save).sort((a,b)=>state.sort==='rank'?RANK_ORDER.indexOf(a.rank)-RANK_ORDER.indexOf(b.rank)||a.no-b.no:state.sort==='no'?a.no-b.no:b.stats[state.sort]-a.stats[state.sort]||a.no-b.no)}
 function renderResults(){const list=filtered(),per=36,pages=Math.max(1,Math.ceil(list.length/per));state.page=Math.min(state.page,pages);$('#results').innerHTML=`<div class="results-bar"><span>找到 <strong>${list.length}</strong> 只怪物${state.view==='collection'?' · 收藏列表':''}</span><span>合成材料</span></div>${list.length?`<div class="catalog">${list.slice((state.page-1)*per,state.page*per).map(card).join('')}</div><div class="pagination"><button class="btn small" data-page="${state.page-1}" ${state.page===1?'disabled':''}>上一页</button><span>${state.page} / ${pages}</span><button class="btn small" data-page="${state.page+1}" ${state.page===pages?'disabled':''}>下一页</button></div>`:`<div class="empty"><strong>${state.view==='collection'&&!save.favorites.length?'还没有收藏的怪物':'没有匹配的怪物'}</strong>${state.view==='collection'&&!save.favorites.length?'点卡片上的星标，把目标留在这里。':'试试更短的关键词，或重置系别和等级筛选。'}</div>`}`}
+const weaponAdvice={
+ '金属指甲':'海盗世界练级用。伤害＋1适合打金属怪，也可领妈妈第二次跑腿奖励。',
+ '光之杖':'通用武器。后期刷武器钥匙时可优先留给需要高攻击的队员。',
+ '银河之剑':'适合持剑物理主力。先手打出降防后，后续队友也能受益。'
+};
+function weaponCard(w,showUsers){
+ const advice=weaponAdvice[w.name];
+ const users=showUsers?D.monsters.filter(m=>m.weaponTypes.includes(w.type)):[];
+ return '<details class="guide"><summary><b>'+esc(w.name)+'</b> · '+esc(w.type)+' · 攻击 '+esc(w.attack)+'</summary><p>附加效果 · '+esc(w.effect)+'</p><p>入手 · '+esc(w.obtain||(advice&&w.name!=='金属指甲'?'后期武器钥匙的候选报酬。':'具体位置待核对'))+'</p><p>买价 · '+esc(w.buy)+'　卖价 · '+esc(w.sell)+'</p>'+(advice?'<p>'+esc(advice)+'</p>':'')+(showUsers?'<details><summary>已确认可装备 · '+users.length+' 种怪物</summary><div class="recipe-members">'+users.map(m=>'<button class="btn small" data-monster="'+m.id+'">'+esc(name(m))+'</button>').join('')+'</div></details>':'')+'</details>';
+}
+function monsterWeapons(m){
+ if(!m.weaponTypes.length)return '<p>这只怪物的装备资料待核对。</p>';
+ return '<h3>'+m.weaponTypes.map(esc).join(' · ')+'</h3>'+D.weapons.filter(w=>m.weaponTypes.includes(w.type)).map(w=>weaponCard(w,false)).join('');
+}
+function renderWeapons(){
+ $('#main').innerHTML=intro('武器图鉴','')+'<details class="guide" open><summary>优先拿哪件</summary>'+Object.entries(weaponAdvice).map(([n,t])=>'<p><b>'+esc(n)+'</b> · '+esc(t)+'</p>').join('')+'<p>刷高阶装备可用白金钥匙搭配「盟友的」与「破坏神」。先确认首轮报酬，再决定是否继续刷。</p><button class="btn" data-view="keys">查钥匙组合与称号</button></details><div class="toolbar"><input id="weapon-query" type="search" placeholder="搜武器、效果或入手地点" aria-label="搜索武器"><select id="weapon-type" aria-label="武器种类"><option value="">全部种类</option>'+[...new Set(D.weapons.map(w=>w.type))].map(t=>'<option>'+esc(t)+'</option>').join('')+'</select></div><div id="weapon-results"></div>';
+ updateWeaponResults();
+}
+function updateWeaponResults(){
+ const q=$('#weapon-query').value.trim(),type=$('#weapon-type').value;
+ const list=D.weapons.filter(w=>(!type||w.type===type)&&[w.name,w.effect,w.obtain].some(x=>x.includes(q)));
+ $('#weapon-results').innerHTML='<p>'+list.length+' 件武器</p>'+list.map(w=>'<details class="guide" data-weapon-name="'+esc(w.name)+'"><summary><b>'+esc(w.name)+'</b> · '+esc(w.type)+' · 攻击 '+esc(w.attack)+'</summary></details>').join('');
+}
+document.addEventListener('toggle',e=>{
+ const box=e.target;
+ if(!box.open||!box.dataset.weaponName||box.children.length>1)return;
+ const w=D.weapons.find(x=>x.name===box.dataset.weaponName);
+ const template=document.createElement('template');
+ template.innerHTML=weaponCard(w,true);
+ box.append(...Array.from(template.content.firstElementChild.children).slice(1));
+},true);
+document.addEventListener('input',e=>{if(e.target.id==='weapon-query')updateWeaponResults()});
+document.addEventListener('change',e=>{if(e.target.id==='weapon-type')updateWeaponResults()});
 function renderSkills(){const q=state.skillQ.trim();const list=D.skills.filter(s=>!q||s.name.includes(q)||(s.aliases||[]).some(n=>n.includes(q))||s.slots.some(x=>x.name.includes(q)||(x.aliases||[]).some(n=>n.includes(q)))||String(s.id)===q);$('#skill-results').innerHTML=`<div class="results-bar"><span>找到 <strong>${list.length}</strong> 个技能组</span><span>共 ${D.skills.length} 组</span></div><div class="skill-grid">${list.map(s=>`<button class="skill-card" data-skill="${s.id}"><strong>${esc(s.name)}</strong><small>${s.slots.length} 个学习节点 · ${s.monsters.length} 种原生持有者<br>${s.slots.slice(0,3).map(x=>esc(x.name)).join(' · ')}${s.evolvesTo?'<br>可进阶 → '+esc(s.evolvesTo.name):''}</small></button>`).join('')}</div>${!list.length?'<div class="empty"><strong>没有匹配的技能</strong>试试“美拉”“治疗”或“攻击”。</div>':''}`}
 function openMonster(id){if(!byId.has(+id))return;focusBefore=focusBefore||document.activeElement;state.trail=state.selected?[...state.trail,+id].slice(-40):[+id];state.selected=+id;state.detailTab='in';state.normalLimit=3;state.resistanceMode='current';state.selectedSkill=null;state.readyOnly=false;state.nearOnly=false;state.recipeKind='all';pushRoute('monster/'+id);renderModal()}
 function openSkill(id){if(!bySkill.has(+id))return;focusBefore=focusBefore||document.activeElement;state.selectedSkill=+id;state.selected=null;state.trail=[];pushRoute('skill/'+id);renderModal()}
@@ -38,7 +71,7 @@ function renderModal(){const box=$('#modal-root');if(!box)return;const selected=
  $('.detail-head .close').focus({preventScroll:true});
 }
 function monsterDetail(m){const trail=state.trail.length>1?`<div class="trail" aria-label="配合浏览路径">${state.trail.map((id,i)=>`${i?'›':''}<button data-trail="${i}">${esc(name(byId.get(id)))}</button>`).join('')}</div>`:'';
- return trail+`<div class="profile f-${m.family}"><div class="portrait">${image(m)}</div><div><span class="rank-pill">${m.rank} 级 <span class="muted">· 图鉴 ${String(m.no).padStart(3,'0')}</span></span><h2 id="detail-title">${esc(name(m))}</h2><div class="sub">${D.families[m.family]} · ${m.size}格体型${save.aliases[m.id]?'<br>本站名：'+esc(m.name):''}</div></div></div><div class="profile-actions"><button class="btn ${fav(m.id)?'primary':''}" data-favorite="${m.id}">${fav(m.id)?'★ 已收藏':'☆ 收藏目标'}</button><div class="counter" aria-label="拥有数量"><button data-count="${m.id}" data-delta="-1" aria-label="减少一只" ${!own(m.id)?'disabled':''}>−</button><span>拥有 <strong>${own(m.id)}</strong> 只</span><button data-count="${m.id}" data-delta="1" aria-label="增加一只">＋</button></div></div><div class="tabs" role="tablist" aria-label="怪物资料">${[['in','怎么合成它'],['tree','合成树'],['out','它能合成什么'],['obtain','入手与位置'],['stats','能力与特性'],['resist','抗性']].map(([k,v])=>`<button role="tab" aria-selected="${state.detailTab===k}" class="${state.detailTab===k?'selected':''}" data-tab="${k}">${v}</button>`).join('')}</div><div id="detail-body" role="tabpanel">${state.detailTab==='tree'?synthesisTreePanel(m):state.detailTab==='out'?outgoing(m):state.detailTab==='in'?incoming(m):state.detailTab==='resist'?resistancePanel(m):state.detailTab==='obtain'?acquisitionPanel(m):stats(m)}</div><p class="footnote">${m.translationStatus==='corrected-with-reference'?'中文名已按参考资料修正；SP 汉化名待实机核对。':m.translationStatus==='reference-found-patch-unverified'?'已找到中文参考译名；SP 汉化名待实机核对。':'中文名暂译，待核对。'}${m.translationSources?.length?' · <a href="'+esc(m.translationSources.find(r=>r.name===m.name)?.source||m.translationSources[0].source)+'" target="_blank" rel="noopener noreferrer">译名参考</a>':''}<br>资料快照 ${D.meta.snapshot} · <a href="https://soshage.com/dqm2sp/monster/${m.id}" target="_blank" rel="noopener noreferrer">查看数据来源</a></p>`;
+ return trail+`<div class="profile f-${m.family}"><div class="portrait">${image(m)}</div><div><span class="rank-pill">${m.rank} 级 <span class="muted">· 图鉴 ${String(m.no).padStart(3,'0')}</span></span><h2 id="detail-title">${esc(name(m))}</h2><div class="sub">${D.families[m.family]} · ${m.size}格体型${save.aliases[m.id]?'<br>本站名：'+esc(m.name):''}</div></div></div><div class="profile-actions"><button class="btn ${fav(m.id)?'primary':''}" data-favorite="${m.id}">${fav(m.id)?'★ 已收藏':'☆ 收藏目标'}</button><div class="counter" aria-label="拥有数量"><button data-count="${m.id}" data-delta="-1" aria-label="减少一只" ${!own(m.id)?'disabled':''}>−</button><span>拥有 <strong>${own(m.id)}</strong> 只</span><button data-count="${m.id}" data-delta="1" aria-label="增加一只">＋</button></div></div><div class="tabs" role="tablist" aria-label="怪物资料">${[['in','怎么合成它'],['tree','合成树'],['out','它能合成什么'],['obtain','入手与位置'],['weapons','可装武器'],['stats','能力与特性'],['resist','抗性']].map(([k,v])=>`<button role="tab" aria-selected="${state.detailTab===k}" class="${state.detailTab===k?'selected':''}" data-tab="${k}">${v}</button>`).join('')}</div><div id="detail-body" role="tabpanel">${state.detailTab==='weapons'?monsterWeapons(m):state.detailTab==='tree'?synthesisTreePanel(m):state.detailTab==='out'?outgoing(m):state.detailTab==='in'?incoming(m):state.detailTab==='resist'?resistancePanel(m):state.detailTab==='obtain'?acquisitionPanel(m):stats(m)}</div><p class="footnote">${m.translationStatus==='corrected-with-reference'?'中文名已按参考资料修正；SP 汉化名待实机核对。':m.translationStatus==='reference-found-patch-unverified'?'已找到中文参考译名；SP 汉化名待实机核对。':'中文名暂译，待核对。'}${m.translationSources?.length?' · <a href="'+esc(m.translationSources.find(r=>r.name===m.name)?.source||m.translationSources[0].source)+'" target="_blank" rel="noopener noreferrer">译名参考</a>':''}<br>资料快照 ${D.meta.snapshot} · <a href="https://soshage.com/dqm2sp/monster/${m.id}" target="_blank" rel="noopener noreferrer">查看数据来源</a></p>`;
 }
 function readyLabel(r,id){const t=C.readiness(r,save.owned,byId,id);return {t,html:`<span class="${t.ready?'ready':'short'}">${t.ready?(r.type==='four'?'祖辈材料齐全':'材料齐全'):'还缺 '+t.missing+' 只'}</span>`}}
 function recipeCard(r,resultId,currentId,showResult=true){return recipeTarget(r,resultId,currentId,showResult)}

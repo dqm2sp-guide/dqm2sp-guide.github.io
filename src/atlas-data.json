@@ -190,6 +190,97 @@
         110
       ],
       "shape": "M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"
+    },
+    {
+      "id": "landmark-13",
+      "label": "钥匙门祠堂附近",
+      "precision": "direction",
+      "x": 153,
+      "y": 111,
+      "bounds": [
+        121,
+        86,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-14",
+      "label": "卡尔卡拉村南的山道",
+      "precision": "direction",
+      "x": 147,
+      "y": 287,
+      "bounds": [
+        115,
+        262,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-15",
+      "label": "阿西亚镇东",
+      "precision": "direction",
+      "x": 236,
+      "y": 541,
+      "bounds": [
+        204,
+        516,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-16",
+      "label": "绿洲营地西部",
+      "precision": "direction",
+      "x": 526,
+      "y": 385,
+      "bounds": [
+        494,
+        360,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-17",
+      "label": "绿洲营地东北",
+      "precision": "direction",
+      "x": 614,
+      "y": 341,
+      "bounds": [
+        582,
+        316,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-18",
+      "label": "钥匙门祠堂东的山道",
+      "precision": "direction",
+      "x": 197,
+      "y": 111,
+      "bounds": [
+        165,
+        86,
+        64,
+        50
+      ]
+    },
+    {
+      "id": "landmark-19",
+      "label": "金字塔附近",
+      "precision": "direction",
+      "x": 688,
+      "y": 576,
+      "bounds": [
+        656,
+        551,
+        64,
+        50
+      ]
     }
   ],
   "landmarks": [
@@ -299,6 +390,132 @@
       ],
       "description": "不可思议之门祠堂附近；沙漠世界通关后",
       "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+    },
+    {
+      "monster": 1,
+      "map": "323261",
+      "zones": [
+        "landmark-13"
+      ],
+      "description": "钥匙门祠堂附近",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 717,
+      "map": "323261",
+      "zones": [
+        "landmark-13"
+      ],
+      "description": "钥匙门祠堂附近",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 240,
+      "map": "323261",
+      "zones": [
+        "village-around"
+      ],
+      "description": "卡尔卡拉村附近（夜间）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 144,
+      "map": "323261",
+      "zones": [
+        "landmark-14"
+      ],
+      "description": "卡尔卡拉村南的山道",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 134,
+      "map": "323261",
+      "zones": [
+        "town-around"
+      ],
+      "description": "阿西亚镇附近（晴天）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 289,
+      "map": "323261",
+      "zones": [
+        "landmark-15"
+      ],
+      "description": "阿西亚镇东（晴天、夜间）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 713,
+      "map": "323261",
+      "zones": [
+        "landmark-15"
+      ],
+      "description": "阿西亚镇东",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 547,
+      "map": "323261",
+      "zones": [
+        "landmark-16"
+      ],
+      "description": "绿洲营地西部",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 379,
+      "map": "323261",
+      "zones": [
+        "landmark-16"
+      ],
+      "description": "绿洲营地西部",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 721,
+      "map": "323261",
+      "zones": [
+        "landmark-17"
+      ],
+      "description": "绿洲营地东北",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 116,
+      "map": "323261",
+      "zones": [
+        "landmark-18"
+      ],
+      "description": "钥匙门祠堂东的山道（水之世界通关后）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 521,
+      "map": "323261",
+      "zones": [
+        "landmark-19"
+      ],
+      "description": "金字塔附近",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 712,
+      "map": "323261",
+      "zones": [
+        "landmark-19"
+      ],
+      "description": "金字塔附近（沙漠通关后、恶劣天气）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+    },
+    {
+      "monster": 722,
+      "map": "323261",
+      "zones": [
+        "landmark-19"
+      ],
+      "description": "金字塔附近（沙漠通关后）",
+      "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
     }
   ],
   "theme": "desert",
@@ -600,6 +817,97 @@
             110
           ],
           "shape": "M103 76 Q175 51 235 88 L242 145 180 172 89 147Z"
+        },
+        {
+          "id": "landmark-13",
+          "label": "钥匙门祠堂附近",
+          "precision": "direction",
+          "x": 153,
+          "y": 111,
+          "bounds": [
+            121,
+            86,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-14",
+          "label": "卡尔卡拉村南的山道",
+          "precision": "direction",
+          "x": 147,
+          "y": 287,
+          "bounds": [
+            115,
+            262,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-15",
+          "label": "阿西亚镇东",
+          "precision": "direction",
+          "x": 236,
+          "y": 541,
+          "bounds": [
+            204,
+            516,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-16",
+          "label": "绿洲营地西部",
+          "precision": "direction",
+          "x": 526,
+          "y": 385,
+          "bounds": [
+            494,
+            360,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-17",
+          "label": "绿洲营地东北",
+          "precision": "direction",
+          "x": 614,
+          "y": 341,
+          "bounds": [
+            582,
+            316,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-18",
+          "label": "钥匙门祠堂东的山道",
+          "precision": "direction",
+          "x": 197,
+          "y": 111,
+          "bounds": [
+            165,
+            86,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-19",
+          "label": "金字塔附近",
+          "precision": "direction",
+          "x": 688,
+          "y": 576,
+          "bounds": [
+            656,
+            551,
+            64,
+            50
+          ]
         }
       ],
       "landmarks": [
@@ -709,6 +1017,132 @@
           ],
           "description": "不可思议之门祠堂附近；沙漠世界通关后",
           "source": "https://gamewith.jp/dqm2-irurukasp/article/show/220302"
+        },
+        {
+          "monster": 1,
+          "map": "323261",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "钥匙门祠堂附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 717,
+          "map": "323261",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "钥匙门祠堂附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 240,
+          "map": "323261",
+          "zones": [
+            "village-around"
+          ],
+          "description": "卡尔卡拉村附近（夜间）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 144,
+          "map": "323261",
+          "zones": [
+            "landmark-14"
+          ],
+          "description": "卡尔卡拉村南的山道",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 134,
+          "map": "323261",
+          "zones": [
+            "town-around"
+          ],
+          "description": "阿西亚镇附近（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 289,
+          "map": "323261",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "阿西亚镇东（晴天、夜间）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 713,
+          "map": "323261",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "阿西亚镇东",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 547,
+          "map": "323261",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "绿洲营地西部",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 379,
+          "map": "323261",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "绿洲营地西部",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 721,
+          "map": "323261",
+          "zones": [
+            "landmark-17"
+          ],
+          "description": "绿洲营地东北",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 116,
+          "map": "323261",
+          "zones": [
+            "landmark-18"
+          ],
+          "description": "钥匙门祠堂东的山道（水之世界通关后）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 521,
+          "map": "323261",
+          "zones": [
+            "landmark-19"
+          ],
+          "description": "金字塔附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 712,
+          "map": "323261",
+          "zones": [
+            "landmark-19"
+          ],
+          "description": "金字塔附近（沙漠通关后、恶劣天气）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
+        },
+        {
+          "monster": 722,
+          "map": "323261",
+          "zones": [
+            "landmark-19"
+          ],
+          "description": "金字塔附近（沙漠通关后）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area2.html"
         }
       ],
       "theme": "desert",
@@ -933,6 +1367,149 @@
             110
           ],
           "description": "海神神殿内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "landmark-11",
+          "label": "波洛尼亚村南",
+          "precision": "direction",
+          "x": 428,
+          "y": 565,
+          "bounds": [
+            396,
+            540,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-12",
+          "label": "波洛尼亚村附近",
+          "precision": "direction",
+          "x": 428,
+          "y": 521,
+          "bounds": [
+            396,
+            496,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-13",
+          "label": "波洛尼亚村附近海面",
+          "precision": "direction",
+          "x": 428,
+          "y": 521,
+          "bounds": [
+            396,
+            496,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-14",
+          "label": "波洛尼亚村东南海岸",
+          "precision": "direction",
+          "x": 472,
+          "y": 565,
+          "bounds": [
+            440,
+            540,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-15",
+          "label": "波洛尼亚村西南遗迹",
+          "precision": "direction",
+          "x": 384,
+          "y": 565,
+          "bounds": [
+            352,
+            540,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-16",
+          "label": "波洛尼亚村西北",
+          "precision": "direction",
+          "x": 384,
+          "y": 477,
+          "bounds": [
+            352,
+            452,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-17",
+          "label": "波洛尼亚村北海面",
+          "precision": "direction",
+          "x": 428,
+          "y": 477,
+          "bounds": [
+            396,
+            452,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-18",
+          "label": "西岬洞窟前方",
+          "precision": "direction",
+          "x": 242,
+          "y": 401,
+          "bounds": [
+            210,
+            376,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-19",
+          "label": "波尔特里茨港町北",
+          "precision": "direction",
+          "x": 472,
+          "y": 122,
+          "bounds": [
+            440,
+            97,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-20",
+          "label": "波尔特里茨港町西",
+          "precision": "direction",
+          "x": 428,
+          "y": 166,
+          "bounds": [
+            396,
+            141,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-21",
+          "label": "波尔特里茨港町南海面",
+          "precision": "direction",
+          "x": 472,
+          "y": 210,
+          "bounds": [
+            440,
+            185,
+            64,
+            50
+          ]
         }
       ],
       "landmarks": [
@@ -1017,7 +1594,152 @@
           "decorative": false
         }
       ],
-      "placements": [],
+      "placements": [
+        {
+          "monster": 392,
+          "map": "325600",
+          "zones": [
+            "landmark-11"
+          ],
+          "description": "波洛尼亚村南（水之世界通关后、恶劣天气）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 132,
+          "map": "325600",
+          "zones": [
+            "landmark-12"
+          ],
+          "description": "波洛尼亚村附近（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 785,
+          "map": "325600",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "波洛尼亚村附近海面（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 782,
+          "map": "325600",
+          "zones": [
+            "landmark-14"
+          ],
+          "description": "波洛尼亚村东南海岸（白天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 364,
+          "map": "325600",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "波洛尼亚村西南遗迹（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 244,
+          "map": "325600",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "波洛尼亚村西南遗迹",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 523,
+          "map": "325600",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "波洛尼亚村西南遗迹（水之世界通关后、恶劣天气）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 745,
+          "map": "325600",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "波洛尼亚村西北",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 4,
+          "map": "325600",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "波洛尼亚村西北（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 180,
+          "map": "325600",
+          "zones": [
+            "landmark-17"
+          ],
+          "description": "波洛尼亚村北海面",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 54,
+          "map": "325600",
+          "zones": [
+            "landmark-18"
+          ],
+          "description": "西岬洞窟前方",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 728,
+          "map": "325600",
+          "zones": [
+            "landmark-19"
+          ],
+          "description": "波尔特里茨港町北",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 783,
+          "map": "325600",
+          "zones": [
+            "landmark-20"
+          ],
+          "description": "波尔特里茨港町西（白天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 137,
+          "map": "325600",
+          "zones": [
+            "landmark-20"
+          ],
+          "description": "波尔特里茨港町西",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 395,
+          "map": "325600",
+          "zones": [
+            "landmark-20"
+          ],
+          "description": "波尔特里茨港町西",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        },
+        {
+          "monster": 518,
+          "map": "325600",
+          "zones": [
+            "landmark-21"
+          ],
+          "description": "波尔特里茨港町南海面",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area3.html"
+        }
+      ],
       "terrain": [
         {
           "d": "M110 70L185 45 255 95 250 195 190 225 95 180Z",
@@ -1292,6 +2014,149 @@
             110
           ],
           "description": "湖上魔塔内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "landmark-12",
+          "label": "北之国诺斯登附近",
+          "precision": "direction",
+          "x": 170,
+          "y": 130,
+          "bounds": [
+            138,
+            105,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-13",
+          "label": "北之港町诺佛附近",
+          "precision": "direction",
+          "x": 370,
+          "y": 282,
+          "bounds": [
+            338,
+            257,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-14",
+          "label": "北之港町诺佛附近海域",
+          "precision": "direction",
+          "x": 370,
+          "y": 282,
+          "bounds": [
+            338,
+            257,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-15",
+          "label": "西国韦斯塔尼亚附近",
+          "precision": "direction",
+          "x": 100,
+          "y": 512,
+          "bounds": [
+            68,
+            487,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-16",
+          "label": "西之港町维斯顿以东",
+          "precision": "direction",
+          "x": 359,
+          "y": 512,
+          "bounds": [
+            327,
+            487,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-17",
+          "label": "东之国伊斯特利亚北的雪屋地带",
+          "precision": "direction",
+          "x": 590,
+          "y": 364,
+          "bounds": [
+            558,
+            339,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-18",
+          "label": "东之国伊斯特利亚附近",
+          "precision": "direction",
+          "x": 590,
+          "y": 408,
+          "bounds": [
+            558,
+            383,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-19",
+          "label": "东之国伊斯特利亚附近海域",
+          "precision": "direction",
+          "x": 590,
+          "y": 408,
+          "bounds": [
+            558,
+            383,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-20",
+          "label": "东之国伊斯特利亚东",
+          "precision": "direction",
+          "x": 634,
+          "y": 408,
+          "bounds": [
+            602,
+            383,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-21",
+          "label": "东之国伊斯特利亚南的桥",
+          "precision": "direction",
+          "x": 590,
+          "y": 452,
+          "bounds": [
+            558,
+            427,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-22",
+          "label": "西之港町维斯顿南海面",
+          "precision": "direction",
+          "x": 315,
+          "y": 556,
+          "bounds": [
+            283,
+            531,
+            64,
+            50
+          ]
         }
       ],
       "landmarks": [
@@ -1384,7 +2249,161 @@
           "decorative": false
         }
       ],
-      "placements": [],
+      "placements": [
+        {
+          "monster": 555,
+          "map": "325611",
+          "zones": [
+            "landmark-12"
+          ],
+          "description": "北之国诺斯登附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 384,
+          "map": "325611",
+          "zones": [
+            "landmark-12"
+          ],
+          "description": "北之国诺斯登附近（白天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 862,
+          "map": "325611",
+          "zones": [
+            "landmark-12"
+          ],
+          "description": "北之国诺斯登附近（冰雪世界通关后、恶劣天气）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 136,
+          "map": "325611",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "北之港町诺佛附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 786,
+          "map": "325611",
+          "zones": [
+            "landmark-14"
+          ],
+          "description": "北之港町诺佛附近海域",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 7,
+          "map": "325611",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "西国韦斯塔尼亚附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 534,
+          "map": "325611",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "西国韦斯塔尼亚附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 770,
+          "map": "325611",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "西国韦斯塔尼亚附近（冰雪世界通关后、夜间）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 829,
+          "map": "325611",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "西国韦斯塔尼亚附近（冰雪世界通关后）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 750,
+          "map": "325611",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "西之港町维斯顿以东",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 313,
+          "map": "325611",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "西之港町维斯顿以东",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 126,
+          "map": "325611",
+          "zones": [
+            "landmark-17"
+          ],
+          "description": "东之国伊斯特利亚北的雪屋地带（冰雪世界通关后）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 512,
+          "map": "325611",
+          "zones": [
+            "landmark-18"
+          ],
+          "description": "东之国伊斯特利亚附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 127,
+          "map": "325611",
+          "zones": [
+            "landmark-19"
+          ],
+          "description": "东之国伊斯特利亚附近海域（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 153,
+          "map": "325611",
+          "zones": [
+            "landmark-20"
+          ],
+          "description": "东之国伊斯特利亚东",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 6,
+          "map": "325611",
+          "zones": [
+            "landmark-21"
+          ],
+          "description": "东之国伊斯特利亚南的桥（冰雪世界通关后）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        },
+        {
+          "monster": 248,
+          "map": "325611",
+          "zones": [
+            "landmark-22"
+          ],
+          "description": "西之港町维斯顿南海面（冰雪世界通关后、恶劣天气）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area4.html"
+        }
+      ],
       "terrain": [
         {
           "d": "M95 45L240 65 370 30 495 55 650 25 720 105 850 160 825 255 775 330 790 440 850 490 795 655 635 690 440 655 320 690 180 640 75 560 100 405 50 280 75 160Z",
@@ -1586,6 +2605,123 @@
             110
           ],
           "description": "魔王城内；楼层与刷怪点未细分"
+        },
+        {
+          "id": "landmark-9",
+          "label": "丰特村附近",
+          "precision": "direction",
+          "x": 350,
+          "y": 560,
+          "bounds": [
+            318,
+            535,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-10",
+          "label": "丰特村南的地板机关附近",
+          "precision": "direction",
+          "x": 350,
+          "y": 604,
+          "bounds": [
+            318,
+            579,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-11",
+          "label": "佩伊镇附近",
+          "precision": "direction",
+          "x": 470,
+          "y": 300,
+          "bounds": [
+            438,
+            275,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-12",
+          "label": "佩伊镇东",
+          "precision": "direction",
+          "x": 514,
+          "y": 300,
+          "bounds": [
+            482,
+            275,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-13",
+          "label": "佩伊镇西",
+          "precision": "direction",
+          "x": 426,
+          "y": 300,
+          "bounds": [
+            394,
+            275,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-14",
+          "label": "希塔诺镇附近",
+          "precision": "direction",
+          "x": 405,
+          "y": 85,
+          "bounds": [
+            373,
+            60,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-15",
+          "label": "风之塔附近",
+          "precision": "direction",
+          "x": 740,
+          "y": 600,
+          "bounds": [
+            708,
+            575,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-16",
+          "label": "魔王城附近",
+          "precision": "direction",
+          "x": 175,
+          "y": 220,
+          "bounds": [
+            143,
+            195,
+            64,
+            50
+          ]
+        },
+        {
+          "id": "landmark-17",
+          "label": "小洞窟的东南方向",
+          "precision": "direction",
+          "x": 789,
+          "y": 319,
+          "bounds": [
+            757,
+            294,
+            64,
+            50
+          ]
         }
       ],
       "landmarks": [
@@ -1654,7 +2790,170 @@
           "decorative": false
         }
       ],
-      "placements": [],
+      "placements": [
+        {
+          "monster": 730,
+          "map": "325622",
+          "zones": [
+            "landmark-9"
+          ],
+          "description": "丰特村附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 739,
+          "map": "325622",
+          "zones": [
+            "landmark-10"
+          ],
+          "description": "丰特村南的地板机关附近（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 529,
+          "map": "325622",
+          "zones": [
+            "landmark-11"
+          ],
+          "description": "佩伊镇附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 824,
+          "map": "325622",
+          "zones": [
+            "landmark-11"
+          ],
+          "description": "佩伊镇附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 162,
+          "map": "325622",
+          "zones": [
+            "landmark-12"
+          ],
+          "description": "佩伊镇东",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 563,
+          "map": "325622",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "佩伊镇西（晴天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 892,
+          "map": "325622",
+          "zones": [
+            "landmark-13"
+          ],
+          "description": "佩伊镇西",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 867,
+          "map": "325622",
+          "zones": [
+            "landmark-14"
+          ],
+          "description": "希塔诺镇附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 373,
+          "map": "325622",
+          "zones": [
+            "landmark-14"
+          ],
+          "description": "希塔诺镇附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 541,
+          "map": "325622",
+          "zones": [
+            "landmark-15"
+          ],
+          "description": "风之塔附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 296,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 583,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近（夜间）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 285,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近（白天）",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 218,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 865,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 6,
+          "map": "325622",
+          "zones": [
+            "landmark-17"
+          ],
+          "description": "小洞窟的东南方向",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 69,
+          "map": "325622",
+          "zones": [
+            "landmark-16"
+          ],
+          "description": "魔王城附近",
+          "source": "https://kyokugen.info/dqm2/dqm2_monster_area5.html"
+        },
+        {
+          "monster": 1030,
+          "map": "325622",
+          "zones": [
+            "landmark-11"
+          ],
+          "description": "佩伊镇外，正门前",
+          "source": "https://altema.jp/iruruka/monster/93"
+        }
+      ],
       "terrain": [
         {
           "d": "M165 425L245 385 300 435 390 395 470 425 530 410 605 460 670 455 650 520 575 575 540 660 460 675 405 625 330 665 240 610 210 550 165 500Z",

@@ -18,3 +18,15 @@
 .atlas-selected-monster img{width:32px;height:32px}
 #atlas-roster{overscroll-behavior:auto}
 @media(max-width:720px){#atlas-roster{max-height:none;overflow:visible}.atlas-roster-item img{width:28px;height:28px}.map-canvas svg{height:300px}.map-workspace{scroll-margin-top:12px}}
+
+.atlas-location[aria-pressed="true"]{border-color:#885e24;box-shadow:inset 3px 0 #885e24}
+
+.cave-search{margin:12px 0;padding:12px;border:1px solid #c6d7d2;border-radius:12px;background:#f7faf8;color:#23453c}
+.cave-search figcaption{font-weight:700;display:flex;align-items:baseline;gap:8px}
+.cave-search small{font-size:.8rem;font-weight:400}
+.cave-search svg{display:block;width:100%;max-width:460px;margin:6px auto;background:#e9f1ed;border-radius:8px}
+.cave-grid{fill:none;stroke:#bfd1c9;stroke-dasharray:3 3}
+.cave-search svg text{text-anchor:middle;font:600 11px sans-serif;fill:white}
+.cave-search svg circle{fill:#285d52}
+.cave-search svg .cave-entry,.cave-search svg .cave-north{fill:#34584e}
+.cave-search div{display:flex;gap:4px 12px;flex-wrap:wrap;margin:6px 0;font-size:.9rem}
